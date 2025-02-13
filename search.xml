@@ -1,0 +1,1521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>FPV穿越机遥控器使用WIFI更新固件的时候，显示没有足够的空间报错no enough space</title>
+    <url>/FPV-falied/</url>
+    <content><![CDATA[<h1 id="我们正常刷新的固件的时候会显示-no-enough-space-或者-failed-above"><a href="#我们正常刷新的固件的时候会显示-no-enough-space-或者-failed-above" class="headerlink" title="我们正常刷新的固件的时候会显示 no enough space 或者 failed above"></a>我们正常刷新的固件的时候会显示 no enough space 或者 failed above</h1><p>解决上面的问题可以使用一下</p>
+<span id="more"></span>
+
+<h1 id="使用清除缓存的固件"><a href="#使用清除缓存的固件" class="headerlink" title="使用清除缓存的固件"></a>使用清除缓存的固件</h1><p>固件地址：<a href="https://pan.quark.cn/s/907bf201873a#/list/share">https://pan.quark.cn/s/907bf201873a#/list/share</a><br>点击链接复制 下载清除缓存固件<br>然后再次连接上我们的遥控器的WIFI选着刚才下载的<code>清楚缓存固件</code><br>然后在重新刷写，刷写好了之后，重新开机</p>
+<h1 id="刷写你需要的固件"><a href="#刷写你需要的固件" class="headerlink" title="刷写你需要的固件"></a>刷写你需要的固件</h1><p>下载对应的FPV radio固件 然后刷写就好了 此方法也适合降级刷写！</p>
+]]></content>
+      <categories>
+        <category>FPV</category>
+        <category>FPV报错</category>
+      </categories>
+      <tags>
+        <tag>FPV</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何使用Google Cloud中的SSH远程连接服务器：详细教程</title>
+    <url>/Google-Cloud-SSH%E8%BF%9C%E7%A8%8B%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>打开这个网址<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html</a><br>找到puttygen.exe (a RSA and DSA key generation utility)，找不到可以直接Ctrl + F 输入puttygen.exe (a RSA and DSA key generation utility)<br>会自动跳转到你找的信息，比如我的是chrome浏览器搜索到是有橙色来提醒找到的目标 找你对应的电脑架构类型下载 x86就下载x86的</p>
+<span id="more"></span>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/puttygen%E4%B8%8B%E8%BD%BD.webp" alt="puttygen下载"></p>
+<p>下载好打开软件进入</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/puttygen%20%E7%95%8C%E9%9D%A2.webp" alt="puttygen界面"></p>
+<p>点击Generate（tips:点击完不要切换其他程序等待一会 切换其他程序它就会不动！）<br>生成好 需要在Key comment添加的Gmail前面的信息@前面的比如我的是 rsa-key-20240826test（在添加你的gmail前面的信息，比如我的邮箱是<a href="mailto:test@gmail.com">test@gmail.com</a> @前面的比如test你直接加后面就行）<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://raw.githubusercontent.com/Duoqixiaozei/img/master/puttygen%E7%94%9F%E6%88%90%E5%A5%BD%E7%9A%84.webp" alt="puttygen生成好"><br>然后点击Save private Key 保存到你想要的文件夹<br>然后打开你的Google cloud的Computer Engine在设置里面的“元数据”然后点击SSH秘钥<br>把puttygen的Public key for pasting into OpenSSH authorized keys file:全部内容复制到秘钥里面</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/google%20cloud%20%E5%85%83%E6%95%B0%E6%8D%AE%20ssh%E7%A7%98%E9%92%A5.webp" alt="ComputerEngine"></p>
+<p>然后打开你的虚拟机实例 复制你的外部IP<br>下载putty网址还是上面那个直接找到下载可以 找你对应的电脑架构类型下载 x86就下载x86的<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E4%B8%8B%E8%BD%BD.webp" alt="putty下载"></p>
+<p>点击左侧SSH-Auth-Credentials to authenticate with在Private key file for authentication:点击browse选择你刚刚在putty key generator保存ssh秘钥的文件夹。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE2.webp" alt="putty设置1"><br>点击session在Hostname输入格式 rsa-key-20240826test@外部地址 （tips：rsa-key-20240826test是你在putty key generator软件的key comment 里面而test是你的Gmail前面的 也就是你Gmail@前面）然后你可以点击下方的Open就可以连接到你的服务器<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE1.webp" alt="putty设置2"><br>如果你觉得上面的过程麻烦下次还要按这样操作的话你在上面操作好之后在左侧session 然后saved<br>session填你想要的名称填好点击save下次打开直接选择你tina好的名称就可以链接服务器<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE3.webp" alt="putty设置3"></p>
+<blockquote>
+<p>有问题可以再下方评论，我看到的话会回复</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Google Cloud</category>
+      </categories>
+      <tags>
+        <tag>Google Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Google 百度 Bing SEO重定向的问题</title>
+    <url>/Google-%E7%99%BE%E5%BA%A6-Bing-seo%E9%87%8D%E5%AE%9A%E5%90%91%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="SEO显示网页会自动重定向是什么原因？"><a href="#SEO显示网页会自动重定向是什么原因？" class="headerlink" title="SEO显示网页会自动重定向是什么原因？"></a>SEO显示网页会自动重定向是什么原因？</h1><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/重定向.webp" widtht="50%" height="50%" alt="chongdingxiang">
+
+<span id="more"></span>
+
+<h2 id="域名绑定了两个在网站上"><a href="#域名绑定了两个在网站上" class="headerlink" title="域名绑定了两个在网站上"></a>域名绑定了两个在网站上</h2><p>去服务商DNS去掉一个比如说我就用一个<a href="http://www.yourdomainame.com/">www.yourdomainame.com</a> 绑定到网站就用这个去绑定，可以用CNAME 或者 A来记录。</p>
+<h2 id="是否正确填写服务器DNS"><a href="#是否正确填写服务器DNS" class="headerlink" title="是否正确填写服务器DNS"></a>是否正确填写服务器DNS</h2><p>要在服务器正确填写你的域名DNS不是用那个就填那个，如果是github page，就在根目录创建一个CNAME的文件 写上你的网站 比如 <a href="http://www.yourdomainame.com/">www.yourdomainame.com</a> 创建好上传就好了</p>
+<h2 id="确定是否https"><a href="#确定是否https" class="headerlink" title="确定是否https"></a>确定是否https</h2><p>这个就很重要，你要看你的网站的是什么格式大部分是https，如果是https没有SSL证书可以把你的域名托管到cloudflare可以免费SSL证书 还可以用cloudflare的cdn，大部分国内是在服务商购买SSL证书。</p>
+]]></content>
+      <categories>
+        <category>SEO</category>
+      </categories>
+      <tags>
+        <tag>SEO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux之putty远程工具</title>
+    <url>/Linux%E4%B9%8Bputty%E8%BF%9C%E7%A8%8B%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h1 id="Linux之Putty篇"><a href="#Linux之Putty篇" class="headerlink" title="Linux之Putty篇"></a>Linux之Putty篇</h1><p>如果你不知道在哪下载<a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">点我下载</a>选择你的系统版本 比如说windows-64位的就下对应的。<br>下载直接打开就行<br>在hostname输入你的服务器IP地址 默认22端口登录<br>我写192.168.1.1是演示的 不是真实这个是局域网路由的 不要跟着我写 按你的服务器ip写</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty1.webp" alt="putty"></p>
+<span id="more"></span>
+
+
+<p>在打开之前先做好这几项<br>在connection里面 找到second between keepalive 调整为30<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty2.webp" alt="putty2"><br>然后放回首页点击save这样以后打开就不用输入你的服务器IP和其他选项<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty3.webp" alt="putty3"></p>
+<blockquote>
+<p>try</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux创建SSH秘钥</title>
+    <url>/Linux%E5%88%9B%E5%BB%BASSH%E7%A7%98%E9%92%A5/</url>
+    <content><![CDATA[<h1 id="SSH-公钥创建"><a href="#SSH-公钥创建" class="headerlink" title="SSH 公钥创建"></a>SSH 公钥创建</h1><p>打开你的linux 输入</p>
+<figure class="highlight excel"><table><tbody><tr><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"youremail@email.com"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>“<del><a href="mailto:youremail@email.com">youremail@email.com</a></del>”填写你自己的email 不要填写示例的</p>
+<p>一路回车</p>
+<span id="more"></span>
+
+<figure class="highlight vim"><table><tbody><tr><td class="code"><pre><span class="line">Enter <span class="keyword">file</span> in which <span class="keyword">to</span> save the key (/root/.ssh/id_rsa):</span><br><span class="line">Created directory <span class="string">'/root/.ssh'</span>.</span><br><span class="line">Enter passphrase (<span class="built_in">empty</span> <span class="keyword">for</span> <span class="keyword">no</span> passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Your identification <span class="built_in">has</span> been saved in /root/.ssh/id_rsa.</span><br><span class="line">Your public key <span class="built_in">has</span> been saved in /root/.ssh/id_rsa.pub.</span><br></pre></td></tr></tbody></table></figure>
+
+<p>切换到ssh目录</p>
+<figure class="highlight jboss-cli"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">cd</span> <span class="string">.ssh</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>用cat、 vim、 或者nano 把秘钥复制出来或者在下载到你的电脑上</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> id_rsa.pub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这样就会显示你的秘钥</p>
+<blockquote>
+<p>懒的调格式了 就这样吧</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程</title>
+    <url>/RustDesk-%E5%AE%8C%E5%85%A8%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在如今的远程办公和技术支持中，安全是首要考虑因素。然而，大部分主流的远程控制软件虽然安全，但其高级功能通常需要付费订阅，这不仅增加了成本，还可能将数据暴露在第三方服务器中。与其花费高额费用购买订阅，不如通过自建服务端，拥有完全掌控的远程解决方案。如果你动手能力强且能自行维护，这将是最佳选择。</p>
+<hr>
+<h2 id="RustDesk-介绍"><a href="#RustDesk-介绍" class="headerlink" title="RustDesk 介绍"></a>RustDesk 介绍</h2><p><strong>RustDesk</strong> 是一款开源的远程桌面软件，类似于 TeamViewer 和 AnyDesk，但它的特点是完全开源且自托管。RustDesk 允许用户在不同的设备和平台之间进行远程控制，支持 Windows、Linux、macOS、Android 和 iOS 等操作系统。</p>
+<p>  作为向日葵等商业软件的替代方案，它具备高性能、安全性和无需订阅等优点。本文将详细介绍 RustDesk 的特点、与向日葵的对比，并指导如何通过 Docker 搭建 RustDesk 服务端。 </p>
+<span id="more"></span>
+
+<hr>
+<h2 id="RustDesk-与向日葵的对比"><a href="#RustDesk-与向日葵的对比" class="headerlink" title="RustDesk 与向日葵的对比"></a>RustDesk 与向日葵的对比</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>RustDesk</th>
+<th>向日葵</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>部署方式</td>
+<td>支持自建服务端</td>
+<td>官方服务器或订阅</td>
+</tr>
+<tr>
+<td>数据隐私</td>
+<td>完全掌控</td>
+<td>依赖官方服务</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>免费</td>
+<td>部分功能需订阅</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>高效（P2P 优先，支持中继）</td>
+<td>视网络状况而定</td>
+</tr>
+</tbody></table>
+<p>RustDesk 的主要优势在于开源和私有化部署，适合需要高度安全和灵活控制的用户。</p>
+<hr>
+<h2 id="搭建-RustDesk-服务端（Docker-优先）"><a href="#搭建-RustDesk-服务端（Docker-优先）" class="headerlink" title="搭建 RustDesk 服务端（Docker 优先）"></a>搭建 RustDesk 服务端（Docker 优先）</h2><h3 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a>1. 环境准备</h3><h4 id="系统与工具"><a href="#系统与工具" class="headerlink" title="系统与工具"></a>系统与工具</h4><ul>
+<li>操作系统：Ubuntu / CentOS</li>
+<li>安装 Docker：</li>
+</ul>
+<p>Ubuntu：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt install -y docker.io docker-compose</span><br></pre></td></tr></tbody></table></figure>
+
+<p>CentOS：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum update -y &amp;&amp; <span class="built_in">sudo</span> yum install -y docker docker-compose</span><br></pre></td></tr></tbody></table></figure>
+
+<p>启动并设置 Docker 开机启动：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start docker</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="2-使用-Docker-部署-RustDesk-服务端"><a href="#2-使用-Docker-部署-RustDesk-服务端" class="headerlink" title="2. 使用 Docker 部署 RustDesk 服务端"></a>2. 使用 Docker 部署 RustDesk 服务端</h3><p>RustDesk 服务端包括 <code>hbbs</code>（信令服务器）和 <code>hbbr</code>（中继服务器），可以通过 Docker 一键部署。</p>
+<h4 id="拉取-RustDesk-Docker-镜像"><a href="#拉取-RustDesk-Docker-镜像" class="headerlink" title="拉取 RustDesk Docker 镜像"></a>拉取 RustDesk Docker 镜像</h4><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">docker pull rustdesk/rustdesk-server:latest</span><br></pre></td></tr></tbody></table></figure>
+
+<h4 id="创建-Docker-容器"><a href="#创建-Docker-容器" class="headerlink" title="创建 Docker 容器"></a>创建 Docker 容器</h4><p>运行以下命令启动服务端：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name rustdesk-server \</span><br><span class="line">  -p 21114:21114 \</span><br><span class="line">  -p 21115:21115 \</span><br><span class="line">  -p 21116:21116 \</span><br><span class="line">  -v $(<span class="built_in">pwd</span>)/data:/data \</span><br><span class="line">  rustdesk/rustdesk-server:latest</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li><code>-p 21114:21114</code>：信令服务器（ID Server），用于设备注册和通信</li>
+<li><code>-p 21115:21115</code>：中继服务器（Relay Server），用于穿透 NAT 和中继数据传输</li>
+<li><code>-p 21116:21116</code>：API 服务器（File Transfer Server），用于文件传输和其他 API 调用</li>
+<li><code>-v $(pwd)/data:/data</code>：持久化存储数据</li>
+</ul>
+<h3 id="3-配置防火墙"><a href="#3-配置防火墙" class="headerlink" title="3. 配置防火墙"></a>3. 配置防火墙</h3><p>确保开放必要端口：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment"># Ubuntu</span></span><br><span class="line"><span class="built_in">sudo</span> ufw allow 21114/tcp</span><br><span class="line"><span class="built_in">sudo</span> ufw allow 21115/tcp</span><br><span class="line"><span class="built_in">sudo</span> ufw allow 21116/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment"># CentOS</span></span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=21114/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=21115/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=21116/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --reload</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="4-获取秘钥与配置"><a href="#4-获取秘钥与配置" class="headerlink" title="4. 获取秘钥与配置"></a>4. 获取秘钥与配置</h3><p>RustDesk 服务端的秘钥存储在容器内 <code>/data</code> 目录下。</p>
+<p>进入容器查看秘钥：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it rustdesk-server <span class="built_in">cat</span> /data/id_ed25519.pub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出的公钥内容即为客户端连接时需要的秘钥。</p>
+<hr>
+<h2 id="安装客户端"><a href="#安装客户端" class="headerlink" title="安装客户端"></a>安装客户端</h2><p>你可以在 <a href="https://github.com/rustdesk/rustdesk/releases/tag/1.3.6">RustDesk 1.3.6 版本发布页面</a> 下载适用于各平台的 RustDesk 客户端安装包。</p>
+<hr>
+<h2 id="客户端配置详解"><a href="#客户端配置详解" class="headerlink" title="客户端配置详解"></a>客户端配置详解</h2><p>在 RustDesk 客户端中，需要配置以下内容：</p>
+<ol>
+<li><p><strong>ID Server（信令服务器）</strong>：</p>
+<ul>
+<li>端口：21114</li>
+<li>用途：负责设备注册和管理设备之间的连接。</li>
+<li>示例配置：填入你的服务器域名或 IP 地址，例如 <code>yourdomain.com</code>。</li>
+</ul>
+</li>
+<li><p><strong>Relay Server（中继服务器）</strong>：</p>
+<ul>
+<li>端口：21115</li>
+<li>用途：用于设备之间的中继通信，尤其是无法直接 P2P 连接时。</li>
+<li>示例配置：同样填写你的服务器域名或 IP 地址。</li>
+</ul>
+</li>
+<li><p><strong>File Transfer Server（API 服务器）</strong>：</p>
+<ul>
+<li>端口：21116</li>
+<li>用途：文件传输服务，支持远程桌面的文件操作。</li>
+<li>示例配置：填写与信令服务器相同的地址。</li>
+</ul>
+</li>
+<li><p><strong>Key（秘钥）</strong>：</p>
+<ul>
+<li>用途：确保客户端与服务端的连接安全。</li>
+<li>配置方式：将前面获取的公钥粘贴到「Key」字段中。</li>
+</ul>
+</li>
+</ol>
+<p>在 RustDesk 客户端的设置页面中，依次填写以上信息，完成配置。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/202412261553881.png" alt="rustdesk-setting"></p>
+<hr>
+<h2 id="验证服务"><a href="#验证服务" class="headerlink" title="验证服务"></a>验证服务</h2><ol>
+<li>启动客户端并尝试连接目标设备。</li>
+<li>检查服务端日志，确保连接正常。</li>
+</ol>
+<p>查看 Docker 容器日志：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">docker logs rustdesk-server</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>RustDesk 通过开源、可私有化部署的特点，为用户提供了安全高效的远程桌面解决方案。与向日葵相比，RustDesk 的免费和隐私优势尤为突出。通过 Docker 部署 RustDesk 服务端，并结合必要端口配置和秘钥管理，可以轻松搭建自己的远程桌面服务。<br>参考 <a href="https://rustdesk.com/">RustDesk 官方网站</a> 获取更多信息。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>网络工具</category>
+      </categories>
+      <tags>
+        <tag>RustDesk</tag>
+        <tag>远程桌面</tag>
+        <tag>自建服务</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spotify 美化插件之歌词界面毛玻璃效果</title>
+    <url>/Spotify-%E7%BE%8E%E5%8C%96%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<p><strong>声明</strong>：以下安装美化需要有spicetify-cli和spicetify-marketplace插件如果没有就只能看我以往的spotify美化教程<br>不懂安装的插件的点击这里看我之前的文章讲解 <a href="/spotify%E7%BE%8E%E5%8C%96/" title="Spotify 美化指南">Spotify 美化指南</a></p>
+<h1 id="如何安装？"><a href="#如何安装？" class="headerlink" title="如何安装？"></a>如何安装？</h1><h2 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h2><p><strong>安装好插件后，直接从marketplace-Extensions 找到beautiful lyrics安装 你就可以看到下面的多出了一个麦克风的图标点击就可以看到效果</strong><br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E7%BE%8E%E5%8C%96%E6%8F%92%E4%BB%B6.webp" alt="安装教程"></p>
+<span id="more"></span>
+<h2 id="第二种方法"><a href="#第二种方法" class="headerlink" title="第二种方法"></a>第二种方法</h2><p><strong>在powershell 安装 beautiful lyrics 输入一下内容</strong></p>
+<figure class="highlight arduino"><table><tbody><tr><td class="code"><pre><span class="line">spicetify config custom_apps</span><br><span class="line">spicetify apply</span><br></pre></td></tr></tbody></table></figure>
+<p>美化歌词推荐：beautiful lyrics 有毛玻璃效果<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E6%95%88%E6%9E%9C%E5%9B%BE.webp" alt="美化效果"><br>再次打开客户端就可以看到效果</p>
+<blockquote>
+<p>tips:有些歌曲在spotify是无法看到歌词。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Spotify</category>
+      </categories>
+      <tags>
+        <tag>Spotify</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Temu特姆一键拒绝调价脚本 不同意调价脚本</title>
+    <url>/Temu%E7%89%B9%E5%A7%86%E4%B8%80%E9%94%AE%E6%8B%92%E7%BB%9D%E8%B0%83%E4%BB%B7-%E4%B8%8D%E5%90%8C%E6%84%8F%E8%B0%83%E4%BB%B7%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<p>Temu天天弹降价窗所以搞了个一键不同调价的脚本<br>脚本要搭配油猴使用！！！<br>该脚本js脚本 可以直接复制到油猴 也可以直接创建一个文件后缀js的文件<br>然后把内容复制使用文本编辑粘贴上去再拖动到油猴脚本。<br>建议直接在油猴脚本 新建一个脚本 直接复制一下内容！<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/temu.webp" alt="temu右上角"><br>点击右上角开始直接一键不同意调价！！！</p>
+<span id="more"></span> 
+<figure class="highlight javascript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// ==UserScript==</span></span><br><span class="line"><span class="comment">// @name         自动点击不同意</span></span><br><span class="line"><span class="comment">// @namespace    https:www.pw0n.xyz</span></span><br><span class="line"><span class="comment">// @version      0.5</span></span><br><span class="line"><span class="comment">// @description  自动点击指定的元素，并增加开始和暂停按钮</span></span><br><span class="line"><span class="comment">// @author       pw0n</span></span><br><span class="line"><span class="comment">// @match        https://seller.kuajingmaihuo.com/*</span></span><br><span class="line"><span class="comment">// @grant        none</span></span><br><span class="line"><span class="comment">// ==/UserScript==</span></span><br><span class="line"></span><br><span class="line">(<span class="keyword">function</span>(<span class="params"></span>) {</span><br><span class="line">    <span class="string">'use strict'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> isRunning = <span class="literal">false</span>; <span class="comment">// 标记当前状态，是否自动点击</span></span><br><span class="line">    <span class="keyword">let</span> intervalId;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">clickElements</span>(<span class="params">selector</span>) {</span><br><span class="line">        <span class="keyword">const</span> elements = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(selector);</span><br><span class="line">        elements.<span class="title function_">forEach</span>(<span class="function"><span class="params">element</span> =&gt;</span> {</span><br><span class="line">            element.<span class="title function_">click</span>();</span><br><span class="line">        });</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">autoClick</span>(<span class="params"></span>) {</span><br><span class="line">        <span class="comment">// 点击class为 RD_textWrapper_5-111-0 的元素</span></span><br><span class="line">        <span class="title function_">clickElements</span>(<span class="string">'div.RD_textWrapper_5-111-0.RD_prevRadio_5-111-0'</span>);</span><br><span class="line">        <span class="comment">// 点击"我已知晓风险，本次不再提醒"的元素</span></span><br><span class="line">        <span class="title function_">clickElements</span>(<span class="string">'div.CBX_textWrapper_5-111-0.CBX_prevCheckSquare_5-111-0'</span>);</span><br><span class="line">        <span class="comment">// 点击确认按钮</span></span><br><span class="line">        <span class="title function_">clickElements</span>(<span class="string">'button[data-tracking-id="zIb_kvR_JvmInKd9"].BTN_outerWrapper_5-111-0.BTN_danger_5-111-0.BTN_medium_5-111-0.BTN_outerWrapperBtn_5-111-0[data-testid="beast-core-button"]'</span>);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">startAutoClick</span>(<span class="params"></span>) {</span><br><span class="line">        <span class="keyword">if</span> (!isRunning) {</span><br><span class="line">            <span class="title function_">autoClick</span>(); <span class="comment">// 执行一次点击</span></span><br><span class="line">            intervalId = <span class="built_in">setInterval</span>(autoClick, <span class="number">3000</span>); <span class="comment">// 每3秒执行一次</span></span><br><span class="line">            isRunning = <span class="literal">true</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">stopAutoClick</span>(<span class="params"></span>) {</span><br><span class="line">        <span class="keyword">if</span> (isRunning) {</span><br><span class="line">            <span class="built_in">clearInterval</span>(intervalId);</span><br><span class="line">            isRunning = <span class="literal">false</span>;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建按钮</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">createControlButtons</span>(<span class="params"></span>) {</span><br><span class="line">        <span class="keyword">const</span> startButton = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">'button'</span>);</span><br><span class="line">        <span class="keyword">const</span> stopButton = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">'button'</span>);</span><br><span class="line"></span><br><span class="line">        startButton.<span class="property">textContent</span> = <span class="string">'开始'</span>;</span><br><span class="line">        stopButton.<span class="property">textContent</span> = <span class="string">'暂停'</span>;</span><br><span class="line"></span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">position</span> = <span class="string">'fixed'</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">top</span> = <span class="string">'10px'</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">left</span> = <span class="string">'10px'</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">zIndex</span> = <span class="string">'9999'</span>;</span><br><span class="line"></span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">position</span> = <span class="string">'fixed'</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">top</span> = <span class="string">'10px'</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">left</span> = <span class="string">'70px'</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">zIndex</span> = <span class="string">'9999'</span>;</span><br><span class="line"></span><br><span class="line">        startButton.<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, startAutoClick);</span><br><span class="line">        stopButton.<span class="title function_">addEventListener</span>(<span class="string">'click'</span>, stopAutoClick);</span><br><span class="line"></span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(startButton);</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(stopButton);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 页面加载后创建按钮</span></span><br><span class="line">    <span class="variable language_">window</span>.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params"></span>) {</span><br><span class="line">        <span class="title function_">createControlButtons</span>();</span><br><span class="line">    };</span><br><span class="line">})();</span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p>劝退正常人的平台</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>跨境电商</category>
+        <category>TEMU</category>
+      </categories>
+      <tags>
+        <tag>TEMU</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VIM编辑器那些坑（一）</title>
+    <url>/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="VIM编辑器那些坑（一）"><a href="#VIM编辑器那些坑（一）" class="headerlink" title="VIM编辑器那些坑（一）"></a>VIM编辑器那些坑（一）</h1><p>我每次用中文输入的时候按ESC每次都会退出不了的问题<br>后面切换英文输入法就能退出 ESC + :  就可以实现了<br>vim 按住ESC后你可以用H,J,KL,四个键 分别代表←↑↓→键，你还可以用翻页按钮PgUP</p>
+<span id="more"></span>
+<p>,PgDn，分别是上下页面，这样你可以实现快速阅览<br>那么用查找的命令是什么呢？<br>习惯用windows的你肯定觉得是ctr + F 其实不是这样的，VIM是 先退出编辑状态 一般按一下ESC键然后 敲打？或者/ 然后在加上你想要的内容<br>比如我想找example关键词+Enter(回车)</p>
+<figure class="highlight maxima"><table><tbody><tr><td class="code"><pre><span class="line">？<span class="built_in">example</span> 或者/ <span class="built_in">example</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>OK那么你会用这些经典的用法那么怎么实现保存退出呢？<br>退出可以用</p>
+<figure class="highlight elixir"><table><tbody><tr><td class="code"><pre><span class="line"><span class="title class_">ESC</span>+<span class="symbol">:q+Enter</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>保存则是</p>
+<figure class="highlight elixir"><table><tbody><tr><td class="code"><pre><span class="line"><span class="title class_">ESC</span>+<span class="symbol">:w+Enter</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>那么保存加退出呢？</p>
+<figure class="highlight elixir"><table><tbody><tr><td class="code"><pre><span class="line"><span class="title class_">ESC</span>+<span class="symbol">:wq+Enter</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>如何实现强制保存和退出呢？那就在后面用到“！”</p>
+<figure class="highlight elixir"><table><tbody><tr><td class="code"><pre><span class="line"><span class="title class_">ESC</span>+<span class="symbol">:wq</span>！+<span class="title class_">Enter</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>忘记了一个重要的编辑功能<br>编辑功能不用按ESC 进入你想要的文件或者在你插件的文件时候按入“i”键就可以进入编辑功能，这样你就可以实现编辑功能是不是很方便呢？退出编辑功能直接按ESC就这样可以阅览</p>
+]]></content>
+      <categories>
+        <category>VIM</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VIM编辑器那些坑（二）</title>
+    <url>/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="VIM编辑器那些坑-二"><a href="#VIM编辑器那些坑-二" class="headerlink" title="VIM编辑器那些坑(二)"></a>VIM编辑器那些坑(二)</h1><h2 id="VIM界外复制！！！😕"><a href="#VIM界外复制！！！😕" class="headerlink" title="VIM界外复制！！！😕"></a>VIM界外复制！！！😕</h2><p>遇到从外界复制你是不是以为ctrl+v ，然而vim并不会粘贴，那么要怎么粘贴呢？<br>我们先从外面复制文字 然后 打开vim 在命令模式下 输入:+p这要就能复制到你的内容了<br>如果你用的是Putty或者是Xshell,你可以直接从外界复制，然后到vim点击右键直接复制。</p>
+<h2 id="VIM界内复制和粘贴"><a href="#VIM界内复制和粘贴" class="headerlink" title="VIM界内复制和粘贴"></a>VIM界内复制和粘贴</h2><span id="more"></span>
+<p>命令模式下 直接输入yy是复制一行 我们直接输入p 就可以往下面粘贴<br>小写p是往下面粘贴 大写P是往上面复制<br>yw在当前行复制 在输入p直接在该行粘贴</p>
+<h2 id="VIM删除该行"><a href="#VIM删除该行" class="headerlink" title="VIM删除该行"></a>VIM删除该行</h2><p>dd命令就可以删除<br>怎么删除你想要的行呢？ 输入：1,3 d 这就是表示你要从第一行到第三行删除</p>
+<p>很多人都不知道键盘还有个home键和end键都没用过 这个无论是linux windows mac 都能使用在编辑器下 home就是跳到你该行第一位 end就相反跳到最后一位</p>
+<blockquote>
+<p>学太多反而害了你</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>VIM</category>
+      </categories>
+      <tags>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>archlinux没有显示器无法调节亮度</title>
+    <url>/archlinux-boot-screen-issue/</url>
+    <content><![CDATA[<h2 id="如何解决-Thinkpad-笔记本亮度无法调节的问题"><a href="#如何解决-Thinkpad-笔记本亮度无法调节的问题" class="headerlink" title="如何解决 Thinkpad 笔记本亮度无法调节的问题"></a>如何解决 Thinkpad 笔记本亮度无法调节的问题</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在一些 Thinkpad 笔记本电脑上，尽管系统能够检测到亮度控制接口，但实际调节亮度的功能却无法正常工作。你可能会看到系统识别到亮度控制硬件，但调整亮度时并无任何反应，甚至出现闪屏或无法控制的情况。本文将为你提供一系列步骤，帮助解决这个问题。</p>
+<span id="more"></span>
+
+<hr>
+<h3 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h3><figure class="highlight nix"><table><tbody><tr><td class="code"><pre><span class="line">		 .o<span class="operator">+</span>`                   <span class="operator">-</span>-------- </span><br><span class="line">                `ooo<span class="symbol">/</span>                   <span class="params">OS:</span> Arch Linux x86_64 </span><br><span class="line">               `<span class="operator">+</span><span class="params">oooo:</span>                  <span class="params">Host:</span> <span class="number">20</span>H5A056CD ThinkPad E570 </span><br><span class="line">              `<span class="operator">+</span><span class="params">oooooo:</span>                 <span class="params">Kernel:</span> <span class="number">6.12</span>.<span class="number">7</span><span class="operator">-</span>arch1-<span class="number">1</span> </span><br><span class="line">             <span class="operator">-</span><span class="operator">+</span>oooooo<span class="operator">+</span>:                <span class="params">Uptime:</span> <span class="number">10</span> mins </span><br><span class="line">           `<span class="operator">/</span>:-:<span class="operator">++</span>oooo<span class="operator">+</span>:               <span class="params">Packages:</span> <span class="number">1542</span> (pacman) </span><br><span class="line">          `<span class="operator">/</span><span class="operator">++</span><span class="operator">++</span><span class="operator">/</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">+</span>:              <span class="params">Shell:</span> bash <span class="number">5.2</span>.<span class="number">37</span> </span><br><span class="line">         `<span class="operator">/</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span>:             <span class="params">Resolution:</span> <span class="number">1920</span>x1080 </span><br><span class="line">        `<span class="operator">/</span><span class="operator">++</span><span class="operator">+</span>ooooooooooooo<span class="operator">/</span>`           <span class="params">DE:</span> Plasma <span class="number">6.2</span>.<span class="number">4</span> </span><br><span class="line">       .<span class="operator">/</span>ooosssso<span class="operator">++</span>osssssso<span class="operator">+</span>`          <span class="params">WM:</span> kwin </span><br><span class="line">      .oossssso-````<span class="operator">/</span>ossssss<span class="operator">+</span>`         <span class="params">Theme:</span> Breeze [GTK2<span class="operator">/</span><span class="number">3</span>] </span><br><span class="line">     <span class="operator">-</span>osssssso.      <span class="meta">:ssssssso</span>.        <span class="params">Icons:</span> breeze [GTK2<span class="operator">/</span><span class="number">3</span>] </span><br><span class="line">    <span class="meta">:osssssss</span><span class="symbol">/</span>        osssso<span class="operator">++</span><span class="operator">+</span>.       <span class="params">Terminal:</span> konsole </span><br><span class="line">   <span class="operator">/</span>ossssssss<span class="symbol">/</span>        <span class="operator">+</span>ssssooo<span class="symbol">/-</span>       <span class="params">CPU:</span> Intel i3-<span class="number">7100</span>U (<span class="number">4</span>) @ <span class="number">2.400</span>GHz </span><br><span class="line"> `<span class="operator">/</span>ossssso<span class="operator">+</span><span class="operator">/</span>:-        <span class="operator">-</span>:<span class="symbol">/+osssso+-</span>     <span class="params">GPU:</span> Intel HD Graphics <span class="number">620</span> </span><br><span class="line">`<span class="operator">+</span>sso<span class="operator">+</span>:-`                 `.-<span class="operator">/</span><span class="operator">+</span><span class="params">oso:</span>    <span class="params">GPU:</span> NVIDIA GeForce <span class="number">940</span>MX </span><br><span class="line"><span class="operator">++</span>:.                           `-<span class="operator">/</span><span class="operator">+</span><span class="symbol">/</span>   <span class="params">Memory:</span> <span class="number">2753</span>MiB <span class="symbol">/</span> <span class="number">7848</span>MiB </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="1-检查硬件信息"><a href="#1-检查硬件信息" class="headerlink" title="1. 检查硬件信息"></a>1. 检查硬件信息</h3><p>首先，查看系统日志，确认是否检测到了亮度控制接口。你可以使用以下命令查看 <code>Xorg</code> 的日志，查找与亮度相关的信息：</p>
+<figure class="highlight stata"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">cat</span> /<span class="keyword">var</span>/<span class="keyword">log</span>/Xorg.0.<span class="keyword">log</span> | grep -i <span class="string">"backlight"</span></span><br><span class="line"><span class="keyword">cat</span> /<span class="keyword">var</span>/<span class="keyword">log</span>/Xorg.0.<span class="keyword">log</span> | grep -i <span class="string">"synaptics"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果日志中出现以下内容，说明系统确实已经识别了亮度控制接口：</p>
+<figure class="highlight angelscript"><table><tbody><tr><td class="code"><pre><span class="line"><span class="string">[    39.909]</span> (--) <span class="built_in">int</span>el(<span class="number">0</span>): Found backlight control <span class="keyword">interface</span> <span class="symbol">thinkpad_screen</span> (<span class="symbol">type</span> '<span class="symbol">platform</span>') <span class="symbol">for</span> <span class="symbol">output</span> <span class="symbol">eDP1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>出现这个显示是系统已经识别到了 <code>thinkpad_screen</code> 作为亮度控制接口，类型为 <code>platform</code>，并且为输出设备 <code>eDP1</code> 提供了控制。</p>
+<hr>
+<h3 id="2-可能的原因"><a href="#2-可能的原因" class="headerlink" title="2. 可能的原因"></a>2. 可能的原因</h3><p>尽管系统识别到了亮度控制接口，仍然可能会遇到无法调节亮度的情况。常见的原因包括：</p>
+<ol>
+<li><strong>驱动问题</strong> ：虽然系统检测到了硬件接口，但可能存在驱动没有正确加载，或者硬件兼容性问题，导致亮度调节无法生效。</li>
+<li><strong>ACPI 配置问题</strong> ：ACPI（高级配置和电源管理）与亮度控制的交互可能受到内核参数的影响。你当前的内核命令行包含了 <code>acpi_osi=Linux</code> 和 <code>acpi_backlight=vendor</code> 这两个参数，可能与亮度调节的功能产生冲突。不同的笔记本电脑可能需要不同的 ACPI 配置才能正常工作。</li>
+</ol>
+<hr>
+<h3 id="3-下一步检查"><a href="#3-下一步检查" class="headerlink" title="3. 下一步检查"></a>3. 下一步检查</h3><p>为了进一步解决问题，你可以尝试修改内核的启动参数，调整 ACPI 配置，确保亮度控制功能可以正常使用。按照以下步骤进行操作：</p>
+<h4 id="步骤-1：修改-GRUB-配置"><a href="#步骤-1：修改-GRUB-配置" class="headerlink" title="步骤 1：修改 GRUB 配置"></a>步骤 1：修改 GRUB 配置</h4><ul>
+<li><p>打开 GRUB 配置文件：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/default/grub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>找到以下行：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">GRUB_CMDLINE_LINUX_DEFAULT</span>=<span class="string">"quiet splash"</span></span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>在这行的末尾添加 <code>acpi_backlight=video</code>，该参数强制使用标准的视频驱动程序来控制亮度，而不是依赖于其他硬件接口。修改后的行应如下所示：</p>
+</li>
+</ul>
+<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">GRUB_CMDLINE_LINUX_DEFAULT</span>=<span class="string">"quiet splash acpi_backlight=video"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这将会优先使用标准的 <code>video</code> 模式来处理亮度控制，从而避免硬件兼容性问题。</p>
+<hr>
+<h4 id="步骤-2：更新-GRUB-配置"><a href="#步骤-2：更新-GRUB-配置" class="headerlink" title="步骤 2：更新 GRUB 配置"></a>步骤 2：更新 GRUB 配置</h4><p>修改完成后，需要更新 GRUB 配置以使更改生效：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h4 id="步骤-3：重启计算机"><a href="#步骤-3：重启计算机" class="headerlink" title="步骤 3：重启计算机"></a>步骤 3：重启计算机</h4><p>完成配置更新后，重启计算机以使新的内核参数生效：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> reboot</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+]]></content>
+      <categories>
+        <category>archlinux</category>
+      </categories>
+      <tags>
+        <tag>archlinux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>archlinux开机进入系统显示白屏闪烁</title>
+    <url>/archlinux%E5%BC%80%E6%9C%BA%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E7%99%BD%E5%B1%8F%E9%97%AA%E7%83%81/</url>
+    <content><![CDATA[<p>前几天我把我的archlinux，全部更新了一遍，没想到开机开机进入系统显示白屏闪烁 切换tty3显示：nouveau0000:01:00.8:xorg[875]:valldate:22</p>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <div style="width: 400px; height: 400px; overflow: hidden; border-radius: 0%; background-color: #f0f0f0">
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/202501061120422.webp" style="width: 100%; height: 100%; object-fit: cover;" alt="linux开机报错">
+  </div>
+</div>
+
+<figure class="highlight apache"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attribute">nouveau0000</span>:<span class="number">01</span>:<span class="number">00</span>.<span class="number">8</span>:xorg[<span class="number">875</span>]:valldate:<span class="number">22</span></span><br><span class="line"><span class="attribute">nouveau0000</span>:<span class="number">01</span>:<span class="number">00</span>.<span class="number">8</span>:xorg[<span class="number">875</span>]:valldating bo list</span><br></pre></td></tr></tbody></table></figure>
+
+<span id="more"></span>
+
+<h1 id="第一步-开机启动-进入grub时"><a href="#第一步-开机启动-进入grub时" class="headerlink" title="第一步 开机启动 进入grub时"></a>第一步 开机启动 进入grub时</h1><h2 id="1-进入-GRUB-菜单"><a href="#1-进入-GRUB-菜单" class="headerlink" title="1. 进入 GRUB 菜单"></a>1. 进入 GRUB 菜单</h2><ul>
+<li>重启你的电脑，当 GRUB 启动菜单出现时，使用上下箭头键选中你想启动的内核（通常是默认的启动项）。</li>
+<li>按下 <strong>e</strong> 键进行编辑。</li>
+</ul>
+<h2 id="2-禁用-Nouveau-驱动"><a href="#2-禁用-Nouveau-驱动" class="headerlink" title="2. 禁用 Nouveau 驱动"></a>2. 禁用 Nouveau 驱动</h2><ul>
+<li><p>在 GRUB 编辑界面中，找到以 <code>linux</code> 开头的那一行。这一行通常会包含启动内核的路径以及一些内核参数。<br>比如，类似这样的行：</p>
+<figure class="highlight routeros"><table><tbody><tr><td class="code"><pre><span class="line">linux   /boot/vmlinuz-linux <span class="attribute">root</span>=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx rx quiet splash nouveau.<span class="attribute">modeset</span>=0</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
+<p>每个人的电脑不一样这个是参考</p>
+<p>rx在后面添加：</p>
+<figure class="highlight routeros"><table><tbody><tr><td class="code"><pre><span class="line">quiet splash nouveau.<span class="attribute">modeset</span>=0</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将 <code>nouveau.modeset=0</code> 添加到这行的末尾，禁用 Nouveau 驱动。</p>
+<ul>
+<li>禁用 Nouveau 驱动的参数是 <code>nouveau.modeset=0</code>。</li>
+<li>例如，编辑后的行应该像这样：</li>
+</ul>
+<h2 id="3-启动"><a href="#3-启动" class="headerlink" title="3. 启动"></a>3. 启动</h2><ul>
+<li>修改完成后，按 <strong>Ctrl + X</strong> 或 <strong>F10</strong> 启动系统。此时系统将会在单用户模式下启动，并且 Nouveau 驱动将被禁用。</li>
+</ul>
+<h1 id="第二步-进入桌面后（或者进入系统后）"><a href="#第二步-进入桌面后（或者进入系统后）" class="headerlink" title="第二步 进入桌面后（或者进入系统后）"></a>第二步 进入桌面后（或者进入系统后）</h1><h2 id="1-禁用独立显卡的唤醒"><a href="#1-禁用独立显卡的唤醒" class="headerlink" title="1. 禁用独立显卡的唤醒"></a>1. <strong>禁用独立显卡的唤醒</strong></h2><ul>
+<li><p>编辑 <code>/etc/default/grub</code>：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/default/grub</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>找到以下行:</p>
+<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">GRUB_CMDLINE_LINUX_DEFAULT</span>=<span class="string">"quiet splash"</span></span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>修改成</p>
+<figure class="highlight ini"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attr">GRUB_CMDLINE_LINUX_DEFAULT</span>=<span class="string">"quiet splash nouveau.modeset=0 acpi_backlight=vendor"</span></span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>更新 GRUB：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></tbody></table></figure></li>
+</ul>
+<h2 id="2-使用-NVIDIA-闭源驱动"><a href="#2-使用-NVIDIA-闭源驱动" class="headerlink" title="2. 使用 NVIDIA 闭源驱动"></a>2. <strong>使用 NVIDIA 闭源驱动</strong></h2><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> pacman -S nvidia nvidia-utils nvidia-settings</span><br><span class="line"><span class="built_in">sudo</span> mkinitcpio -P</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="3-重启"><a href="#3-重启" class="headerlink" title="3. 重启"></a>3. <strong>重启</strong></h2><p>完成上述步骤后，重启系统：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> reboot</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="4-确认-NVIDIA-驱动是否生效"><a href="#4-确认-NVIDIA-驱动是否生效" class="headerlink" title="4. 确认 NVIDIA 驱动是否生效"></a>4. <strong>确认 NVIDIA 驱动是否生效</strong></h2><p>重启后，运行以下命令确认 NVIDIA 驱动是否被加载：</p>
+<figure class="highlight ebnf"><table><tbody><tr><td class="code"><pre><span class="line"><span class="attribute">nvidia-smi</span></span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p>正常加载后如果你的不能调整显示屏的亮度的话请看下一篇</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>archlinux</category>
+      </categories>
+      <tags>
+        <tag>archlinux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo 使用表情教程</title>
+    <url>/emoji-test/</url>
+    <content><![CDATA[<p>输入这个命令 下载hexo-filter-github-emojis </p>
+<figure class="highlight livecodeserver"><table><tbody><tr><td class="code"><pre><span class="line">$ npm install hexo-<span class="built_in">filter</span>-github-emojis <span class="comment">--save</span></span><br></pre></td></tr></tbody></table></figure>
+<span id="more"></span>😀
+<p>向站点配置文件 hexo（你的博客文件夹名）_config.yml 中添加如下设置</p>
+<figure class="highlight nix"><table><tbody><tr><td class="code"><pre><span class="line"><span class="params">githubEmojis:</span></span><br><span class="line">  <span class="params">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="params">className:</span> github-emoji</span><br><span class="line">  <span class="params">unicode:</span> <span class="literal">true</span></span><br><span class="line">  <span class="params">styles:</span></span><br><span class="line">    <span class="params">display:</span> inline</span><br><span class="line">    <span class="params">vertical-align:</span> middle <span class="comment"># Freemind适用</span></span><br><span class="line">  <span class="params">localEmojis:</span></span><br><span class="line">  </span><br></pre></td></tr></tbody></table></figure>
+<p>保存好后你可以再你的文章尝试表情<br>在 emoji-cheat-sheet 中找到你想要的表情，然后点击即可复制。使用方法和 GitHub 一样，比如你想发一个笑脸 😄 直接输入笑脸对应的 emoji 编码 :smile： 就可以。<br>🤤😵‍💫🧐🤓👨‍🎤😏🦧🛗⏫</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spotify 美化指南</title>
+    <url>/spotify%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="Spotify-美化指南：用插件打造个性化音乐世界"><a href="#Spotify-美化指南：用插件打造个性化音乐世界" class="headerlink" title="Spotify 美化指南：用插件打造个性化音乐世界"></a>Spotify 美化指南：用插件打造个性化音乐世界</h1><p>你是否觉得默认的 Spotify 界面有些单调？是否希望它能更符合你的审美？Spotify 美化不仅可以让你的音乐播放器变得更有趣，还能让操作更高效。通过简单的设置，你可以自定义主题颜色、安装功能插件，让每次听歌都更愉悦。<br>现在就跟随本指南，一起把你的 Spotify 打造得与众不同！<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E6%95%88%E6%9E%9C%E5%9B%BE.webp" alt="美化效果"></p>
+<span id="more"></span>
+
+<hr>
+<h2 id="为什么要美化-Spotify？"><a href="#为什么要美化-Spotify？" class="headerlink" title="为什么要美化 Spotify？"></a>为什么要美化 Spotify？</h2><p>Spotify 是一款功能强大的流媒体音乐播放器，但它的默认界面风格可能无法满足所有人的喜好。通过美化，你可以实现以下目标：</p>
+<ul>
+<li><strong>个性化界面</strong>：选择你喜欢的主题和配色，打造专属于你的视觉风格。</li>
+<li><strong>增强功能</strong>：通过插件扩展，如歌词同步、快捷操作等，让使用体验更上一层楼。</li>
+<li><strong>让音乐更有仪式感</strong>：听音乐不仅是耳朵的享受，更是眼睛的盛宴。</li>
+</ul>
+<p>准备好了吗？接下来开始动手！</p>
+<hr>
+<h2 id="Windows-安装指南"><a href="#Windows-安装指南" class="headerlink" title="Windows 安装指南"></a>Windows 安装指南</h2><h3 id="1-安装-Spicetify-插件程序"><a href="#1-安装-Spicetify-插件程序" class="headerlink" title="1. 安装 Spicetify 插件程序"></a>1. 安装 Spicetify 插件程序</h3><p>确保 Spotify 已安装（任意版本均可）。然后按照以下步骤安装 Spicetify，这是一款功能强大的美化工具。</p>
+<h4 id="打开-Windows-Powershell"><a href="#打开-Windows-Powershell" class="headerlink" title="打开 Windows Powershell"></a>打开 Windows Powershell</h4><ul>
+<li>按下系统键，搜索并打开 <strong>Windows Powershell</strong>（注意：必须是 Powershell，而非 CMD）。  </li>
+<li>在 Powershell 中粘贴以下命令并运行：</li>
+</ul>
+<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">iwr</span> <span class="literal">-useb</span> https://raw.githubusercontent.com/spicetify/spicetify<span class="literal">-cli</span>/master/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></tbody></table></figure>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/spotify%E5%AE%89%E8%A3%85%E7%95%8C%E9%9D%A2.webp" alt="Spotify 安装界面"></p>
+<p>安装 <strong>Marketplace</strong> 插件后，你可以在 Spotify 的 <strong>Marketplace</strong> 中自由选择并安装各种主题和功能插件。安装命令如下：</p>
+<figure class="highlight powershell"><table><tbody><tr><td class="code"><pre><span class="line"><span class="built_in">iwr</span> <span class="literal">-useb</span> https://raw.githubusercontent.com/spicetify/spicetify<span class="literal">-marketplace</span>/main/resources/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></tbody></table></figure>
+<p>安装的时候有报错请看看你有没有挂魔法，没有的话导致下载不了，因为是从github上下载的</p>
+<h1 id="Linux和Mac安装spicetify过程"><a href="#Linux和Mac安装spicetify过程" class="headerlink" title="Linux和Mac安装spicetify过程"></a>Linux和Mac安装spicetify过程</h1><ul>
+<li>打开控制命令台复制以下内容并回车 <figure class="highlight awk"><table><tbody><tr><td class="code"><pre><span class="line">curl -fsSL https:<span class="regexp">//</span>raw.githubusercontent.com<span class="regexp">/spicetify/</span>spicetify-cli<span class="regexp">/master/i</span>nstall.sh | sh</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight vim"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">sh</span> curl -fsSL https://raw.githubusercontent.<span class="keyword">com</span>/spicetify/spicetify-marketplace/main/resources/install.<span class="keyword">sh</span>| <span class="keyword">sh</span></span><br></pre></td></tr></tbody></table></figure>
+重新打开spotify 会多出了一个按钮 Marketplace，点击一下你就可以看到主题和插件了</li>
+</ul>
+<hr>
+<h1 id="报错的问题"><a href="#报错的问题" class="headerlink" title="报错的问题"></a>报错的问题</h1><ul>
+<li>安装的时候显示错误 大概率是你网络没用魔法</li>
+<li>如果是win7以下的系统那就是你的powershell太老得去微软下一个最新的powershell</li>
+<li>安装的时候选择了CMD而不是powershell导致显示’sh’ 不是内部或外部命令，也不是可运行的程序或批处理文件。</li>
+<li>误用 CMD：安装过程中必须使用 Powershell，而不是 CMD，否则会出现类似以下的错误提示：</li>
+<li>sh 不是内部或外部命令，也不是可运行的程序或批处理文件。</li>
+</ul>
+<hr>
+]]></content>
+      <categories>
+        <category>Spotify</category>
+      </categories>
+      <tags>
+        <tag>Spotify</tag>
+        <tag>美化</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【云端黑科技】用 Cloudflare Zaraz 轻松提升网站速度和用户体验！</title>
+    <url>/%E3%80%90%E4%BA%91%E7%AB%AF%E9%BB%91%E7%A7%91%E6%8A%80%E3%80%91%E7%94%A8-Cloudflare-Zaraz-%E8%BD%BB%E6%9D%BE%E6%8F%90%E5%8D%87%E7%BD%91%E7%AB%99%E9%80%9F%E5%BA%A6%E5%92%8C%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%EF%BC%81/</url>
+    <content><![CDATA[<h2 id="🚀-什么是-Cloudflare-Zaraz？"><a href="#🚀-什么是-Cloudflare-Zaraz？" class="headerlink" title="🚀 什么是 Cloudflare Zaraz？"></a>🚀 什么是 Cloudflare Zaraz？</h2><p>Cloudflare Zaraz 是 Cloudflare 提供的一项功能，通过 <strong>在云端加载和管理第三方脚本</strong>，减少对用户浏览器的性能消耗。相比传统方法，Zaraz 可以： <span id="more"></span> </p>
+<ul>
+<li>减少脚本对页面速度的影响。  </li>
+<li>提升网站的 Google PageSpeed 分数。  </li>
+<li>优化用户隐私保护，符合 GDPR 等合规要求。</li>
+</ul>
+<hr>
+<h2 id="🛠️-如何配置和使用-Cloudflare-Zaraz"><a href="#🛠️-如何配置和使用-Cloudflare-Zaraz" class="headerlink" title="🛠️ 如何配置和使用 Cloudflare Zaraz"></a>🛠️ 如何配置和使用 Cloudflare Zaraz</h2><h3 id="1️⃣-激活-Cloudflare-Zaraz"><a href="#1️⃣-激活-Cloudflare-Zaraz" class="headerlink" title="1️⃣ 激活 Cloudflare Zaraz"></a>1️⃣ 激活 Cloudflare Zaraz</h3><ol>
+<li><p><strong>登录 Cloudflare 账户</strong>。<br>访问 <a href="https://dash.cloudflare.com/">Cloudflare Dashboard</a>。  </p>
+</li>
+<li><p><strong>选择你的网站</strong>。<br>在仪表板中，点击你要优化的网站域名。  </p>
+</li>
+<li><p><strong>启用 Zaraz</strong>。  </p>
+<ul>
+<li>在左侧菜单中找到 <strong>“Zaraz”</strong> 选项。  </li>
+<li>如果没有看到，确保你的网站启用了 Cloudflare Pro 或更高版本。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/Zaraz.webp" alt="Zaraz"></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="2️⃣-添加脚本（例如-Google-Analytics）"><a href="#2️⃣-添加脚本（例如-Google-Analytics）" class="headerlink" title="2️⃣ 添加脚本（例如 Google Analytics）"></a>2️⃣ 添加脚本（例如 Google Analytics）</h3><ol>
+<li><strong>点击 “Add Tool”</strong> 按钮。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/Analytics.webp" alt="Analytics"></li>
+<li>在弹出的工具列表中选择你要添加的脚本，比如 <strong>Google Analytics</strong>。  </li>
+<li>填写必要的配置参数，例如：  <ul>
+<li>Google Analytics 的追踪 ID（形如 <code>UA-XXXXXX</code>）。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/gcode.webp" alt="ID"></li>
+</ul>
+</li>
+<li>点击保存，你的脚本将被自动托管到云端！<br>这样我们就不用在我们的服务器添加文件和代码，直接在Zaraz就可以用很方便</li>
+</ol>
+<hr>
+<h3 id="3️⃣-自定义规则"><a href="#3️⃣-自定义规则" class="headerlink" title="3️⃣ 自定义规则"></a>3️⃣ 自定义规则</h3><p>Zaraz 支持为不同的页面或用户设置触发条件：  </p>
+<ul>
+<li><strong>页面 URL</strong>：为特定页面加载脚本。  </li>
+<li><strong>用户操作</strong>：例如点击按钮时触发脚本。  </li>
+<li><strong>地域限制</strong>：根据访客位置加载脚本，提升隐私保护。</li>
+</ul>
+<hr>
+<h3 id="4️⃣-测试与优化"><a href="#4️⃣-测试与优化" class="headerlink" title="4️⃣ 测试与优化"></a>4️⃣ 测试与优化</h3><ol>
+<li>访问你的网站，确保新脚本正常运行。  </li>
+<li>使用 Google PageSpeed Insights 检查性能提升情况。  </li>
+<li>定期优化 Zaraz 配置，移除无用脚本。</li>
+</ol>
+<hr>
+<h2 id="🎯-为什么选择-Zaraz？"><a href="#🎯-为什么选择-Zaraz？" class="headerlink" title="🎯 为什么选择 Zaraz？"></a>🎯 为什么选择 Zaraz？</h2><ul>
+<li><strong>降低脚本对页面的影响</strong>，提升用户体验。  </li>
+<li><strong>统一管理第三方服务</strong>，无需修改代码。  </li>
+<li><strong>提升安全性</strong>，减少脚本直接访问用户数据的风险。</li>
+</ul>
+<hr>
+<h2 id="📢-分享这篇教程，解锁网站性能新境界！"><a href="#📢-分享这篇教程，解锁网站性能新境界！" class="headerlink" title="📢 分享这篇教程，解锁网站性能新境界！"></a>📢 分享这篇教程，解锁网站性能新境界！</h2><p>还在等什么？快试试 Cloudflare Zaraz，让你的网站加载如风，用户体验飞升！别忘了分享这篇教程，帮助更多人发现这个神奇的工具！ 🌟</p>
+]]></content>
+      <categories>
+        <category>cloudflare</category>
+        <category>Zaraz</category>
+      </categories>
+      <tags>
+        <tag>cloudflare</tag>
+        <tag>Zaraz</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>万能青年旅店《冀西南林路行》开箱分享与专辑介绍</title>
+    <url>/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97%E3%80%8A%E5%86%80%E8%A5%BF%E5%8D%97%E6%9E%97%E8%B7%AF%E8%A1%8C%E3%80%8B%E5%BC%80%E7%AE%B1%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h2 id="万青二专《冀西南林路行》开箱体验"><a href="#万青二专《冀西南林路行》开箱体验" class="headerlink" title="万青二专《冀西南林路行》开箱体验"></a>万青二专《冀西南林路行》开箱体验</h2><p>期待已久的万能青年旅店第二张专辑《冀西南林路行》终于到手！十年磨一剑，这张专辑在内容和设计上都无可挑剔。实体专辑的封面设计延续了万青一贯的简约风格，同时蕴含深刻的北方气质，让人一见倾心。翻阅附赠的小册子，每一首曲目都充满了诗意与力量。</p>
+<hr>
+<h2 id="专辑背景"><a href="#专辑背景" class="headerlink" title="专辑背景"></a>专辑背景</h2><p><strong>《冀西南林路行》</strong> 是一张承载了深厚思想和情感的作品，标题中“冀西南”不仅指向具体的地理区域，更象征着一次精神上的探索之旅。这张专辑在音乐上依然延续了乐队的摇滚风格，同时加入了器乐曲与叙事性编曲，展现了更加丰富的艺术表达。</p>
+<hr>
+<h2 id="专辑完整曲目"><a href="#专辑完整曲目" class="headerlink" title="专辑完整曲目"></a>专辑完整曲目</h2><p>以下是《冀西南林路行》的全部曲目列表 <sup>[<a href="https://baike.baidu.com/item/%E5%86%80%E8%A5%BF%E5%8D%97%E6%9E%97%E8%B7%AF%E8%A1%8C/55572124?fr=ge_ala#2" target="_blank">1</a>]</sup>，每一首都各具特色，编曲和情感表达层次分明：</p>
+<div align="center">
+
+<table>
+<thead>
+<tr>
+<th>曲目名</th>
+<th>作词</th>
+<th>作曲</th>
+<th>时长</th>
+<th>类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. <strong>早</strong></td>
+<td>（器乐曲）</td>
+<td>董亚千</td>
+<td>01:23</td>
+<td>器乐曲</td>
+</tr>
+<tr>
+<td>2. <strong>泥河</strong></td>
+<td>姬赓</td>
+<td>董亚千</td>
+<td>05:48</td>
+<td>词曲全作</td>
+</tr>
+<tr>
+<td>3. <strong>平等云雾</strong></td>
+<td>（器乐曲）</td>
+<td>董亚千</td>
+<td>01:26</td>
+<td>器乐曲</td>
+</tr>
+<tr>
+<td>4. <strong>采石</strong></td>
+<td>姬赓</td>
+<td>董亚千</td>
+<td>08:56</td>
+<td>词曲全作</td>
+</tr>
+<tr>
+<td>5. <strong>山雀</strong></td>
+<td>姬赓</td>
+<td>董亚千</td>
+<td>03:18</td>
+<td>词曲全作</td>
+</tr>
+<tr>
+<td>6. <strong>绕越</strong></td>
+<td>（器乐曲）</td>
+<td>董亚千</td>
+<td>02:43</td>
+<td>器乐曲</td>
+</tr>
+<tr>
+<td>7. <strong>河北墨麒麟</strong></td>
+<td>姬赓</td>
+<td>董亚千</td>
+<td>11:28</td>
+<td>词曲全作</td>
+</tr>
+<tr>
+<td>8. <strong>郊眠寺</strong></td>
+<td>姬赓</td>
+<td>董亚千</td>
+<td>09:40</td>
+<td>词曲全作</td>
+</tr>
+</tbody></table>
+</div>
+
+<hr>
+<h2 id="推荐曲目"><a href="#推荐曲目" class="headerlink" title="推荐曲目"></a>推荐曲目</h2><h3 id="《河北墨麒麟》"><a href="#《河北墨麒麟》" class="headerlink" title="《河北墨麒麟》"></a><strong>《河北墨麒麟》</strong></h3><p>作为专辑中的压轴之作，这首歌以其恢弘的编曲和深刻的歌词直击人心。小号与吉他的搭配勾勒出辽阔的画面，仿佛将听众带入冀西南的壮丽景致。</p>
+<h3 id="《采石》"><a href="#《采石》" class="headerlink" title="《采石》"></a><strong>《采石》</strong></h3><p>整首歌以缓慢而强烈的节奏展开，歌词传递出对土地与生命的深刻思考，情绪层层递进，最终到达高潮，令人久久不能平静。</p>
+<h3 id="《泥河》"><a href="#《泥河》" class="headerlink" title="《泥河》"></a><strong>《泥河》</strong></h3><p>开篇便以低沉的旋律和叙事性的歌词抓住听众的心，仿佛在讲述一段历史故事。编曲融合了北方民谣的元素，听来韵味悠长。</p>
+<hr>
+<h2 id="实体专辑展示"><a href="#实体专辑展示" class="headerlink" title="实体专辑展示"></a>实体专辑展示</h2><p>专辑设计简约而不失质感，音乐之外的细节同样让人赞叹：</p>
+<center>
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/黑白.webp" alt="黑白" width="50%" height="50%">
+    <p>专辑封面：低调而经典，处处彰显万青的风格</p>
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/包装.webp" alt="包装" width="50%" height="50%">
+    <p>专辑包装：整体设计充满仪式感，让人爱不释手</p>
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/专辑唱片.webp" alt="实体CD" width="50%" height="50%">
+    <p>实体CD：收藏价值满满，细节让人惊喜</p>
+</center>
+
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>《冀西南林路行》</strong> 不仅是万青对音乐创作的进一步探索，更是一场诗意与现实交织的旅程。从编曲到歌词，从旋律到情感，这张专辑展现了乐队深厚的音乐造诣和独特的叙事能力。</p>
+<p>对于每一个热爱音乐、热爱万青的人来说，这张专辑绝对是不可错过的经典之作。让我们随着旋律，开启一场属于北方的心灵旅行吧！</p>
+<blockquote>
+<p>十年磨一剑，《冀西南林路行》不负期待。<br>这不仅仅是一张专辑，更是一份值得细细品味的艺术瑰宝。🎵</p>
+</blockquote>
+<hr>
+<p>[1]专辑曲目内容来源：<a href="https://baike.baidu.com/item/%E5%86%80%E8%A5%BF%E5%8D%97%E6%9E%97%E8%B7%AF%E8%A1%8C/55572124?fr=ge_ala#2">百度百科</a></p>
+]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>日常</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>世界上第一个网站 World Wide Web</title>
+    <url>/%E4%B8%96%E7%95%8C%E4%B8%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-World-Wide-Web/</url>
+    <content><![CDATA[<h1 id="世界上第一个网站"><a href="#世界上第一个网站" class="headerlink" title="世界上第一个网站"></a>世界上第一个网站</h1><p>想知道人类历史上第一个网站是什么样的吗？点击链接了解详情：<a href="https://info.cern.ch/hypertext/WWW/TheProject.html">点我进入世界上第一个网站</a></p>
+<p>这个网站由 <strong>蒂姆·伯纳斯-李 (Tim Berners-Lee)</strong> 于 1991 年创建，是全球信息互联的起点。它不仅为现代互联网铺平了道路，还彻底改变了人类分享与获取信息的方式。</p>
+<hr>
+<h2 id="万维网的由来"><a href="#万维网的由来" class="headerlink" title="万维网的由来"></a><strong>万维网的由来</strong></h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>1980 年代末，蒂姆·伯纳斯-李在欧洲核子研究中心 (CERN) 工作时，发现研究人员需要一种方便的方式共享研究成果和数据。然而，当时的计算机系统互不兼容，信息交换极为困难。</p>
+<h3 id="创造历程"><a href="#创造历程" class="headerlink" title="创造历程"></a>创造历程</h3><ol>
+<li><p><strong>想法的萌芽</strong><br>1989 年，伯纳斯-李提出了一个名为“信息管理：一个建议”的项目计划，旨在通过超文本系统解决信息共享问题。他提出的三个核心技术后来成为万维网的基石：</p>
+<ul>
+<li>**超文本标记语言 (HTML)**：用于创建网页内容。</li>
+<li>**统一资源定位符 (URL)**：用于唯一标识网络资源的位置。</li>
+<li>**超文本传输协议 (HTTP)**：用于信息在网络上的传递。</li>
+</ul>
+</li>
+<li><p><strong>原型开发</strong><br>1990 年，他在 CERN 的 NeXT 计算机上开发出了第一个网页浏览器和服务器。第一个网站于 1991 年上线，提供了关于万维网的基本信息，包括如何创建网页和使用浏览器。</p>
+</li>
+<li><p><strong>公开发布</strong><br>1993 年，伯纳斯-李决定将万维网技术免费开放，推动了全球范围的快速普及。</p>
+</li>
+</ol>
+<hr>
+<h2 id="万维网带来的启发"><a href="#万维网带来的启发" class="headerlink" title="万维网带来的启发"></a><strong>万维网带来的启发</strong></h2><ul>
+<li><strong>开放与合作</strong><br>万维网的成功得益于伯纳斯-李将其技术免费开放。这种开放精神成为互联网发展的核心理念，启发了开源软件运动和全球协作项目（如维基百科、Linux）。</li>
+<li><strong>技术的包容性</strong><br>万维网的设计初衷是包容不同的计算机和系统，这种跨平台思想在今天仍是互联网发展的重要原则。</li>
+<li><strong>信息的民主化</strong><br>万维网使每个人都能轻松创建、分享和获取信息。这种信息民主化极大地推动了教育、文化和科技的发展。</li>
+<li><strong>技术的社会责任</strong><br>伯纳斯-李曾警告，人们应珍视网络的开放性，同时防止其被滥用于隐私侵犯、虚假信息传播等目的。他的呼吁提醒后来者，技术创新应始终以人为本。</li>
+</ul>
+<hr>
+<h2 id="如何创造第一个网站"><a href="#如何创造第一个网站" class="headerlink" title="如何创造第一个网站"></a><strong>如何创造第一个网站</strong></h2><h3 id="创建工具"><a href="#创建工具" class="headerlink" title="创建工具"></a>创建工具</h3><ul>
+<li>使用 HTML 编写页面内容。</li>
+<li>使用简单的文本编辑器创建文档并通过 HTTP 服务发布。</li>
+<li>URL 用于让用户在浏览器中访问资源。</li>
+</ul>
+<h3 id="实践步骤"><a href="#实践步骤" class="headerlink" title="实践步骤"></a>实践步骤</h3><ol>
+<li><strong>编写 HTML 文档</strong>：<figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span><span class="tag">&lt;<span class="name">title</span>&gt;</span>我的第一个网页<span class="tag">&lt;/<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>欢迎来到万维网<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是我的第一个网页！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure></li>
+<li><strong>使用浏览器打开</strong>：<br>保存为 .html 文件后，直接用浏览器打开即可查看页面内容。</li>
+<li><strong>托管到服务器</strong>:</li>
+</ol>
+<ul>
+<li><p>将文件上传到 HTTP 服务器，例如 Apache 或 Nginx。</p>
+</li>
+<li><p>确保服务器运行并配置正确，其他人就可以通过 URL 访问你的页面。</p>
+</li>
+</ul>
+<hr>
+<h2 id="延伸阅读"><a href="#延伸阅读" class="headerlink" title="延伸阅读"></a><strong>延伸阅读</strong></h2><p>如果你对万维网的历史或蒂姆·伯纳斯-李的贡献感兴趣，可以查看以下资源：</p>
+<ol>
+<li><a href="https://www.history.com/topics/inventions/the-invention-of-the-world-wide-web">万维网的历史</a></li>
+<li><a href="https://www.w3.org/People/Berners-Lee/">蒂姆·伯纳斯-李的个人网站</a></li>
+<li><a href="https://home.cern/science/computing/birth-web">CERN 对万维网诞生的介绍</a></li>
+</ol>
+<hr>
+<p>通过了解万维网的诞生，我们能够感受到科技如何改变世界，也能从中汲取启示：创新不仅需要技术，更需要开放、合作和对未来的责任感。</p>
+]]></content>
+      <categories>
+        <category>记录</category>
+        <category>科技</category>
+      </categories>
+      <tags>
+        <tag>网络</tag>
+        <tag>记录</tag>
+        <tag>科技史</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>国内也能用 Gemini 了！超详细教程</title>
+    <url>/%E5%9B%BD%E5%86%85%E4%B9%9F%E8%83%BD%E7%94%A8-Gemini-%E4%BA%86%EF%BC%81%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p><strong>使用 Cloudflare Workers 搭建 Gemini API 代理，并通过 Chatbox 使用 Gemini</strong></p>
+<p>本教程将指导你如何利用 Cloudflare Workers 搭建一个将 Google Gemini API 转换为 OpenAI API 兼容格式的代理，然后使用开源的 Chatbox 连接 Gemini 模型。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><span id="more"></span>
+
+<ol>
+<li><strong>Google Gemini API 密钥:</strong><ul>
+<li>访问 <a href="https://aistuidio.google.com/">aistuidio.google.com</a> 并登录你的 Google 账号。</li>
+<li>在 Google AI Studio 中创建新的 API 密钥。请注意，即使你不在支持的地区，也可以通过 VPN 获取。</li>
+</ul>
+</li>
+<li><strong>Cloudflare 账号:</strong><ul>
+<li>你需要一个 Cloudflare 账号。如果你还没有，请在 <a href="https://cloudflare.com/">cloudflare.com</a> 注册一个。</li>
+</ul>
+</li>
+<li><strong>Github 账号:</strong><ul>
+<li>你需要一个 Github 账号，以便fork项目</li>
+</ul>
+</li>
+<li><strong>Chatbox:</strong><ul>
+<li>下载并安装 <a href="https://github.com/Bin-Huang/chatbox">Chatbox</a> 。这是一个开源的聊天客户端，支持多种 AI 模型。</li>
+</ul>
+</li>
+</ol>
+<h2 id="步骤一：获取gemini-API"><a href="#步骤一：获取gemini-API" class="headerlink" title="步骤一：获取gemini API"></a>步骤一：获取gemini API</h2><ul>
+<li>访问 <a href="https://aistuidio.google.com/">aistuidio.google.com</a>，登录你自己的谷歌账号</li>
+<li>点击右上角<strong>Get API key</strong><br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/googleapi.webp" alt="Get API key"></li>
+<li>点击<strong>秘钥创建</strong>这样你就获得一个秘钥，后续下载好chatbox设置需要复制gemini API<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/%E5%A4%8D%E5%88%B6AI%E7%A7%98%E9%92%A5.webp" alt="复制秘钥"></li>
+</ul>
+<h2 id="步骤二：部署-Cloudflare-Worker"><a href="#步骤二：部署-Cloudflare-Worker" class="headerlink" title="步骤二：部署 Cloudflare Worker"></a>步骤二：部署 Cloudflare Worker</h2><ol>
+<li><p><strong>Deploy<code>openai-gemini</code> 项目:</strong></p>
+<ul>
+<li>访问 <a href="https://github.com/PublicAffairs/openai-gemini">https://github.com/PublicAffairs/openai-gemini</a></li>
+<li>点击下面的 “Deploy with worker” 按钮，项目会自动部署 。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/github%E9%A1%B5%E9%9D%A2.webp" alt="github项目"></li>
+<li>点击 I have a account（在此之前你必须有cloudflare账号和域名dns绑定到cloudflare）<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/cloudflare%E8%B4%A6%E5%8F%B7.webp" alt="cloudflare账号"></li>
+</ul>
+</li>
+<li><p><strong>填写cloudflare woker token和api</strong></p>
+<ul>
+<li>点击这按顺序点击这两个，先点击<strong>Worker Dashboard</strong>，登录号你的cloudflare在你的左侧会显示你的账户ID点击复制填写在<strong>Account ID</strong>。</li>
+<li>点击<strong>My profile</strong>在<strong>用户API令牌</strong>点击<strong>创建令牌</strong>选择<strong>编辑cloudflare worker使用模版</strong><br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/%E5%88%9B%E5%BB%BA%E7%A7%98%E9%92%A5.webp" alt="创建api令牌"><br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/%E5%88%9B%E5%BB%BAworkerAI%E7%A7%98%E9%92%A5.webp" alt="使用cloudflarewoker模版"></li>
+<li>在账户资源中选择<strong>包括</strong>和<strong>所有账户</strong>还有下面的区域资源也是一样选择<strong>包括</strong>和<strong>包括所有区域</strong>（账户资源可以选择你所需要的域名为了方便我就选择所有账户以便后面可以选择域名）</li>
+<li><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/%E7%BC%96%E8%BE%91.webp" alt="编辑cloudflareworker"></li>
+<li>点击<strong>Connect Account</strong>这里之后会跳转到github，登录github会自动action。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/%E5%A1%AB%E5%86%99.webp" alt="Connect Account"></li>
+</ul>
+</li>
+<li><p><strong>回到cloudflare账号</strong></p>
+<ul>
+<li>登录你的 Cloudflare 账号，进入 “Workers &amp; Pages” 页面。</li>
+<li>找到gemini的项目</li>
+<li>找到<strong>设置</strong>里面在<strong>域和路由</strong>点击<strong>添加</strong>点击<strong>自定域</strong>输入你的域名（比如你的域名123.com 你可以在123.com添加你喜欢的前缀比如chat.123.com）<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/%E8%AE%BE%E7%BD%AE%E5%9F%9F%E5%90%8D.webp" alt="设置域名"><br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D.webp" alt="自定域"></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="步骤三：配置-Chatbox"><a href="#步骤三：配置-Chatbox" class="headerlink" title="步骤三：配置 Chatbox"></a>步骤三：配置 Chatbox</h2><ol>
+<li><p><strong>下载对应系统的chatbox（以Windows为例子）</strong></p>
+<ul>
+<li><a href="https://github.com/Bin-Huang/chatbox">Chatbox</a>点击这个跳转到github之后可以点击<strong>release</strong>选择对应的下载版本<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/yyyy/MM/dd/chatbox-%E5%AF%B9%E5%BA%94%E7%9A%84%E5%AE%89%E8%A3%85%E5%8C%85.webp" alt="下载对应版本"></li>
+</ul>
+</li>
+<li><p><strong>添加自定义模型:</strong></p>
+<ul>
+<li>在 Chatbox 的设置中，找到 “模型” 或 “自定义模型” 的选项。</li>
+<li>点击 “添加模型” 或类似按钮。</li>
+</ul>
+</li>
+<li><p><strong>配置模型参数:</strong></p>
+<ul>
+<li><strong>模型名称:</strong> 例如 <code>Gemini-Cloudflare</code>。</li>
+<li><strong>API 类型:</strong> 选择 <code>OpenAI</code>。</li>
+<li><strong>API Base URL:</strong> 将你的 Cloudflare Worker 的 URL 粘贴到这里（就是设置自定义的域名）<code>，例如 </code>chat.123.com。</li>
+<li><strong>API Key:</strong>  回到第一步骤复制你的gemini的api并填写。</li>
+<li><strong>模型名称:</strong>  设置为 <code>gemini-1.5-pro-latest</code> 或者 <code>models/gemini-1.5-pro-latest</code></li>
+</ul>
+</li>
+<li><p><strong>测试连接:</strong></p>
+</li>
+</ol>
+<h2 id="步骤四：开始使用-Gemini"><a href="#步骤四：开始使用-Gemini" class="headerlink" title="步骤四：开始使用 Gemini"></a>步骤四：开始使用 Gemini</h2><ol>
+<li><strong>选择模型：</strong><ul>
+<li>在 Chatbox 中，选择你刚刚添加的 <code>Gemini-Cloudflare</code> 模型。</li>
+</ul>
+</li>
+<li><strong>开始聊天：</strong><ul>
+<li>现在你可以像使用 OpenAI 模型一样，与 Gemini 模型进行对话了。</li>
+</ul>
+</li>
+</ol>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li><strong>模型选择：</strong> 你可以使用 <code>gemini-1.5-pro-latest</code> 模型，或者其他 Gemini 模型。</li>
+<li><strong>API 限制:</strong>  Gemini API 可能存在使用限制，请参考 Google AI Studio 的文档。</li>
+<li><strong>Cloudflare Worker 限制：</strong> Cloudflare Worker 有一些资源限制，例如执行时间限制。如果你的请求量过大，可能会遇到问题。</li>
+<li><strong><code>openai-gemini</code> 项目:</strong>  这个项目还在开发中，可能存在一些 bug 或不兼容的问题。请关注项目的更新。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过本教程，你已经成功地使用 Cloudflare Workers 搭建了 Gemini API 的代理，并使用 Chatbox 连接了 Gemini 模型。现在你可以享受免费的 Gemini API 服务了。</p>
+<p><strong>补充说明:</strong></p>
+<ul>
+<li>这个教程是基于你提供的 Github 项目链接以及你的需求编写的。</li>
+<li>请确保你的 Cloudflare Worker URL 是正确的，并且你的 Gemini API 密钥也是有效的。</li>
+<li>如果遇到任何问题，请仔细检查你的配置，并参考相关文档。</li>
+<li>由于 <code>openai-gemini</code> 项目处于活跃开发中，请关注项目更新，以获得最新的功能和修复。</li>
+<li>请注意，使用 Gemini API 需遵守 Google 的服务条款。</li>
+<li>请注意，使用 Cloudflare Workers 需遵守 Cloudflare 的服务条款。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Gemini</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>域名取消绑定后为什么输入IP网址还是会自动跳转域名？</title>
+    <url>/%E5%9F%9F%E5%90%8D%E5%8F%96%E6%B6%88%E7%BB%91%E5%AE%9A%E5%90%8E%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BE%93%E5%85%A5IP%E7%BD%91%E5%9D%80%E8%BF%98%E6%98%AF%E4%BC%9A%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BD%AC%E5%9F%9F%E5%90%8D%EF%BC%9F/</url>
+    <content><![CDATA[<p><strong>域名取消绑定后为什么输入IP网址还是会自动跳转域名</strong></p>
+<h1 id="可能原因及解决方案"><a href="#可能原因及解决方案" class="headerlink" title="可能原因及解决方案"></a>可能原因及解决方案</h1><h2 id="域名服务商未彻底删除IP绑定"><a href="#域名服务商未彻底删除IP绑定" class="headerlink" title="域名服务商未彻底删除IP绑定"></a>域名服务商未彻底删除IP绑定</h2><p>如果你的域名服务商没有彻底删除IP绑定信息，IP网址可能依旧与域名关联。你可以检查并删除所有绑定到该IP地址的域名。</p>
+<span id="more"></span>
+<h2 id="域名服务商缓存未清理"><a href="#域名服务商缓存未清理" class="headerlink" title="域名服务商缓存未清理"></a>域名服务商缓存未清理</h2><p>有时，域名服务商的缓存未及时清理，导致IP地址仍会重定向到域名。请联系你的服务商以清理相关缓存。</p>
+<h2 id="服务器上的-URL-重写规则未修改"><a href="#服务器上的-URL-重写规则未修改" class="headerlink" title="服务器上的 URL 重写规则未修改"></a>服务器上的 URL 重写规则未修改</h2><p>服务器上的 URL 重写规则（如 Nginx 或 Apache 的 <code>.htaccess</code> 文件）可能未按照正确的地址进行修改，导致IP地址仍然重定向到域名。</p>
+<h2 id="示例：使用-Cloudflare-进行检查和调整"><a href="#示例：使用-Cloudflare-进行检查和调整" class="headerlink" title="示例：使用 Cloudflare 进行检查和调整"></a>示例：使用 Cloudflare 进行检查和调整</h2><ol>
+<li><p>打开 <a href="https://dash.cloudflare.com/">Cloudflare</a> 网站，进入 <strong>DNS</strong> 记录页面，检查是否还有其他域名绑定到你的服务器IP地址，确保所有无关的域名记录都已删除。</p>
+</li>
+<li><p>进入 <strong>缓存</strong> - <strong>配置</strong> - <strong>清除缓存</strong>，选择 <strong>清除所有内容</strong> 以确保缓存已被清理。<br>  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/cloudflare%E7%BC%93%E5%AD%98.webp" alt="cloudflare缓存清理"></p>
+</li>
+<li><p>打开你的Nginx配置文件，确认是否已将绑定的域名更改为IP地址。这样一来，你的IP网址就能正常打开了。</p>
+</li>
+</ol>
+<blockquote>
+<p>以上解决方案基于80端口已开放的公网IP地址。</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>域名注册与 Cloudflare 托管教程</title>
+    <url>/%E5%9F%9F%E5%90%8D%E6%B3%A8%E5%86%8C%E4%B8%8E-Cloudflare-%E6%89%98%E7%AE%A1%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="域名注册与-Cloudflare-托管教程"><a href="#域名注册与-Cloudflare-托管教程" class="headerlink" title="域名注册与 Cloudflare 托管教程"></a>域名注册与 Cloudflare 托管教程</h1><p>本指南将引导你完成域名注册，以及使用 Cloudflare 进行域名托管的步骤。</p>
+<h1 id="注册域名"><a href="#注册域名" class="headerlink" title="注册域名"></a>注册域名</h1><h2 id="推荐服务商：NameSilo"><a href="#推荐服务商：NameSilo" class="headerlink" title="推荐服务商：NameSilo"></a>推荐服务商：NameSilo</h2><p>我们推荐使用 NameSilo 进行域名注册，它操作简便且价格合理。<a href="https://www.namesilo.com/?rid=e401749ou">点击这里</a> 直接访问 NameSilo 官网。</p>
+<h2 id="域名后缀选择"><a href="#域名后缀选择" class="headerlink" title="域名后缀选择"></a>域名后缀选择</h2><ul>
+<li><strong>.com：</strong> 推荐用于正式网站，更具专业性。</li>
+<li><strong>.xyz / .site：</strong> 适合个人博客、学生项目等，价格相对较低。</li>
+</ul>
+<p>请根据你的需求选择合适的域名后缀。</p>
+<h1 id="NameSilo-用户注册"><a href="#NameSilo-用户注册" class="headerlink" title="NameSilo 用户注册"></a>NameSilo 用户注册</h1><h3 id="注册注意事项"><a href="#注册注意事项" class="headerlink" title="注册注意事项"></a>注册注意事项</h3><ul>
+<li><strong>邮箱：</strong> 请使用你常用的有效邮箱进行注册，以便接收重要通知。</li>
+<li><strong>用户名：</strong> 注册时设置的用户名请务必牢记。</li>
+</ul>
+<h2 id="填写个人信息"><a href="#填写个人信息" class="headerlink" title="填写个人信息"></a>填写个人信息</h2><ol>
+<li>注册完成后，你需要填写个人信息。</li>
+<li>访问 <a href="https://www.meiguodizhi.com/">美国地址生成器</a> 或直接复制此网址：<code>https://www.meiguodizhi.com</code>。</li>
+<li>在 NameSilo 网站，点击 <strong>Account Settings</strong>，按照生成器提供的身份信息填写。</li>
+</ol>
+<h2 id="配置-DNS-服务器"><a href="#配置-DNS-服务器" class="headerlink" title="配置 DNS 服务器"></a>配置 DNS 服务器</h2><ol>
+<li>填写完个人信息后，点击 <strong>Dashboard</strong>。</li>
+<li>如果你已购买域名，会看到 <strong>Active Domains</strong>，点击 <strong>Manage</strong>。</li>
+<li>点击你的域名，找到 <strong>nameserver</strong>，点击 <strong>Edit</strong>。</li>
+<li><strong>删除所有已有的 nameserver</strong>，并保持此页面打开，我们稍后会用到。</li>
+</ol>
+<h1 id="Cloudflare-托管域名"><a href="#Cloudflare-托管域名" class="headerlink" title="Cloudflare 托管域名"></a>Cloudflare 托管域名</h1><h2 id="添加域名到-Cloudflare"><a href="#添加域名到-Cloudflare" class="headerlink" title="添加域名到 Cloudflare"></a>添加域名到 Cloudflare</h2><ol>
+<li>访问 Cloudflare 官网，点击 <strong>添加域</strong>。</li>
+<li>输入你购买的域名，例如 <code>123.xyz</code>。</li>
+<li>选择 <strong>免费计划</strong> (如果你有特殊需求，也可以考虑其他付费计划)。</li>
+</ol>
+<h2 id="获取-Cloudflare-DNS-服务器"><a href="#获取-Cloudflare-DNS-服务器" class="headerlink" title="获取 Cloudflare DNS 服务器"></a>获取 Cloudflare DNS 服务器</h2><p>Cloudflare 会提供两个 DNS 服务器地址，例如：</p>
+<figure class="highlight stylus"><table><tbody><tr><td class="code"><pre><span class="line">poppy<span class="selector-class">.ns</span><span class="selector-class">.cloudflare</span>.com</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight stylus"><table><tbody><tr><td class="code"><pre><span class="line">ray<span class="selector-class">.ns</span><span class="selector-class">.cloudflare</span>.com</span><br></pre></td></tr></tbody></table></figure>
+
+<p>请复制这两个地址。</p>
+<h2 id="配置-NameSilo-DNS-服务器"><a href="#配置-NameSilo-DNS-服务器" class="headerlink" title="配置 NameSilo DNS 服务器"></a>配置 NameSilo DNS 服务器</h2><ol>
+<li>返回到之前在 NameSilo 保留的 <strong>nameserver</strong> 编辑页面。</li>
+<li>将 Cloudflare 提供的 DNS 服务器地址粘贴到 NameSilo 的 nameserver 中。</li>
+<li>保存更改。</li>
+</ol>
+<h2 id="检查-Cloudflare-配置"><a href="#检查-Cloudflare-配置" class="headerlink" title="检查 Cloudflare 配置"></a>检查 Cloudflare 配置</h2><ol>
+<li>返回 Cloudflare 页面，点击 <strong>检查</strong> 按钮。</li>
+<li>通常情况下，配置会在 5 分钟内生效。</li>
+<li>如果配置未生效，请稍后或隔天再进行检查。</li>
+</ol>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>一旦配置生效，你就可以使用你的域名了。</p>
+]]></content>
+      <categories>
+        <category>cloudflare</category>
+      </categories>
+      <tags>
+        <tag>cloudflare</tag>
+        <tag>域名注册</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>曾经的百元机之王：酷派手机为何从辉煌走向低谷?</title>
+    <url>/%E6%9B%BE%E7%BB%8F%E7%9A%84%E7%99%BE%E5%85%83%E6%9C%BA%E4%B9%8B%E7%8E%8B%EF%BC%9A%E9%85%B7%E6%B4%BE%E6%89%8B%E6%9C%BA%E4%B8%BA%E4%BD%95%E4%BB%8E%E8%BE%89%E7%85%8C%E8%B5%B0%E5%90%91%E4%BD%8E%E8%B0%B7/</url>
+    <content><![CDATA[<h1 id="从巅峰到低谷：酷派手机的财务困局与市场份额分析"><a href="#从巅峰到低谷：酷派手机的财务困局与市场份额分析" class="headerlink" title="从巅峰到低谷：酷派手机的财务困局与市场份额分析"></a>从巅峰到低谷：酷派手机的财务困局与市场份额分析</h1><p>酷派（Coolpad），曾是国内智能手机市场的重要玩家之一，凭借其高性价比的百元机产品在早期吸引了大量消费者。然而，随着市场竞争的加剧、技术创新滞后以及战略失误，酷派的市场份额逐渐萎缩，最终陷入财务困境。本文将从酷派的辉煌历史、市场份额变化、财务状况和转型困局等多个方面进行详细分析。</p>
+<div align="center"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://img.antutu.com/20180404/s_15228305111376_1.jpg" alt="Coolpad" width="500"></div>
+
+<blockquote>
+<p>图片来源：<a href="https://www.antutu.com/doc/114017.htm">安兔兔</a></p>
+</blockquote>
+<span id="more"></span>
+<hr>
+<h2 id="一、从百元机到市场低迷：酷派曾经的成功与衰退"><a href="#一、从百元机到市场低迷：酷派曾经的成功与衰退" class="headerlink" title="一、从百元机到市场低迷：酷派曾经的成功与衰退"></a>一、从百元机到市场低迷：酷派曾经的成功与衰退</h2><p>酷派在智能手机行业早期取得了不小的成绩，尤其在中低端市场。其百元机的推出，使大量预算有限的消费者选择了酷派。以下是酷派辉煌时期的几个关键因素：</p>
+<ol>
+<li><strong>性价比与百元机战略</strong><br>酷派凭借着价格亲民的百元机快速吸引了大量消费者，尤其是三四线城市的用户。相比于同类产品，酷派在硬件上并不逊色，但价格更具竞争力。</li>
+<li><strong>运营商渠道合作</strong><br>酷派与中国移动等运营商的合作，使其迅速在市场中占据一席之地。通过推出定制版手机，酷派得以快速获得消费者的信任，特别是在农村和二线城市。</li>
+<li><strong>市场份额扩展</strong><br>2014至2016年间，酷派的市场份额曾一度超过10%，尤其是在千元以下的手机市场中占据主导地位。然而，随着行业的发展，酷派未能及时跟进技术创新，开始失去市场份额。</li>
+</ol>
+<hr>
+<h2 id="二、市场份额逐年下降：从领跑到跟随"><a href="#二、市场份额逐年下降：从领跑到跟随" class="headerlink" title="二、市场份额逐年下降：从领跑到跟随"></a>二、市场份额逐年下降：从领跑到跟随</h2><p>随着行业的技术更新换代和竞争的加剧，酷派的市场份额逐渐下滑。以下是酷派市场份额的变化趋势：</p>
+<h3 id="酷派市场份额变化（2015-2023年）"><a href="#酷派市场份额变化（2015-2023年）" class="headerlink" title="酷派市场份额变化（2015-2023年）"></a><strong>酷派市场份额变化（2015-2023年）</strong></h3><table>
+<thead>
+<tr>
+<th>年份</th>
+<th>国内市场份额</th>
+<th>主要原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2015年</td>
+<td>10%</td>
+<td>依靠百元机和运营商渠道占据市场份额</td>
+</tr>
+<tr>
+<td>2016年</td>
+<td>9%</td>
+<td>受限于产品创新不足，竞争开始激烈</td>
+</tr>
+<tr>
+<td>2017年</td>
+<td>7%</td>
+<td>华为、小米、OPPO等品牌的崛起，酷派份额逐渐下降</td>
+</tr>
+<tr>
+<td>2018年</td>
+<td>4%</td>
+<td>市场疲软，未能及时适应5G、AI等新技术</td>
+</tr>
+<tr>
+<td>2019年</td>
+<td>2%</td>
+<td>品牌形象逐渐模糊，线上渠道合作较少</td>
+</tr>
+<tr>
+<td>2020年</td>
+<td>1%</td>
+<td>市场份额急剧萎缩，酷派几乎退出国内主流市场</td>
+</tr>
+<tr>
+<td>2021年</td>
+<td>0.5%</td>
+<td>完全退出手机业务，转向地产及物业租赁领域</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="三、财务困境：亏损收窄，但盈利前景渺茫"><a href="#三、财务困境：亏损收窄，但盈利前景渺茫" class="headerlink" title="三、财务困境：亏损收窄，但盈利前景渺茫"></a>三、财务困境：亏损收窄，但盈利前景渺茫</h2><p>酷派目前的财务状况依然处于亏损状态，尽管亏损的幅度有所收窄。以下是酷派2022年至2024年上半年的财务对比图表：</p>
+<p><strong>酷派财务数据（2022-2024年上半年）</strong></p>
+<table>
+<thead>
+<tr>
+<th>年份</th>
+<th>净亏损（港元）</th>
+<th>毛利/毛损（港元）</th>
+<th>主要收入来源</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2022年</td>
+<td>-6.25亿</td>
+<td>-0.05亿</td>
+<td>手机销售、运营商定制机</td>
+</tr>
+<tr>
+<td>2023年</td>
+<td>-2.25亿</td>
+<td>+1亿</td>
+<td>资产处置、手机及物业租赁</td>
+</tr>
+<tr>
+<td>2024年（H1）</td>
+<td>-0.95亿</td>
+<td>+1.2亿</td>
+<td>土地资产盘活、物业租赁</td>
+</tr>
+</tbody></table>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://raw.githubusercontent.com/Duoqixiaozei/img/master/Coolpad_Financial.webp" alt="酷派财务分析图"></p>
+<p><strong>数据分析：</strong></p>
+<ol>
+<li><strong>亏损逐年收窄</strong><br>酷派集团（Coolpad）近年来面临了显著的财务困境和市场份额的逐步下滑。据其最新财报预估，酷派在2024年上半年预计会录得约9000万到9500万港元的净亏损。这一亏损虽然较2023年有所减少，但仍反映出公司在品牌重塑和产品销售上的困难。2023年度，公司减少了运营成本和产品分销开支，同时也开始了调整销售渠道和低成本电商策略，虽然有所改进，但整体收入仍难以突破亏损的困境。<sup>[<a href="https://www.mitrade.com/cn/insights/news/live-news/article-8-346818-20240906" target="_blank">1</a>]</sup></li>
+<li><strong>资产处置依赖</strong><br>酷派通过出售土地和非主营资产来减轻亏损压力，这种策略为公司带来了暂时的现金流，但并非可持续的增长之路<sup>[<a href="(https://cn.investing.com/equities/coolpad-group-financial-summary" target="_blank">2</a>]</sup>。</li>
+</ol>
+<hr>
+<h2 id="四、错失创新与市场份额丧失"><a href="#四、错失创新与市场份额丧失" class="headerlink" title="四、错失创新与市场份额丧失"></a>四、错失创新与市场份额丧失</h2><p>酷派市场份额的下降主要源于以下几点：</p>
+<ol>
+<li><strong>技术创新滞后</strong><br>酷派未能在4G、5G等关键技术上与竞争对手同步，导致其产品的技术更新滞后，失去了消费者的兴趣，尤其是与小米、华为等品牌的技术创新差距逐渐拉大。</li>
+<li><strong>未能有效转型</strong><br>尽管酷派在房地产和物业租赁等领域进行了转型，但其核心手机业务并未得到有效复兴。地产业务虽然带来了一定的现金流，但没有从根本上解决酷派的主营问题<sup>[<a href="https://news.qq.com/rain/a/20240906A08ITG00" target="_blank">3</a>]</sup>。</li>
+<li><strong>竞争加剧</strong><br>华为、小米、OPPO、vivo等品牌的崛起，凭借着技术创新、强大的品牌影响力和线上线下的深度布局，进一步挤压了酷派的市场份额。</li>
+</ol>
+<hr>
+<h2 id="五、酷派的未来展望：能否实现复兴？"><a href="#五、酷派的未来展望：能否实现复兴？" class="headerlink" title="五、酷派的未来展望：能否实现复兴？"></a>五、酷派的未来展望：能否实现复兴？</h2><p>尽管酷派的市场份额和财务状况堪忧，但公司仍然拥有一定的品牌影响力。若想逆袭，酷派需要在以下几个方面进行调整：</p>
+<ol>
+<li><strong>技术创新与差异化竞争</strong><br>酷派应加强在5G、AI、智能硬件等领域的研发，推出具有差异化竞争力的产品。此外，酷派可以进一步发展物联网、智能家居等新兴领域，寻找新的增长点。</li>
+<li><strong>品牌重塑与市场营销</strong><br>通过与年轻人群体相关的品牌重塑，酷派有机会重新激活市场份额。创新的营销手段和创意广告将有助于提高酷派的品牌知名度。</li>
+<li><strong>加强电商渠道建设</strong><br>酷派需要更加重视电商平台的建设，尤其是在线渠道的拓展。通过与主要电商平台合作，可以提高品牌曝光率和销量。</li>
+<li><strong>多元化发展</strong><br>酷派应在维持手机业务的同时，扩大其业务范围，尤其是进入5G、智能硬件等新兴产业，并与其他产业进行跨界合作，提升整体竞争力。</li>
+</ol>
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>酷派从“百元机”的市场传奇到如今的低迷困境，经历了市场份额的不断下滑和财务状况的恶化。尽管如此，酷派仍然保留了一定的品牌价值和市场潜力。如果能通过技术创新、品牌重塑以及市场多元化来实现自我突破，酷派或许能够在未来的竞争中找到新的出路。</p>
+<hr>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li>[1]酷派2024年上半年财务预估，预计净亏损约9000万至9500万港元 <a href="https://finance.sina.com.cn/">来源</a></li>
+<li>[2]南方都市报：酷派土地资产处置 <a href="https://cn.investing.com/equities/coolpad-group-financial-summary">来源</a></li>
+<li>[3]腾讯新闻：酷派财务数据分析 <a href="https://news.qq.com/rain/a/20240906A08ITG00">来源</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>酷派手机</tag>
+        <tag>百元机之王</tag>
+        <tag>市场份额</tag>
+        <tag>财务分析</tag>
+        <tag>手机行业衰退</tag>
+        <tag>品牌失落</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>这首歌的歌词让人震撼！《大石碎胸口》你听过吗？</title>
+    <url>/%E6%AD%8C%E6%9B%B2%E6%8E%A8%E8%8D%90%E3%80%8A%E5%A4%A7%E7%9F%B3%E7%A2%8E%E8%83%B8%E5%8F%A3%E3%80%8B/</url>
+    <content><![CDATA[<h1 id="🎶-这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"><a href="#🎶-这首歌的歌词让人震撼！《大石碎胸口》你听过吗？" class="headerlink" title="🎶 这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"></a>🎶 这首歌的歌词让人震撼！《大石碎胸口》你听过吗？</h1><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97%E5%AD%90.webp" alt="万能青年旅店专辑封面"></p>
+<span id="more"></span>
+<p>你有过那种听一首歌，突然被歌词震撼到的感觉吗？今天我就想给大家推荐一首让我久久不能忘怀的歌——<strong>《大石碎胸口》</strong>，它出自万能青年旅店的同名专辑。这首歌至今已经发行13年，但每次听都能给我全新的感触，你一定不能错过。</p>
+<h2 id="🎧-为什么这首歌让我停不下来？"><a href="#🎧-为什么这首歌让我停不下来？" class="headerlink" title="🎧 为什么这首歌让我停不下来？"></a>🎧 为什么这首歌让我停不下来？</h2><p><strong>《大石碎胸口》</strong>这首歌的旋律和歌词有种让人无法抗拒的魅力。可能你第一次听，会觉得它和你之前听过的歌曲有点不同——它不是那种一听就让人愉快的旋律，而是给你一种<strong>沉重却不失力量的感觉</strong>。这首歌的旋律融合了<strong>摇滚、民谣与实验音乐</strong>，每次的编曲都能在耳朵里回响不已。</p>
+<p>在听这首歌的那一刻，你一定会感到一种莫名的压迫感，仿佛有一块石头压在胸口——这种感觉就是歌名的来源，而它的深意也远不止于此。</p>
+<h2 id="🎤-歌词究竟有多震撼？"><a href="#🎤-歌词究竟有多震撼？" class="headerlink" title="🎤 歌词究竟有多震撼？"></a>🎤 歌词究竟有多震撼？</h2><p>当你开始认真听歌词时，你会发现它的深度远超一般的歌。歌名里的“大石”和“胸口”，其实是两种象征：<strong>大石代表着生活中的压力、困境，而胸口则是承载这些痛苦的地方</strong>。歌词中的每一句话，都像是生活中的真实写照，讲述了普通人在社会变革中的迷茫、挣扎和不屈。</p>
+<p>歌词里提到的“<strong>黑暗好像一颗巨石按在胸口</strong>”，真的是让我每次都想停下来思考：生活中的那些“石头”，是不是我们每个人都曾背负过呢？</p>
+<p>这首歌也让你看到一个不为人知的世界——它不仅讲述个人的心境，也隐约透露着社会的巨大压力。歌词里有很多值得琢磨的地方，你可能听了好几遍，才会慢慢发现其中的深意。</p>
+<h2 id="🎶-音乐的独特魅力"><a href="#🎶-音乐的独特魅力" class="headerlink" title="🎶 音乐的独特魅力"></a>🎶 音乐的独特魅力</h2><p>这首歌的编曲和演奏真的是无可挑剔。它不仅仅是一首摇滚歌，更多的是一种情感的释放。每一个乐器的使用都非常精巧，从小号、小提琴到电吉他、贝斯，这些音符交织在一起，构成了歌的层次感和情感张力。特别是在高潮部分，音乐仿佛要把你拉进一个<strong>深邃的世界</strong>，让你与歌词中的情感产生共鸣。</p>
+<h2 id="💭-歌词摘选"><a href="#💭-歌词摘选" class="headerlink" title="💭 歌词摘选"></a>💭 歌词摘选</h2><blockquote>
+<p>渔王还想 继续做渔王<br>而海港已经 不知去向<br>此刻他醉倒 在洗浴中心<br>没有潮汐的梦<br>胸口已暮色苍茫</p>
+</blockquote>
+<blockquote>
+<p>肥胖的城市 递给他一个<br>传统的方法 来克制恐慌<br>卖掉武器 风暴喉咙<br>换取饮食<br>背叛能让你获得自由</p>
+</blockquote>
+<blockquote>
+<p>停电之后 暂时摆脱了<br>坚硬的时刻 倒转的河<br>肥胖的城市<br>驱赶着所有 拒绝沉没的人<br>那首疯狂的歌又响起</p>
+</blockquote>
+<blockquote>
+<p>电灯熄灭 物换星移 泥牛入海<br>黑暗好像 一颗巨石 按在胸口<br>独脚大盗 百万富翁 摸爬滚打<br>黑暗好像 一颗巨石 按在胸口</p>
+</blockquote>
+<h2 id="📢-总结：你敢尝试这份沉重与力量的结合吗？"><a href="#📢-总结：你敢尝试这份沉重与力量的结合吗？" class="headerlink" title="📢 总结：你敢尝试这份沉重与力量的结合吗？"></a>📢 总结：你敢尝试这份沉重与力量的结合吗？</h2><p>如果你还没有听过 <strong>《大石碎胸口》</strong>，真的是时候去听一听了。它不仅仅是一首歌，它是<strong>关于生活的深刻反思</strong>，是<strong>对抗压力和困境的力量</strong>。每次听完，你会感觉到一种被深深触动的感觉，它的歌词和旋律会在你心中留下印记。</p>
+<p>所以，<strong>你准备好被这首歌震撼了吗？</strong> 如果你也像我一样，喜欢那种能带来深刻思考的音乐，那么这首歌你一定不能错过！🌟</p>
+]]></content>
+      <categories>
+        <category>歌曲推荐</category>
+      </categories>
+      <tags>
+        <tag>歌曲推荐</tag>
+        <tag>万能青年旅店</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用域名和cloudflare创建无限邮箱</title>
+    <url>/%E7%94%A8%E5%9F%9F%E5%90%8D%E5%92%8Ccloudflare%E5%88%9B%E5%BB%BA%E6%97%A0%E9%99%90%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><strong>域名：</strong> 你需要一个已经拥有的域名。</li>
+<li><strong>Cloudflare 账号：</strong> 如果没有，请前往 <a href="https://www.cloudflare.com/">Cloudflare 官网</a> 注册一个。</li>
+<li><strong>官方文档：</strong> <a href="https://temp-mail-docs.awsl.uk/">https://temp-mail-docs.awsl.uk/</a></li>
+<li><strong>域名接入 Cloudflare：</strong> 如果你还不清楚如何将域名接入 Cloudflare，请参考这篇教程： <a href="https://pw0n.xyz/">点击这里</a> (请注意，此链接可能需要替换为实际可用的教程链接)</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Cloudflare-电子邮件设置"><a href="#Cloudflare-电子邮件设置" class="headerlink" title="Cloudflare 电子邮件设置"></a>Cloudflare 电子邮件设置</h2><ol>
+<li><strong>开始使用电子邮件路由：</strong> 在 Cloudflare 控制台中，找到你的域名，点击 <strong>电子邮件</strong>，然后选择 <strong>电子邮件路由</strong> 开始使用。</li>
+<li><strong>自定义域名前缀和验证邮箱：</strong><ul>
+<li>为你的域名设置一个前缀。</li>
+<li>在下方输入<strong>你的真实邮箱地址</strong>（QQ 邮箱或 163 邮箱等，确保能接收到邮件）。</li>
+<li>点击 <strong>验证邮箱</strong>。</li>
+</ul>
+</li>
+<li><strong>验证邮箱：</strong> 前往你填写的邮箱，找到 Cloudflare 发来的邮件，点击邮件中的链接完成验证。</li>
+<li><strong>启用电子邮件路由：</strong> 返回 Cloudflare，点击 <strong>继续</strong>，在电子邮件路由入门指南页面，点击 <strong>添加记录并启用</strong>。</li>
+<li><strong>编辑路由规则：</strong> 点击 <strong>编辑</strong>，打开 <strong>状态</strong>，然后点击 <strong>路由规则</strong>。</li>
+</ol>
+<h2 id="创建-D1-数据库"><a href="#创建-D1-数据库" class="headerlink" title="创建 D1 数据库"></a>创建 D1 数据库</h2><ol>
+<li><strong>进入 D1 数据库：</strong> 在 Cloudflare 主页，点击 <strong>存储和数据库</strong>，然后选择 <strong>D1 SQL 数据库</strong>。</li>
+<li><strong>创建数据库：</strong> 点击 <strong>创建</strong>，输入一个你喜欢的名字，然后点击 <strong>创建</strong>。</li>
+<li><strong>执行 SQL 脚本：</strong><ul>
+<li>复制以下 SQL 代码：<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> raw_mails (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    message_id TEXT,</span><br><span class="line">    source TEXT,</span><br><span class="line">    address TEXT,</span><br><span class="line">    raw TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_raw_mails_address <span class="keyword">ON</span> raw_mails(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> address (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span> AUTOINCREMENT,</span><br><span class="line">    name TEXT <span class="keyword">UNIQUE</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_address_name <span class="keyword">ON</span> address(name);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> auto_reply_mails (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    source_prefix TEXT,</span><br><span class="line">    name TEXT,</span><br><span class="line">    address TEXT <span class="keyword">UNIQUE</span>,</span><br><span class="line">    subject TEXT,</span><br><span class="line">    message TEXT,</span><br><span class="line">    enabled <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">1</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_auto_reply_mails_address <span class="keyword">ON</span> auto_reply_mails(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> address_sender (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    address TEXT <span class="keyword">UNIQUE</span>,</span><br><span class="line">    balance <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>,</span><br><span class="line">    enabled <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">1</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_address_sender_address <span class="keyword">ON</span> address_sender(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> sendbox (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    address TEXT,</span><br><span class="line">    raw TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_sendbox_address <span class="keyword">ON</span> sendbox(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> settings (</span><br><span class="line">    key TEXT <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    <span class="keyword">value</span> TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> users (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_email TEXT <span class="keyword">UNIQUE</span> <span class="keyword">NOT NULL</span>,</span><br><span class="line">    password TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    user_info TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_users_user_email <span class="keyword">ON</span> users(user_email);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> users_address (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_id <span class="type">INTEGER</span>,</span><br><span class="line">    address_id <span class="type">INTEGER</span> <span class="keyword">UNIQUE</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_users_address_user_id <span class="keyword">ON</span> users_address(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_users_address_address_id <span class="keyword">ON</span> users_address(address_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> user_roles (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_id <span class="type">INTEGER</span> <span class="keyword">UNIQUE</span> <span class="keyword">NOT NULL</span>,</span><br><span class="line">    role_text TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_user_roles_user_id <span class="keyword">ON</span> user_roles(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> user_passkeys (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_id <span class="type">INTEGER</span> <span class="keyword">NOT NULL</span>,</span><br><span class="line">    passkey_name TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    passkey_id TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    passkey TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    counter <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_user_passkeys_user_id <span class="keyword">ON</span> user_passkeys(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_user_passkeys_user_id_passkey_id <span class="keyword">ON</span> user_passkeys(user_id, passkey_id);</span><br></pre></td></tr></tbody></table></figure></li>
+<li>在 D1 数据库的 <strong>控制台</strong> 中，将代码粘贴到输入框中。</li>
+<li>点击 <strong>执行</strong>。</li>
+</ul>
+</li>
+</ol>
+<h2 id="部署-Worker"><a href="#部署-Worker" class="headerlink" title="部署 Worker"></a>部署 Worker</h2><ol>
+<li><p><strong>创建 Worker：</strong> 在 Cloudflare 主页，点击 <strong>Workers 和 Pages</strong>，然后选择 <strong>创建 Worker</strong>。</p>
+</li>
+<li><p><strong>命名 Worker：</strong> 随意给你的 Worker 起一个名字，然后点击 <strong>部署</strong>。</p>
+</li>
+<li><p><strong>设置兼容性标志：</strong></p>
+<ul>
+<li>找到你刚才部署的 Worker，点击进入。</li>
+<li>点击 <strong>设置</strong>，找到 <strong>兼容性标志</strong>。</li>
+<li>点击编辑标志，输入 <strong>nodejs_compat</strong>。</li>
+</ul>
+</li>
+<li><p><strong>编辑代码：</strong></p>
+<ul>
+<li><p>点击 <strong>编辑代码</strong>。</p>
+</li>
+<li><p>下载 <code>worker.js</code> 代码：<a href="https://github.com/dreamhunter2333/cloudflare_temp_email/releases/latest/download/worker.js">worker.js</a></p>
+</li>
+<li><p>将下载的代码复制粘贴到代码编辑器中，然后点击 <strong>部署</strong>。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>绑定 D1 数据库：</strong></p>
+<ul>
+<li>返回 Worker 设置页面。</li>
+<li>点击 <strong>D1 数据库</strong>，然后选择 <strong>绑定</strong>。</li>
+<li>在 <strong>变量名称</strong> 中输入 <strong>DB</strong>。</li>
+<li>在 <strong>D1 数据库</strong> 中选择你创建的数据库。</li>
+</ul>
+</li>
+<li><p><strong>设置自定义域：</strong></p>
+<ul>
+<li>在 <strong>域和路由</strong> 中选择 <strong>自定义域</strong>。</li>
+<li>输入你想要的 API 域名 (例如 <code>api.你的域名.com</code>)。</li>
+</ul>
+</li>
+<li><p><strong>配置环境变量：</strong></p>
+<ul>
+<li>在 Worker 设置页面，找到 <strong>环境变量</strong>。</li>
+<li>根据下表配置环境变量：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>类型</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ADMIN_PASSWORDS</td>
+<td>JSON</td>
+<td><code>["your_password", "your_password_two"]</code></td>
+<td>admin 控制台密码，不配置则不允许访问控制台。可以配置多个密码，也可以只配置一个。</td>
+</tr>
+<tr>
+<td>ADMIN_USER_ROLE</td>
+<td>纯文本</td>
+<td><code>admin</code></td>
+<td>admin 角色配置，只有用户角色等于 <code>ADMIN_USER_ROLE</code> 的用户才能访问 admin 控制台。</td>
+</tr>
+<tr>
+<td>DEFAULT_DOMAINS</td>
+<td>JSON</td>
+<td><code>[""]</code></td>
+<td>未登录用户可用的域名列表，默认为空。如果你想让未登录用户也可以使用域名，可以添加你的域名，例如 <code>["你的域名.com"]</code>，可以添加多个域名。</td>
+</tr>
+<tr>
+<td>DOMAINS</td>
+<td>JSON</td>
+<td><code>["你的域名.com"]</code></td>
+<td>用于配置你的域名，例如 <code>["你的域名.com"]</code>，请确保配置的域名已经接入 Cloudflare。</td>
+</tr>
+<tr>
+<td>ENABLE_AUTO_REPLY</td>
+<td>纯文本</td>
+<td><code>false</code></td>
+<td>是否允许自动回复邮件，默认 <code>false</code>。</td>
+</tr>
+<tr>
+<td>ENABLE_USER_CREATE_EMAIL</td>
+<td>纯文本</td>
+<td><code>true</code></td>
+<td>是否允许用户随机创建邮箱账户，默认 <code>true</code>。</td>
+</tr>
+<tr>
+<td>ENABLE_USER_DELETE_EMAIL</td>
+<td>纯文本</td>
+<td><code>true</code></td>
+<td>是否允许用户删除邮件，默认 <code>true</code>。设置为 <code>false</code> 则不允许用户删除邮件。</td>
+</tr>
+<tr>
+<td>JWT_SECRET</td>
+<td>纯文本</td>
+<td>自己生成一个</td>
+<td>用于生成 JWT 的密钥，前往 <a href="https://www.librechat.ai/toolkit/creds_generator">https://www.librechat.ai/toolkit/creds_generator</a> 生成并复制 <strong>JWT_SECRET</strong> 的值。</td>
+</tr>
+<tr>
+<td>NO_LIMIT_SEND_ROLE</td>
+<td>纯文本</td>
+<td><code>admin</code></td>
+<td>可以无限发送邮件的角色，设置为 <code>admin</code> 则只有 <code>admin</code> 角色的用户可以无限发送邮件。</td>
+</tr>
+<tr>
+<td>USER_ROLES</td>
+<td>JSON</td>
+<td><code>[{"domains":["xx.com"],"prefix":"","role":"vip"},{"domains":["xx.com"],"prefix":"","role":"admin"}]</code></td>
+<td>设置系统角色，示例中创建了 <code>vip</code> 和 <code>admin</code> 两个角色。请从这里复制，避免格式错误。</td>
+</tr>
+<tr>
+<td>RESEND_TOKEN</td>
+<td>纯文本</td>
+<td><code>re_xxxx</code></td>
+<td>去 <a href="https://resend.com/"><code>https://resend.com</code></a> 注册并添加域名获取 api 秘钥填写，用来发送邮件，可自己选择。</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="部署-KV-缓存"><a href="#部署-KV-缓存" class="headerlink" title="部署 KV 缓存"></a>部署 KV 缓存</h2><ol>
+<li><strong>创建 KV 命名空间：</strong> 在 Cloudflare 主页，点击 <strong>存储和数据库</strong>，然后选择 <strong>KV</strong>。</li>
+<li><strong>创建命名空间：</strong> 点击 <strong>创建</strong>，随意输入一个名字，然后点击 <strong>添加</strong>。</li>
+<li><strong>绑定 KV 命名空间：</strong><ul>
+<li>返回 <strong>Workers 和 Pages</strong>，找到你创建的 Worker。</li>
+<li>点击 <strong>设置</strong>，然后选择 <strong>绑定</strong>。</li>
+<li>点击 <strong>KV 命名空间</strong>，在 <strong>变量名称</strong> 中输入 <strong>KV</strong>（注意大写）。</li>
+<li>在 <strong>命名空间</strong> 中选择你创建的 KV 命名空间。</li>
+</ul>
+</li>
+</ol>
+<h2 id="部署路由转发"><a href="#部署路由转发" class="headerlink" title="部署路由转发"></a>部署路由转发</h2><ol>
+<li><strong>进入电子邮件路由：</strong> 在 Cloudflare 主页，点击你的域名，然后选择 <strong>电子邮件</strong>，再选择 <strong>电子邮件路由</strong>。</li>
+<li><strong>编辑路由规则：</strong><ul>
+<li>找到 <strong>路由规则</strong> 部分，点击 <strong>catch-all</strong> 规则。</li>
+<li>在 <strong>操作</strong> 中选择 <strong>发送到 Workers</strong>。</li>
+<li>在 <strong>编辑位置</strong> 中选择你创建的 Worker。</li>
+<li>点击 <strong>保存</strong>。</li>
+</ul>
+</li>
+</ol>
+<h2 id="创建页面前端"><a href="#创建页面前端" class="headerlink" title="创建页面前端"></a>创建页面前端</h2><ol>
+<li><p><strong>下载前端代码：</strong> <a href="https://github.com/dreamhunter2333/cloudflare_temp_email/releases/latest/download/frontend.zip">前端代码</a></p>
+</li>
+<li><p><strong>解压前端代码：</strong> 解压下载的 <code>frontend.zip</code> 文件。</p>
+</li>
+<li><p><strong>编辑 index 文件：</strong></p>
+<ul>
+<li>打开解压后的文件夹，进入 <code>assets</code> 文件夹。</li>
+<li>找到 <code>index-xxxx</code> 文件 (xxxx 是随机数，每个人不一样)，使用文本编辑器打开。</li>
+<li>按下 <code>Ctrl + F</code> (或 <code>Cmd + F</code>)，搜索 <code>https://temp-email-aps-</code>。</li>
+<li>将找到的链接替换成你刚刚创建的 API 域名 (例如 <code>https://api.你的域名.com</code>)，保存文件。</li>
+</ul>
+</li>
+<li><p><strong>创建 Pages 项目：</strong></p>
+<ul>
+<li>在 Cloudflare 主页，点击 <strong>Workers 和 Pages</strong>，然后选择 <strong>Pages</strong>。</li>
+<li>点击 <strong>创建项目</strong>，然后选择 <strong>上传资产</strong>。</li>
+<li>随便起一个项目名，然后点击 <strong>从计算机选择</strong>。</li>
+</ul>
+</li>
+<li><p><strong>上传前端代码：</strong> 选择你解压的文件夹，将所有文件上传。</p>
+</li>
+<li><p><strong>设置自定义域：</strong></p>
+<ul>
+<li>点击 <strong>自定义域</strong>，将你的邮箱前端域名指向 Pages 项目 (例如 <code>mail.你的域名.com</code>)。</li>
+</ul>
+</li>
+<li><p><strong>访问前端：</strong> 等待几分钟，然后在浏览器中输入 <code>mail.你的域名.com</code>，查看是否成功部署。</p>
+</li>
+</ol>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>恭喜！你已经成功搭建了一个基于 Cloudflare 的无限邮箱服务。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>请将示例中的 “你的域名.com”、”api.你的域名.com” 和 “mail.你的域名.com” 替换成你自己的实际域名。</li>
+<li>请确保你的域名已经正确接入 Cloudflare。</li>
+</ul>
+<p>希望这个教程对你有帮助！</p>
+]]></content>
+      <categories>
+        <category>创建邮箱</category>
+      </categories>
+      <tags>
+        <tag>邮箱</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>申请Adsense“低质量内容”被拒绝</title>
+    <url>/%E7%94%B3%E8%AF%B7Adsense%E2%80%9C%E4%BD%8E%E8%B4%A8%E9%87%8F%E5%86%85%E5%AE%B9%E2%80%9D%E8%A2%AB%E6%8B%92%E7%BB%9D/</url>
+    <content><![CDATA[<h1 id="AdSense-审核卡住了？别慌！我来告诉你问题可能出在哪"><a href="#AdSense-审核卡住了？别慌！我来告诉你问题可能出在哪" class="headerlink" title="AdSense 审核卡住了？别慌！我来告诉你问题可能出在哪"></a>AdSense 审核卡住了？别慌！我来告诉你问题可能出在哪</h1><p><strong>申请 Adsense 总是因为“低质量内容”被拒绝</strong></p>
+<p>今天早上，我收到了 AdSense 的邮件，结果是：被拒了！理由是“Low value content（低质量内容）”。<br><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/fix-dir/G/blog/2025/01/22/17-55-10-39c399568001e87cd323ab052c2a47d0-adsense--refuse-a248af.webp" alt="adsens-refuse"></p>
+<span id="more"></span>
+
+<p><strong>又被拒了，我反思了一下：</strong></p>
+<p>这已经不是我第一次因为“低质量内容”被 AdSense 拒绝了。这次虽然有 Discover 带来的流量，但 AdSense 还是不让我过。我得好好想想，我的网站到底哪里有问题。</p>
+<p><strong>1. 有流量不代表内容好：</strong></p>
+<p>Discover 带来的流量是挺多的，但这不代表我的内容就符合 AdSense 的要求。AdSense 更看重内容是不是有深度、是不是原创、是不是有价值，光有流量没用。</p>
+<p><strong>2. 内容不够深入：</strong></p>
+<p>我承认，为了快点有流量，我有点急了。有些文章为了多写点，就写得比较简单，只是把信息罗列出来，没有自己的想法和分析。</p>
+<p><strong>3. 内容有点抄袭：</strong></p>
+<p>为了快点把网站填满，我参考了一些别人的文章，导致内容有点抄袭，不够原创。这肯定不符合 AdSense 的要求。</p>
+<p><strong>4. 网站体验不好：</strong></p>
+<p>网站的排版、图片质量啥的也需要优化。虽然内容能看，但在用户体验上还是差了点。</p>
+<p><strong>我打算这么做：</strong></p>
+<p>这次被拒让我明白，AdSense 不会因为你有流量就让你过关。接下来，我打算这样做：</p>
+<ul>
+<li><strong>深入研究：</strong> 把网站的主题好好研究一下，写出有深度、有价值的内容。</li>
+<li><strong>坚持原创：</strong> 坚持写原创内容，加入自己的想法和见解。</li>
+<li><strong>优化排版：</strong> 把网站排版优化一下，让大家看起来更舒服。</li>
+<li><strong>持续更新：</strong> 经常更新内容，让网站保持活跃。</li>
+<li><strong>学习别人：</strong> 看看其他成功通过 AdSense 审核的网站，学学他们的经验。</li>
+</ul>
+<p><strong>怎么回事，大家都这样？</strong></p>
+<p>说实话，这还是我第一个被拒绝的网站。之前几个网站申请 AdSense 都挺顺利的，一个星期就搞定了。我感觉这个网站跟之前的网站差不多，主题、插件、页面布局都差不多。</p>
+<p>于是，我就去论坛看看有没有解决方法。</p>
+<p><strong>可能的原因：</strong></p>
+<ul>
+<li><strong>AdSense 政策变了：</strong> 可能是 Google AdSense 最近改了审核标准，对内容质量要求更高了。</li>
+<li><strong>算法调整：</strong> AdSense 的审核算法可能调整了，导致以前能通过的网站现在被拒绝了。</li>
+<li><strong>内容太像了：</strong> 可能是因为大家都在做差不多的网站，内容太像了，AdSense 不喜欢。</li>
+<li><strong>网站不好用：</strong> 可能是网站的用户体验不好，AdSense 觉得网站没什么价值。</li>
+</ul>
+<p><strong>难道是网站不够规范？</strong></p>
+<p>在国外论坛中，我看到网友分享了他的经验。他修改内容，而是检查了网站的附属页面，比如隐私条款、Cookies 协议、GDPR 这些。<br>结果，他把这些页面完善后，再申请 AdSense 就通过了。这让我觉得，可能不是内容不行，而是网站不够规范。</p>
+<p><strong>官方论坛没啥用？</strong></p>
+<p>我又去 AdSense 官方论坛看了看，但没找到啥有用的方法。比如官方说的“内容质量”问题，我觉得我的网站肯定没问题。</p>
+<p>首先，我的文章没语法错误，都是 AI 生成草稿，然后我再改的，还用了语法检查工具。</p>
+<p>其次，我对自己的文章还是挺有信心的，因为我都是找竞争小的关键词，填补搜索市场的空白。如果内容不好，也不可能被 Google Discover 推荐。</p>
+<p><strong>我打算最后试一次：</strong></p>
+<p>所以，接下来我打算再更新几篇文章，然后把网站的必备页面完善好，再重新申请 AdSense 试试。如果你也遇到了类似的问题，不妨试试这个方法。</p>
+]]></content>
+      <categories>
+        <category>Google AdSense</category>
+        <category>网站运营</category>
+        <category>内容创作</category>
+        <category>问题解决</category>
+        <category>经验分享</category>
+      </categories>
+      <tags>
+        <tag>Google AdSense</tag>
+        <tag>低质量内容</tag>
+        <tag>网站审核</tag>
+        <tag>官方论坛</tag>
+        <tag>网站规范</tag>
+        <tag>内容创作</tag>
+        <tag>网站运营</tag>
+        <tag>审核策略</tag>
+        <tag>网站页面</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决MediaCreationTool报错(0X80072F8F-0X20000)方法</title>
+    <url>/%E8%A7%A3%E5%86%B3MediaCreationTool%E6%8A%A5%E9%94%99-0X80072F8F-0X20000-%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Windows-7-升级-Win10：解决-MediaCreationTool-报错-0X80072F8F-0X20000-方法"><a href="#Windows-7-升级-Win10：解决-MediaCreationTool-报错-0X80072F8F-0X20000-方法" class="headerlink" title="Windows 7 升级 Win10：解决 MediaCreationTool 报错 (0X80072F8F-0X20000)方法"></a>Windows 7 升级 Win10：解决 MediaCreationTool 报错 (0X80072F8F-0X20000)方法</h1><p><strong>问题：</strong></p>
+<p>当您尝试使用 MediaCreationTool 工具（版本 22H2）将老旧的 Windows 7 系统升级到 Windows 10 时，可能会遇到错误代码 <code>0X80072F8F-0X20000</code>。</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/fix-dir/G/blog/2025/01/22/16-29-01-9b2c68f58b7f2b135672e29617993f1a-MediaCreationTool_22H2%E6%8A%A5%E9%94%99-1584da.webp" alt="MediaCreationTool22H2报错"></p>
+<span id="more"></span>
+
+<p><strong>原因：</strong></p>
+<p>这个错误通常是因为 Windows 7 系统缺少必要的 TLS（安全传输层协议）支持，导致 MediaCreationTool 工具无法正常连接到服务器。</p>
+<p><strong>解决方案：</strong></p>
+<p>以下步骤将帮助您解决此问题，顺利升级到 Windows 10：</p>
+<h2 id="步骤一：添加-TLS-注册表信息"><a href="#步骤一：添加-TLS-注册表信息" class="headerlink" title="步骤一：添加 TLS 注册表信息"></a><strong>步骤一：添加 TLS 注册表信息</strong></h2><ol>
+<li><p><strong>创建注册表文件：</strong></p>
+<ul>
+<li><p>在您的电脑桌面，新建一个文本文档（.txt 文件）。</p>
+</li>
+<li><p>将下面的代码复制粘贴到这个文本文档中：</p>
+  <figure class="highlight moonscript"><table><tbody><tr><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp]</span><br><span class="line"><span class="string">"DefaultSecureProtocols"</span>=<span class="name">dword</span>:<span class="number">00000</span>a00</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp]</span><br><span class="line"><span class="string">"DefaultSecureProtocols"</span>=<span class="name">dword</span>:<span class="number">00000</span>a00</span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>保存这个文本文档，并将其重命名为 <code>tls.reg</code> （注意：将文件扩展名从 .txt 改为 .reg）。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>运行注册表文件：</strong></p>
+<ul>
+<li>双击 <code>tls.reg</code> 文件，系统会弹出提示。</li>
+<li>点击 “是”  确认导入注册表信息。</li>
+</ul>
+<p> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/fix-dir/G/blog/2025/01/22/16-34-16-b7d35e68512cfc78139cf7733ff657ff-%E6%8F%90%E7%A4%BA%E7%A1%AE%E5%AE%9A-9d22ff.webp" alt="点击是"></p>
+</li>
+</ol>
+<h2 id="步骤二：安装-Windows-7-补丁"><a href="#步骤二：安装-Windows-7-补丁" class="headerlink" title="步骤二：安装 Windows 7 补丁"></a><strong>步骤二：安装 Windows 7 补丁</strong></h2><ol>
+<li><p><strong>下载补丁：</strong></p>
+<ul>
+<li>打开浏览器，访问 <a href="https://www.catalog.update.microsoft.com/Search.aspx?q=kb3140245">Microsoft Update Catalog</a> 下载补丁。</li>
+<li>您也可以直接复制 <code>https://www.catalog.update.microsoft.com/Search.aspx?q=kb3140245</code> 到浏览器地址栏进行搜索。</li>
+</ul>
+</li>
+<li><p><strong>选择并安装补丁：</strong></p>
+<ul>
+<li>在搜索结果中，找到与您 Windows 7 系统版本（32 位或 64 位）相对应的补丁，点击下载。</li>
+<li>下载完成后，运行安装程序，按照提示完成补丁安装。</li>
+</ul>
+<p> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/fix-dir/G/blog/2025/01/22/16-34-16-3014eb6daccb31541f16aff0b1406304-%E4%B8%8B%E8%BD%BD%E5%AF%B9%E5%BA%94%E7%B3%BB%E7%BB%9F%E8%A1%A5%E4%B8%81-3096f5.webp" alt="选择对应补丁"></p>
+</li>
+</ol>
+<p><strong>完成！</strong></p>
+<p>完成以上步骤后，请重新运行 MediaCreationTool 工具，尝试升级到 Windows 10。</p>
+<p><strong>温馨提示：</strong></p>
+<ul>
+<li>确保您的电脑已连接到互联网，以便 MediaCreationTool 工具能够正常下载文件。</li>
+<li>如果问题仍然存在，请检查您的系统时间和日期设置是否正确。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>系统升级</category>
+        <category>故障排除</category>
+      </categories>
+      <tags>
+        <tag>MediaCreationTool</tag>
+        <tag>Windows 7</tag>
+        <tag>Windows 10</tag>
+        <tag>系统升级</tag>
+        <tag>错误代码</tag>
+        <tag>0X80072F8F</tag>
+        <tag>TLS</tag>
+        <tag>注册表</tag>
+        <tag>补丁</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一下我入坑Linux</title>
+    <url>/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E6%88%91%E5%85%A5%E5%9D%91linux/</url>
+    <content><![CDATA[<h1 id="重生之Linux初体验"><a href="#重生之Linux初体验" class="headerlink" title="重生之Linux初体验"></a>重生之Linux初体验</h1><p>你们是什么时候入坑Linux的？是为了学习，还是为了建站？<br>我第一次接触Linux是在很久以前，那时还是个小屁孩。听了一位B站UP主讲解Linux后，我对它产生了浓厚的兴趣。然后，我读了《鸟哥的私房菜》开始自学，但很快因为命令行的枯燥和与Windows的差异，我停了下来。Linux那时对我来说太复杂了，尤其是没有Windows那种鼠标点击的便捷操作。毕竟，谁不想轻轻松松地“点点点”就搞定一切呢？</p>
+<span id="more"></span>
+<h2 id="初识Linux：从虚拟机到Ubuntu"><a href="#初识Linux：从虚拟机到Ubuntu" class="headerlink" title="初识Linux：从虚拟机到Ubuntu"></a>初识Linux：从虚拟机到Ubuntu</h2><p>那时，我大部分的Linux体验都是通过虚拟机（VMware）来进行的。ISO文件下载速度非常慢，等了好久才下载好。虽然虚拟机中运行Linux的体验不好，但我还是忍不住好奇，尝试了一下。第一次使用Linux时，大部分搜索结果都是关于Ubuntu的，于是我下载了它。当时的Ubuntu并不像现在那么易用和直观，桌面环境也不如现在那样完善，兼容性有点差。Gnome桌面虽然还行，但如果你用的是笔记本，KDE桌面体验会更流畅，虽然KDE的可玩性没有Gnome那么高。那时候我常觉得自己像是在给电脑做“手术”，不过，幸运的是，它并没有“死掉”——至少还运行着。</p>
+<p>我记得第一个学会的命令是 <code>cd</code>、<code>cp</code>、<code>mkdir</code>、<code>touch</code> 等基础命令。那时这些命令对我来说比较容易理解，但像 <code>ls -al</code> 和 <code>chmod</code> 等命令就让我有些困惑了。尤其是<code>chmod</code>，感觉它就像是Linux的“魔法咒语”，一不小心就能“变戏法”把文件搞丢。</p>
+<h2 id="从树莓派到云服务器"><a href="#从树莓派到云服务器" class="headerlink" title="从树莓派到云服务器"></a>从树莓派到云服务器</h2><p>在初中时，我还买了台树莓派，用它学习Linux的更多知识。几年后，我以原价将树莓派卖掉，回想起来真有点好笑，简直像是给这台“小钢炮”举办了个小型拍卖会。到了高中，我认识了一位做游戏开发的同学，他对Linux的理解让我非常佩服。那时，他居然可以在小米10（或11）上使用Docker编译和运行Windows，他的技术实力令人叹为观止。那时我心想：“哇，这人不去做黑客真是浪费天赋啊！”</p>
+<p>大学时，我没有继续深造Linux，而是沉迷于娱乐。直到最近，我才重新开始深入学习Linux，安装了一个无图形界面的CentOS服务器。这种操作全靠命令行，完全不依赖GUI界面。像下面这样：</p>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E5%91%BD%E4%BB%A4%E7%95%8C%E9%9D%A2.webp" alt="命令界面"></p>
+<p>在重新接触Linux的过程中，我发现自己经常会卡在一些错误上。很多时候是因为没有配置国内镜像源，导致下载依赖时发生404错误，甚至导致安装失败。记得当时有一个流行的表情包：“Google都不会”，意指我们寻求帮助时反而找不到正确的答案。有时候我都怀疑，Google是不是变得“任性”了，连基本的答案都不给。</p>
+<h2 id="误入“坑”：rm-rf的危险"><a href="#误入“坑”：rm-rf的危险" class="headerlink" title="误入“坑”：rm -rf的危险"></a>误入“坑”：rm -rf的危险</h2><p>在Linux中，最让我印象深刻的命令之一就是 <code>rm -rf</code>。这个命令会在不做任何提示的情况下，强制删除文件，甚至可能导致系统崩溃，丢失所有数据。很多初学者都会在不小心执行这个命令后，损失惨重。记得我第一次用它时，屏幕上的“删除成功”字样简直像是把我所有的文件都埋进了“数字大海”，那一刻，我甚至怀疑人生。</p>
+<h2 id="Linux无处不在"><a href="#Linux无处不在" class="headerlink" title="Linux无处不在"></a>Linux无处不在</h2><p>虽然很多人认为Linux离自己很远，但其实你每天接触的很多设备都在运行Linux。无论是地铁站的自助售票机，还是云服务器、Android手机（即使Google做了修改，核心仍基于Linux），甚至是嵌入式设备、机器人、大数据和人工智能领域，Linux都无处不在。你有没有想过，你每天刷的某个APP背后，可能就是Linux在“默默为你服务”？</p>
+<hr>
+<p>通过这一段学习和实践，我逐渐明白了Linux的魅力。它不仅是一个操作系统，更代表了一种开放、自由的精神。Linux的应用范围越来越广，不仅改变了我们的工作和生活方式，也为创新和科技进步提供了无穷的动力。如果你还没有尝试过Linux，强烈建议你也加入这个探索的旅程，准备好接受“黑暗中的光明”吧。</p>
+]]></content>
+      <categories>
+        <category>记录一下</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录之前的计划</title>
+    <url>/%E8%AE%B0%E5%BD%95%E4%B9%8B%E5%89%8D%E7%9A%84%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<h1 id="那些事情实现了吗？"><a href="#那些事情实现了吗？" class="headerlink" title="那些事情实现了吗？"></a>那些事情实现了吗？</h1><ul>
+<li><p><input disabled="" type="checkbox"> 
+<strong>高中时候</strong></p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox"> 
+创建博客HEXO并发表文章 <a href="https://www.pw0n.xyz/">博客</a></p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+ESP8266 智能设备</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+<strong>大学时候</strong></p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+<strong>现在</strong></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生活记录</category>
+      </categories>
+      <tags>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+</search>

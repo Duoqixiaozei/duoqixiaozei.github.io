@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="codeva-tiWIr8OvPt">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.pw0n.xyz","root":"/","scheme":"Pisces","version":"7.8.0","sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"gitalk","active":null,"storage":true,"lazyload":false},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="如何解决 Thinkpad 笔记本亮度无法调节的问题背景在一些 Thinkpad 笔记本电脑上，尽管系统能够检测到亮度控制接口，但实际调节亮度的功能却无法正常工作。你可能会看到系统识别到亮度控制硬件，但调整亮度时并无任何反应，甚至出现闪屏或无法控制的情况。本文将为你提供一系列步骤，帮助解决这个问题。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="archlinux没有显示器无法调节亮度">
+<meta property="og:url" content="https://www.pw0n.xyz/archlinux-boot-screen-issue/index.html">
+<meta property="og:site_name" content="PW0N&#39;s Blog">
+<meta property="og:description" content="如何解决 Thinkpad 笔记本亮度无法调节的问题背景在一些 Thinkpad 笔记本电脑上，尽管系统能够检测到亮度控制接口，但实际调节亮度的功能却无法正常工作。你可能会看到系统识别到亮度控制硬件，但调整亮度时并无任何反应，甚至出现闪屏或无法控制的情况。本文将为你提供一系列步骤，帮助解决这个问题。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-02T09:41:53.000Z">
+<meta property="article:modified_time" content="2025-02-12T06:16:17.586Z">
+<meta property="article:author" content="PW0N">
+<meta property="article:tag" content="archlinux">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www.pw0n.xyz/archlinux-boot-screen-issue/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
+  <title>archlinux没有显示器无法调节亮度 | PW0N's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4839637409222286"
+     crossorigin="anonymous"></script>
+<link rel="alternate" href="/atom.xml" title="PW0N's Blog" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">PW0N's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">分享更多的技术让志同道合的一起学习交流</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-nav">
+
+    <a href="/nav/" rel="section"><i class="fa fa-compass fa-fw"></i>导航</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-language">
+
+    <a href="https://en.pw0n.xyz/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-language fa-fw"></i>English</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-rss">
+
+    <a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/archlinux-boot-screen-issue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          archlinux没有显示器无法调节亮度
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-01-02 17:41:53" itemprop="dateCreated datePublished" datetime="2025-01-02T17:41:53+08:00">2025-01-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/archlinux/" itemprop="url" rel="index"><span itemprop="name">archlinux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="如何解决-Thinkpad-笔记本亮度无法调节的问题"><a href="#如何解决-Thinkpad-笔记本亮度无法调节的问题" class="headerlink" title="如何解决 Thinkpad 笔记本亮度无法调节的问题"></a>如何解决 Thinkpad 笔记本亮度无法调节的问题</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在一些 Thinkpad 笔记本电脑上，尽管系统能够检测到亮度控制接口，但实际调节亮度的功能却无法正常工作。你可能会看到系统识别到亮度控制硬件，但调整亮度时并无任何反应，甚至出现闪屏或无法控制的情况。本文将为你提供一系列步骤，帮助解决这个问题。</p>
+<span id="more"></span>
+
+<hr>
+<h3 id="电脑配置"><a href="#电脑配置" class="headerlink" title="电脑配置"></a>电脑配置</h3><figure class="highlight nix"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">		 .o<span class="operator">+</span>`                   <span class="operator">-</span>-------- </span><br><span class="line">                `ooo<span class="symbol">/</span>                   <span class="params">OS:</span> Arch Linux x86_64 </span><br><span class="line">               `<span class="operator">+</span><span class="params">oooo:</span>                  <span class="params">Host:</span> <span class="number">20</span>H5A056CD ThinkPad E570 </span><br><span class="line">              `<span class="operator">+</span><span class="params">oooooo:</span>                 <span class="params">Kernel:</span> <span class="number">6.12</span>.<span class="number">7</span><span class="operator">-</span>arch1-<span class="number">1</span> </span><br><span class="line">             <span class="operator">-</span><span class="operator">+</span>oooooo<span class="operator">+</span>:                <span class="params">Uptime:</span> <span class="number">10</span> mins </span><br><span class="line">           `<span class="operator">/</span>:-:<span class="operator">++</span>oooo<span class="operator">+</span>:               <span class="params">Packages:</span> <span class="number">1542</span> (pacman) </span><br><span class="line">          `<span class="operator">/</span><span class="operator">++</span><span class="operator">++</span><span class="operator">/</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">+</span>:              <span class="params">Shell:</span> bash <span class="number">5.2</span>.<span class="number">37</span> </span><br><span class="line">         `<span class="operator">/</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span><span class="operator">++</span>:             <span class="params">Resolution:</span> <span class="number">1920</span>x1080 </span><br><span class="line">        `<span class="operator">/</span><span class="operator">++</span><span class="operator">+</span>ooooooooooooo<span class="operator">/</span>`           <span class="params">DE:</span> Plasma <span class="number">6.2</span>.<span class="number">4</span> </span><br><span class="line">       .<span class="operator">/</span>ooosssso<span class="operator">++</span>osssssso<span class="operator">+</span>`          <span class="params">WM:</span> kwin </span><br><span class="line">      .oossssso-````<span class="operator">/</span>ossssss<span class="operator">+</span>`         <span class="params">Theme:</span> Breeze [GTK2<span class="operator">/</span><span class="number">3</span>] </span><br><span class="line">     <span class="operator">-</span>osssssso.      <span class="meta">:ssssssso</span>.        <span class="params">Icons:</span> breeze [GTK2<span class="operator">/</span><span class="number">3</span>] </span><br><span class="line">    <span class="meta">:osssssss</span><span class="symbol">/</span>        osssso<span class="operator">++</span><span class="operator">+</span>.       <span class="params">Terminal:</span> konsole </span><br><span class="line">   <span class="operator">/</span>ossssssss<span class="symbol">/</span>        <span class="operator">+</span>ssssooo<span class="symbol">/-</span>       <span class="params">CPU:</span> Intel i3-<span class="number">7100</span>U (<span class="number">4</span>) @ <span class="number">2.400</span>GHz </span><br><span class="line"> `<span class="operator">/</span>ossssso<span class="operator">+</span><span class="operator">/</span>:-        <span class="operator">-</span>:<span class="symbol">/+osssso+-</span>     <span class="params">GPU:</span> Intel HD Graphics <span class="number">620</span> </span><br><span class="line">`<span class="operator">+</span>sso<span class="operator">+</span>:-`                 `.-<span class="operator">/</span><span class="operator">+</span><span class="params">oso:</span>    <span class="params">GPU:</span> NVIDIA GeForce <span class="number">940</span>MX </span><br><span class="line"><span class="operator">++</span>:.                           `-<span class="operator">/</span><span class="operator">+</span><span class="symbol">/</span>   <span class="params">Memory:</span> <span class="number">2753</span>MiB <span class="symbol">/</span> <span class="number">7848</span>MiB </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h3 id="1-检查硬件信息"><a href="#1-检查硬件信息" class="headerlink" title="1. 检查硬件信息"></a>1. 检查硬件信息</h3><p>首先，查看系统日志，确认是否检测到了亮度控制接口。你可以使用以下命令查看 <code>Xorg</code> 的日志，查找与亮度相关的信息：</p>
+<figure class="highlight stata"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cat</span> /<span class="keyword">var</span>/<span class="keyword">log</span>/Xorg.0.<span class="keyword">log</span> | grep -i <span class="string">"backlight"</span></span><br><span class="line"><span class="keyword">cat</span> /<span class="keyword">var</span>/<span class="keyword">log</span>/Xorg.0.<span class="keyword">log</span> | grep -i <span class="string">"synaptics"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>如果日志中出现以下内容，说明系统确实已经识别了亮度控制接口：</p>
+<figure class="highlight angelscript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[    39.909]</span> (--) <span class="built_in">int</span>el(<span class="number">0</span>): Found backlight control <span class="keyword">interface</span> <span class="symbol">thinkpad_screen</span> (<span class="symbol">type</span> '<span class="symbol">platform</span>') <span class="symbol">for</span> <span class="symbol">output</span> <span class="symbol">eDP1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>出现这个显示是系统已经识别到了 <code>thinkpad_screen</code> 作为亮度控制接口，类型为 <code>platform</code>，并且为输出设备 <code>eDP1</code> 提供了控制。</p>
+<hr>
+<h3 id="2-可能的原因"><a href="#2-可能的原因" class="headerlink" title="2. 可能的原因"></a>2. 可能的原因</h3><p>尽管系统识别到了亮度控制接口，仍然可能会遇到无法调节亮度的情况。常见的原因包括：</p>
+<ol>
+<li><strong>驱动问题</strong> ：虽然系统检测到了硬件接口，但可能存在驱动没有正确加载，或者硬件兼容性问题，导致亮度调节无法生效。</li>
+<li><strong>ACPI 配置问题</strong> ：ACPI（高级配置和电源管理）与亮度控制的交互可能受到内核参数的影响。你当前的内核命令行包含了 <code>acpi_osi=Linux</code> 和 <code>acpi_backlight=vendor</code> 这两个参数，可能与亮度调节的功能产生冲突。不同的笔记本电脑可能需要不同的 ACPI 配置才能正常工作。</li>
+</ol>
+<hr>
+<h3 id="3-下一步检查"><a href="#3-下一步检查" class="headerlink" title="3. 下一步检查"></a>3. 下一步检查</h3><p>为了进一步解决问题，你可以尝试修改内核的启动参数，调整 ACPI 配置，确保亮度控制功能可以正常使用。按照以下步骤进行操作：</p>
+<h4 id="步骤-1：修改-GRUB-配置"><a href="#步骤-1：修改-GRUB-配置" class="headerlink" title="步骤 1：修改 GRUB 配置"></a>步骤 1：修改 GRUB 配置</h4><ul>
+<li><p>打开 GRUB 配置文件：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nano /etc/default/grub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>找到以下行：</p>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">GRUB_CMDLINE_LINUX_DEFAULT</span>=<span class="string">"quiet splash"</span></span><br></pre></td></tr></tbody></table></figure></li>
+<li><p>在这行的末尾添加 <code>acpi_backlight=video</code>，该参数强制使用标准的视频驱动程序来控制亮度，而不是依赖于其他硬件接口。修改后的行应如下所示：</p>
+</li>
+</ul>
+<figure class="highlight ini"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">GRUB_CMDLINE_LINUX_DEFAULT</span>=<span class="string">"quiet splash acpi_backlight=video"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这将会优先使用标准的 <code>video</code> 模式来处理亮度控制，从而避免硬件兼容性问题。</p>
+<hr>
+<h4 id="步骤-2：更新-GRUB-配置"><a href="#步骤-2：更新-GRUB-配置" class="headerlink" title="步骤 2：更新 GRUB 配置"></a>步骤 2：更新 GRUB 配置</h4><p>修改完成后，需要更新 GRUB 配置以使更改生效：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> grub-mkconfig -o /boot/grub/grub.cfg</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h4 id="步骤-3：重启计算机"><a href="#步骤-3：重启计算机" class="headerlink" title="步骤 3：重启计算机"></a>步骤 3：重启计算机</h4><p>完成配置更新后，重启计算机以使新的内核参数生效：</p>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> reboot</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+
+    </div>
+
+    
+    
+    <div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script><div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/archlinux/" rel="tag"># archlinux</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/archlinux%E5%BC%80%E6%9C%BA%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F%E6%98%BE%E7%A4%BA%E7%99%BD%E5%B1%8F%E9%97%AA%E7%83%81/" rel="prev" title="archlinux开机进入系统显示白屏闪烁">
+      <i class="fa fa-chevron-left"></i> archlinux开机进入系统显示白屏闪烁
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/%E5%9B%BD%E5%86%85%E4%B9%9F%E8%83%BD%E7%94%A8-Gemini-%E4%BA%86%EF%BC%81%E8%B6%85%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/" rel="next" title="国内也能用 Gemini 了！超详细教程">
+      国内也能用 Gemini 了！超详细教程 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3-Thinkpad-%E7%AC%94%E8%AE%B0%E6%9C%AC%E4%BA%AE%E5%BA%A6%E6%97%A0%E6%B3%95%E8%B0%83%E8%8A%82%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">如何解决 Thinkpad 笔记本亮度无法调节的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%B5%E8%84%91%E9%85%8D%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">电脑配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A3%80%E6%9F%A5%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF"><span class="nav-number">1.3.</span> <span class="nav-text">1. 检查硬件信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.4.</span> <span class="nav-text">2. 可能的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%B8%8B%E4%B8%80%E6%AD%A5%E6%A3%80%E6%9F%A5"><span class="nav-number">1.5.</span> <span class="nav-text">3. 下一步检查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E4%BF%AE%E6%94%B9-GRUB-%E9%85%8D%E7%BD%AE"><span class="nav-number">1.5.1.</span> <span class="nav-text">步骤 1：修改 GRUB 配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E6%9B%B4%E6%96%B0-GRUB-%E9%85%8D%E7%BD%AE"><span class="nav-number">1.5.2.</span> <span class="nav-text">步骤 2：更新 GRUB 配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E9%87%8D%E5%90%AF%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="nav-number">1.5.3.</span> <span class="nav-text">步骤 3：重启计算机</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="PW0N"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">PW0N</p>
+  <div class="site-description" itemprop="description">阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">53</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Duoqixiaozei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Duoqixiaozei" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:pw0nxx@163.com" title="E-Mail → mailto:pw0nxx@163.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PW0N</span>
+</div>
+由 <a  class="theme-link"  target="_blank" rel="noopener external nofollow noreferrer" href="http://hexo.io">Hexo</a> 强力驱动
+
+<a class="theme-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/iissnan/hexo-theme-next">
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://www.pw0n.xyz/archlinux-boot-screen-issue/',]
+      });
+      });
+  </script>
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'Ov23licQslcmqpdOl1SO',
+      clientSecret: '82092c2fbc2d05ab92d329b16a599e70451e13b2',
+      repo        : 'duoqixiaozei.github.io',
+      owner       : 'duoqixiaozei',
+      admin       : ['duoqixiaozei'],
+      id          : 'b64af4b9b1a3df2545a3029b2ea1f3fe',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
+</html>

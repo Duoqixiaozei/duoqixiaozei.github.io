@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="codeva-tiWIr8OvPt">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.pw0n.xyz","root":"/","scheme":"Pisces","version":"7.8.0","sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"gitalk","active":null,"storage":true,"lazyload":false},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。 无论是技术教程还是生活故事，都能在这里找到有趣的内容。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PW0N&#39;s Blog">
+<meta property="og:url" content="https://www.pw0n.xyz/page/3/index.html">
+<meta property="og:site_name" content="PW0N&#39;s Blog">
+<meta property="og:description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。 无论是技术教程还是生活故事，都能在这里找到有趣的内容。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="PW0N">
+<meta property="article:tag" content="linux,seo">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www.pw0n.xyz/page/3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
+  <title>PW0N's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4839637409222286"
+     crossorigin="anonymous"></script>
+<link rel="alternate" href="/atom.xml" title="PW0N's Blog" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">PW0N's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">分享更多的技术让志同道合的一起学习交流</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-nav">
+
+    <a href="/nav/" rel="section"><i class="fa fa-compass fa-fw"></i>导航</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-language">
+
+    <a href="https://en.pw0n.xyz/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-language fa-fw"></i>English</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-rss">
+
+    <a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%BA%8C%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%BA%8C%EF%BC%89/" class="post-title-link" itemprop="url">VIM编辑器那些坑（二）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-17 14:25:05" itemprop="dateCreated datePublished" datetime="2024-07-17T14:25:05+08:00">2024-07-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/VIM/" itemprop="url" rel="index"><span itemprop="name">VIM</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="VIM编辑器那些坑-二"><a href="#VIM编辑器那些坑-二" class="headerlink" title="VIM编辑器那些坑(二)"></a>VIM编辑器那些坑(二)</h1><h2 id="VIM界外复制！！！😕"><a href="#VIM界外复制！！！😕" class="headerlink" title="VIM界外复制！！！😕"></a>VIM界外复制！！！😕</h2><p>遇到从外界复制你是不是以为ctrl+v ，然而vim并不会粘贴，那么要怎么粘贴呢？<br>我们先从外面复制文字 然后 打开vim 在命令模式下 输入:+p这要就能复制到你的内容了<br>如果你用的是Putty或者是Xshell,你可以直接从外界复制，然后到vim点击右键直接复制。</p>
+<h2 id="VIM界内复制和粘贴"><a href="#VIM界内复制和粘贴" class="headerlink" title="VIM界内复制和粘贴"></a>VIM界内复制和粘贴</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%BA%8C%EF%BC%89/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%B8%80%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">VIM编辑器那些坑（一）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-15 16:51:53" itemprop="dateCreated datePublished" datetime="2024-07-15T16:51:53+08:00">2024-07-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/VIM/" itemprop="url" rel="index"><span itemprop="name">VIM</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="VIM编辑器那些坑（一）"><a href="#VIM编辑器那些坑（一）" class="headerlink" title="VIM编辑器那些坑（一）"></a>VIM编辑器那些坑（一）</h1><p>我每次用中文输入的时候按ESC每次都会退出不了的问题<br>后面切换英文输入法就能退出 ESC + :  就可以实现了<br>vim 按住ESC后你可以用H,J,KL,四个键 分别代表←↑↓→键，你还可以用翻页按钮PgUP</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/VIM%E7%BC%96%E8%BE%91%E5%99%A8%E9%82%A3%E4%BA%9B%E5%9D%91%EF%BC%88%E4%B8%80%EF%BC%89/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/%E6%AD%8C%E6%9B%B2%E6%8E%A8%E8%8D%90%E3%80%8A%E5%A4%A7%E7%9F%B3%E7%A2%8E%E8%83%B8%E5%8F%A3%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E6%AD%8C%E6%9B%B2%E6%8E%A8%E8%8D%90%E3%80%8A%E5%A4%A7%E7%9F%B3%E7%A2%8E%E8%83%B8%E5%8F%A3%E3%80%8B/" class="post-title-link" itemprop="url">这首歌的歌词让人震撼！《大石碎胸口》你听过吗？</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-11 17:29:56" itemprop="dateCreated datePublished" datetime="2024-07-11T17:29:56+08:00">2024-07-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%AD%8C%E6%9B%B2%E6%8E%A8%E8%8D%90/" itemprop="url" rel="index"><span itemprop="name">歌曲推荐</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="🎶-这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"><a href="#🎶-这首歌的歌词让人震撼！《大石碎胸口》你听过吗？" class="headerlink" title="🎶 这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"></a>🎶 这首歌的歌词让人震撼！《大石碎胸口》你听过吗？</h1><p><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97%E5%AD%90.webp" alt="万能青年旅店专辑封面"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E6%AD%8C%E6%9B%B2%E6%8E%A8%E8%8D%90%E3%80%8A%E5%A4%A7%E7%9F%B3%E7%A2%8E%E8%83%B8%E5%8F%A3%E3%80%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/%E8%AE%B0%E5%BD%95%E4%B9%8B%E5%89%8D%E7%9A%84%E8%AE%A1%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E8%AE%B0%E5%BD%95%E4%B9%8B%E5%89%8D%E7%9A%84%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">记录之前的计划</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-11 16:27:10" itemprop="dateCreated datePublished" datetime="2024-07-11T16:27:10+08:00">2024-07-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">生活记录</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="那些事情实现了吗？"><a href="#那些事情实现了吗？" class="headerlink" title="那些事情实现了吗？"></a>那些事情实现了吗？</h1><ul>
+<li><p><input disabled type="checkbox"> 
+<strong>高中时候</strong></p>
+</li>
+<li><p><input checked disabled type="checkbox"> 
+创建博客HEXO并发表文章 <a href="https://www.pw0n.xyz/">博客</a></p>
+</li>
+<li><p><input disabled type="checkbox"> 
+ESP8266 智能设备</p>
+</li>
+<li><p><input disabled type="checkbox"> 
+<strong>大学时候</strong></p>
+</li>
+<li><p><input disabled type="checkbox"> 
+<strong>现在</strong></p>
+</li>
+</ul>
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E8%AE%B0%E5%BD%95%E4%B9%8B%E5%89%8D%E7%9A%84%E8%AE%A1%E5%88%92/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/%E4%B8%96%E7%95%8C%E4%B8%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-World-Wide-Web/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/%E4%B8%96%E7%95%8C%E4%B8%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-World-Wide-Web/" class="post-title-link" itemprop="url">世界上第一个网站 World Wide Web</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-05 15:08:38" itemprop="dateCreated datePublished" datetime="2024-07-05T15:08:38+08:00">2024-07-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%B0%E5%BD%95/" itemprop="url" rel="index"><span itemprop="name">记录</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%B0%E5%BD%95/%E7%A7%91%E6%8A%80/" itemprop="url" rel="index"><span itemprop="name">科技</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="世界上第一个网站"><a href="#世界上第一个网站" class="headerlink" title="世界上第一个网站"></a>世界上第一个网站</h1><p>想知道人类历史上第一个网站是什么样的吗？点击链接了解详情：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://info.cern.ch/hypertext/WWW/TheProject.html">点我进入世界上第一个网站</a></p>
+<p>这个网站由 <strong>蒂姆·伯纳斯-李 (Tim Berners-Lee)</strong> 于 1991 年创建，是全球信息互联的起点。它不仅为现代互联网铺平了道路，还彻底改变了人类分享与获取信息的方式。</p>
+<hr>
+<h2 id="万维网的由来"><a href="#万维网的由来" class="headerlink" title="万维网的由来"></a><strong>万维网的由来</strong></h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>1980 年代末，蒂姆·伯纳斯-李在欧洲核子研究中心 (CERN) 工作时，发现研究人员需要一种方便的方式共享研究成果和数据。然而，当时的计算机系统互不兼容，信息交换极为困难。</p>
+<h3 id="创造历程"><a href="#创造历程" class="headerlink" title="创造历程"></a>创造历程</h3><ol>
+<li><p><strong>想法的萌芽</strong><br>1989 年，伯纳斯-李提出了一个名为“信息管理：一个建议”的项目计划，旨在通过超文本系统解决信息共享问题。他提出的三个核心技术后来成为万维网的基石：</p>
+<ul>
+<li>**超文本标记语言 (HTML)**：用于创建网页内容。</li>
+<li>**统一资源定位符 (URL)**：用于唯一标识网络资源的位置。</li>
+<li>**超文本传输协议 (HTTP)**：用于信息在网络上的传递。</li>
+</ul>
+</li>
+<li><p><strong>原型开发</strong><br>1990 年，他在 CERN 的 NeXT 计算机上开发出了第一个网页浏览器和服务器。第一个网站于 1991 年上线，提供了关于万维网的基本信息，包括如何创建网页和使用浏览器。</p>
+</li>
+<li><p><strong>公开发布</strong><br>1993 年，伯纳斯-李决定将万维网技术免费开放，推动了全球范围的快速普及。</p>
+</li>
+</ol>
+<hr>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/%E4%B8%96%E7%95%8C%E4%B8%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%BD%91%E7%AB%99-World-Wide-Web/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/emoji-test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/emoji-test/" class="post-title-link" itemprop="url">Hexo 使用表情教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-04 10:35:04" itemprop="dateCreated datePublished" datetime="2024-07-04T10:35:04+08:00">2024-07-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>输入这个命令 下载hexo-filter-github-emojis </p>
+<figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-<span class="built_in">filter</span>-github-emojis <span class="comment">--save</span></span><br></pre></td></tr></tbody></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/emoji-test/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/spotify%E7%BE%8E%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/spotify%E7%BE%8E%E5%8C%96/" class="post-title-link" itemprop="url">Spotify 美化指南</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-04-29 15:16:46" itemprop="dateCreated datePublished" datetime="2024-04-29T15:16:46+08:00">2024-04-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-12 14:16:17" itemprop="dateModified" datetime="2025-02-12T14:16:17+08:00">2025-02-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Spotify/" itemprop="url" rel="index"><span itemprop="name">Spotify</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Spotify-美化指南：用插件打造个性化音乐世界"><a href="#Spotify-美化指南：用插件打造个性化音乐世界" class="headerlink" title="Spotify 美化指南：用插件打造个性化音乐世界"></a>Spotify 美化指南：用插件打造个性化音乐世界</h1><p>你是否觉得默认的 Spotify 界面有些单调？是否希望它能更符合你的审美？Spotify 美化不仅可以让你的音乐播放器变得更有趣，还能让操作更高效。通过简单的设置，你可以自定义主题颜色、安装功能插件，让每次听歌都更愉悦。<br>现在就跟随本指南，一起把你的 Spotify 打造得与众不同！<br><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E6%95%88%E6%9E%9C%E5%9B%BE.webp" alt="美化效果"></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/spotify%E7%BE%8E%E5%8C%96/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="PW0N"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">PW0N</p>
+  <div class="site-description" itemprop="description">阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">53</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Duoqixiaozei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Duoqixiaozei" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:pw0nxx@163.com" title="E-Mail → mailto:pw0nxx@163.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PW0N</span>
+</div>
+由 <a  class="theme-link"  target="_blank" rel="noopener external nofollow noreferrer" href="http://hexo.io">Hexo</a> 强力驱动
+
+<a class="theme-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/iissnan/hexo-theme-next">
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
+
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
+</html>
