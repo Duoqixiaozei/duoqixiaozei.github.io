@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="baidu-site-verification" content="codeva-tiWIr8OvPt">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.pw0n.xyz","root":"/","scheme":"Pisces","version":"7.8.0","sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":true,"lazyload":false,"pangu":true,"comments":{"style":"gitalk","active":null,"storage":true,"lazyload":false},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="今天给大家介绍这一款适合很多人的浏览器插件 —— ​uBlock Origin​。无论你是看 Bilibili &#x2F; YouTube 等平台的视频，还是浏览普通网页，uBlock Origin 都能帮你自动跳过广告，为你带来更清爽的使用体验。 除了视频方面，uBlock Origin 在打开新闻网站、电商页面、论坛等网页时，也能有效屏蔽弹窗广告、横幅广告、追踪脚本等烦人的内容。虽然它会在运行时占用一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一款好用去除广告的浏览器插件 uBlock Origin">
+<meta property="og:url" content="https://www.pw0n.xyz/uBlock/index.html">
+<meta property="og:site_name" content="PW0N&#39;s Blog">
+<meta property="og:description" content="今天给大家介绍这一款适合很多人的浏览器插件 —— ​uBlock Origin​。无论你是看 Bilibili &#x2F; YouTube 等平台的视频，还是浏览普通网页，uBlock Origin 都能帮你自动跳过广告，为你带来更清爽的使用体验。 除了视频方面，uBlock Origin 在打开新闻网站、电商页面、论坛等网页时，也能有效屏蔽弹窗广告、横幅广告、追踪脚本等烦人的内容。虽然它会在运行时占用一">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-08T02:44:34.000Z">
+<meta property="article:modified_time" content="2025-05-08T02:47:16.113Z">
+<meta property="article:author" content="PW0N">
+<meta property="article:tag" content="ublock">
+<meta property="article:tag" content="去广告插件">
+<meta property="article:tag" content="Firefox">
+<meta property="article:tag" content="Edge">
+<meta property="article:tag" content="Chrome">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://www.pw0n.xyz/uBlock/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.css"><style>
+#needsharebutton-postbottom {
+  cursor: pointer;
+  height: 26px;
+  margin-top: 10px;
+  position: relative;
+}
+#needsharebutton-postbottom .btn {
+  border: 1px solid $btn-default-border-color;
+  border-radius: 3px;
+  display: initial;
+  padding: 1px 4px;
+}
+</style>
+  <title>一款好用去除广告的浏览器插件 uBlock Origin | PW0N's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4839637409222286"
+     crossorigin="anonymous"></script>
+<link rel="alternate" href="/atom.xml" title="PW0N's Blog" type="application/atom+xml">
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">PW0N's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">分享更多的技术让志同道合的一起学习交流</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-nav">
+
+    <a href="/nav/" rel="section"><i class="fa fa-compass fa-fw"></i>导航</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-language">
+
+    <a href="https://en.pw0n.xyz/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-language fa-fw"></i>English</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-rss">
+
+    <a href="/atom.xml" rel="section"><i class="fa fa-rss fa-fw"></i>RSS</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.pw0n.xyz/uBlock/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PW0N">
+      <meta itemprop="description" content="阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="PW0N's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          一款好用去除广告的浏览器插件 uBlock Origin
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2025-05-08 02:44:34 / 修改时间：02:47:16" itemprop="dateCreated datePublished" datetime="2025-05-08T02:44:34+00:00">2025-05-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" itemprop="url" rel="index"><span itemprop="name">浏览器插件</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>今天给大家介绍这一款适合很多人的浏览器插件 —— ​<strong>uBlock Origin</strong>​。无论你是看 <strong>Bilibili / YouTube</strong> 等平台的视频，还是浏览普通网页，uBlock Origin 都能帮你自动跳过广告，为你带来更清爽的使用体验。</p>
+<p>除了视频方面，uBlock Origin 在打开新闻网站、电商页面、论坛等网页时，也能有效屏蔽弹窗广告、横幅广告、追踪脚本等烦人的内容。虽然它会在运行时占用一定的内存和 CPU 资源，但整体使用起来非常流畅，几乎感觉不到卡顿。确实是一款“装了就离不开”的神器。</p>
+<hr>
+<h1 id="🌟-uBlock-Origin-的主要优点"><a href="#🌟-uBlock-Origin-的主要优点" class="headerlink" title="🌟 uBlock Origin 的主要优点"></a>🌟 uBlock Origin 的主要优点</h1><ul>
+<li>​<strong>完全免费、开源</strong>​：不像其他某些插件会暗藏收费机制，uBlock Origin 完全开源，安全放心。</li>
+<li>​<strong>占用资源小</strong>​：相比一些老牌的广告插件，uBlock Origin 更加轻量高效。</li>
+<li>​<strong>规则更新及时</strong>​：内置 EasyList、uBlock filters 等规则库，同时支持手动添加自定义过滤规则。</li>
+<li>​<strong>高度可配置</strong>​：高级用户可以根据需要自定义屏蔽范围和行为。</li>
+</ul>
+<hr>
+<h1 id="🚀-如何安装-uBlock-Origin"><a href="#🚀-如何安装-uBlock-Origin" class="headerlink" title="🚀 如何安装 uBlock Origin"></a>🚀 如何安装 uBlock Origin</h1><ol>
+<li><p>打开你的浏览器插件商店：</p>
+<ul>
+<li>Chrome 用户进入 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">Chrome 网上应用店</a></li>
+<li>Firefox 用户访问 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/">Firefox Add-ons</a></li>
+<li>Edge 用户进入 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://microsoftedge.microsoft.com/addons/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">Edge 插件商店</a></li>
+</ul>
+</li>
+<li><p>搜索 <strong>uBlock Origin</strong> 并点击“添加到浏览器”。</p>
+</li>
+<li><p>安装完成后，在右上角扩展图标中点击即可进行简单配置。</p>
+</li>
+<li><p>如果拓展商店没法搜索到或者无法使用可以在github页面下载对应的浏览器拓展程序</p>
+<ul>
+<li>Github uBlock Origin页面<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/gorhill/uBlock/releases">Github uBlock Origin页面下载</a></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="⚙️-推荐设置"><a href="#⚙️-推荐设置" class="headerlink" title="⚙️ 推荐设置"></a>⚙️ 推荐设置</h1><p>为了获得更强的屏蔽效果，可以进入插件设置页面，勾选以下选项：</p>
+<ul>
+<li>✔️ 启用“uBlock filters – Privacy”</li>
+<li>✔️ 启用“uBlock filters – Annoyances”</li>
+<li>✔️ 启用“AdGuard Chinese filter”（适合中文网页）</li>
+<li>✔️ 启用“Fanboy’s Annoyance List”</li>
+</ul>
+<p>如果你愿意深入研究，还可以添加自定义的规则，如屏蔽某些弹窗提示、视频站点的特定广告行为等。</p>
+<hr>
+<h1 id="❗-注意事项"><a href="#❗-注意事项" class="headerlink" title="❗ 注意事项"></a>❗ 注意事项</h1><p>虽然 uBlock Origin 很强大，但也可能会误伤某些正常内容，比如网站评论区、内嵌视频播放器等功能。因此如果你遇到页面功能不正常的情况，可以临时点击扩展图标，选择“在此网站禁用”，刷新页面即可。</p>
+<hr>
+<h1 id="✅-总结"><a href="#✅-总结" class="headerlink" title="✅ 总结"></a>✅ 总结</h1><p>如果你厌倦了网页上各种广告弹窗，或者不想在视频开始前强制观看几十秒的广告，那么 <strong>uBlock Origin</strong> 是你不容错过的插件。它简单、干净、强大，装上之后，你可能再也不想卸载它了。</p>
+<p>快去安装试试吧！让你的浏览器焕然一新 🎉</p>
+
+    </div>
+
+    
+    
+    <div class="post-widgets">
+    <div class="likely">
+        <div class="twitter">Tweet</div>
+        <div class="facebook">Share</div>
+        <div class="linkedin">Link</div>
+        <div class="gplus">Plus</div>
+        <div class="vkontakte">Share</div>
+        <div class="odnoklassniki">Class</div>
+        <div class="telegram">Send</div>
+        <div class="whatsapp">Send</div>
+        <div class="pinterest">Pin</div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/ilyabirman-likely@2/release/likely.min.js"></script><div class="post-widgets">
+      <div id="needsharebutton-postbottom">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/ublock/" rel="tag"># ublock</a>
+              <a href="/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A%E6%8F%92%E4%BB%B6/" rel="tag"># 去广告插件</a>
+              <a href="/tags/Firefox/" rel="tag"># Firefox</a>
+              <a href="/tags/Edge/" rel="tag"># Edge</a>
+              <a href="/tags/Chrome/" rel="tag"># Chrome</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/30sHandle-cross-border-business/" rel="prev" title="30分钟速通！深圳龙华清湖护照&港澳通行证办理攻略 🚀">
+      <i class="fa fa-chevron-left"></i> 30分钟速通！深圳龙华清湖护照&港澳通行证办理攻略 🚀
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%8C%9F-uBlock-Origin-%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BC%98%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">🌟 uBlock Origin 的主要优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%9A%80-%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85-uBlock-Origin"><span class="nav-number">2.</span> <span class="nav-text">🚀 如何安装 uBlock Origin</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E2%9A%99%EF%B8%8F-%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">⚙️ 推荐设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E2%9D%97-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">4.</span> <span class="nav-text">❗ 注意事项</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E2%9C%85-%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">✅ 总结</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="PW0N"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">PW0N</p>
+  <div class="site-description" itemprop="description">阅读我对网络技术的深入分析和最新趋势的见解，同时了解我个人的生活记录和经验分享。
+无论是技术教程还是生活故事，都能在这里找到有趣的内容。
+</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">39</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">71</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Duoqixiaozei" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Duoqixiaozei" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:pw0nxx@163.com" title="E-Mail → mailto:pw0nxx@163.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2024 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PW0N</span>
+</div>
+由 <a  class="theme-link"  target="_blank" rel="noopener external nofollow noreferrer" href="http://hexo.io">Hexo</a> 强力驱动
+
+<a class="theme-link" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/iissnan/hexo-theme-next">
+
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://www.pw0n.xyz/uBlock/',]
+      });
+      });
+  </script>
+
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-needmoreshare2@1/needsharebutton.min.js"></script>
+  <script>
+      pbOptions = {};
+        pbOptions.iconStyle = "box";
+        pbOptions.boxForm = "horizontal";
+        pbOptions.position = "bottomCenter";
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+  </script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'Ov23licQslcmqpdOl1SO',
+      clientSecret: '82092c2fbc2d05ab92d329b16a599e70451e13b2',
+      repo        : 'duoqixiaozei.github.io',
+      owner       : 'duoqixiaozei',
+      admin       : ['duoqixiaozei'],
+      id          : 'a69cc98fb7e5f70e2224fbd2af63f19a',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
+</html>

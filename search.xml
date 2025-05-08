@@ -1954,4 +1954,61 @@ ESP8266 智能设备</p>
         <tag>港澳通行证</tag>
       </tags>
   </entry>
+  <entry>
+    <title>一款好用去除广告的浏览器插件 uBlock Origin</title>
+    <url>/uBlock/</url>
+    <content><![CDATA[<p>今天给大家介绍这一款适合很多人的浏览器插件 —— ​<strong>uBlock Origin</strong>​。无论你是看 <strong>Bilibili / YouTube</strong> 等平台的视频，还是浏览普通网页，uBlock Origin 都能帮你自动跳过广告，为你带来更清爽的使用体验。</p>
+<p>除了视频方面，uBlock Origin 在打开新闻网站、电商页面、论坛等网页时，也能有效屏蔽弹窗广告、横幅广告、追踪脚本等烦人的内容。虽然它会在运行时占用一定的内存和 CPU 资源，但整体使用起来非常流畅，几乎感觉不到卡顿。确实是一款“装了就离不开”的神器。</p>
+<hr>
+<h1 id="🌟-uBlock-Origin-的主要优点"><a href="#🌟-uBlock-Origin-的主要优点" class="headerlink" title="🌟 uBlock Origin 的主要优点"></a>🌟 uBlock Origin 的主要优点</h1><ul>
+<li>​<strong>完全免费、开源</strong>​：不像其他某些插件会暗藏收费机制，uBlock Origin 完全开源，安全放心。</li>
+<li>​<strong>占用资源小</strong>​：相比一些老牌的广告插件，uBlock Origin 更加轻量高效。</li>
+<li>​<strong>规则更新及时</strong>​：内置 EasyList、uBlock filters 等规则库，同时支持手动添加自定义过滤规则。</li>
+<li>​<strong>高度可配置</strong>​：高级用户可以根据需要自定义屏蔽范围和行为。</li>
+</ul>
+<hr>
+<h1 id="🚀-如何安装-uBlock-Origin"><a href="#🚀-如何安装-uBlock-Origin" class="headerlink" title="🚀 如何安装 uBlock Origin"></a>🚀 如何安装 uBlock Origin</h1><ol>
+<li><p>打开你的浏览器插件商店：</p>
+<ul>
+<li>Chrome 用户进入 <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">Chrome 网上应用店</a></li>
+<li>Firefox 用户访问 <a href="https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/">Firefox Add-ons</a></li>
+<li>Edge 用户进入 <a href="https://microsoftedge.microsoft.com/addons/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">Edge 插件商店</a></li>
+</ul>
+</li>
+<li><p>搜索 <strong>uBlock Origin</strong> 并点击“添加到浏览器”。</p>
+</li>
+<li><p>安装完成后，在右上角扩展图标中点击即可进行简单配置。</p>
+</li>
+<li><p>如果拓展商店没法搜索到或者无法使用可以在github页面下载对应的浏览器拓展程序</p>
+<ul>
+<li>Github uBlock Origin页面<a href="https://github.com/gorhill/uBlock/releases">Github uBlock Origin页面下载</a></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="⚙️-推荐设置"><a href="#⚙️-推荐设置" class="headerlink" title="⚙️ 推荐设置"></a>⚙️ 推荐设置</h1><p>为了获得更强的屏蔽效果，可以进入插件设置页面，勾选以下选项：</p>
+<ul>
+<li>✔️ 启用“uBlock filters – Privacy”</li>
+<li>✔️ 启用“uBlock filters – Annoyances”</li>
+<li>✔️ 启用“AdGuard Chinese filter”（适合中文网页）</li>
+<li>✔️ 启用“Fanboy’s Annoyance List”</li>
+</ul>
+<p>如果你愿意深入研究，还可以添加自定义的规则，如屏蔽某些弹窗提示、视频站点的特定广告行为等。</p>
+<hr>
+<h1 id="❗-注意事项"><a href="#❗-注意事项" class="headerlink" title="❗ 注意事项"></a>❗ 注意事项</h1><p>虽然 uBlock Origin 很强大，但也可能会误伤某些正常内容，比如网站评论区、内嵌视频播放器等功能。因此如果你遇到页面功能不正常的情况，可以临时点击扩展图标，选择“在此网站禁用”，刷新页面即可。</p>
+<hr>
+<h1 id="✅-总结"><a href="#✅-总结" class="headerlink" title="✅ 总结"></a>✅ 总结</h1><p>如果你厌倦了网页上各种广告弹窗，或者不想在视频开始前强制观看几十秒的广告，那么 <strong>uBlock Origin</strong> 是你不容错过的插件。它简单、干净、强大，装上之后，你可能再也不想卸载它了。</p>
+<p>快去安装试试吧！让你的浏览器焕然一新 🎉</p>
+]]></content>
+      <categories>
+        <category>浏览器插件</category>
+      </categories>
+      <tags>
+        <tag>ublock</tag>
+        <tag>去广告插件</tag>
+        <tag>Firefox</tag>
+        <tag>Edge</tag>
+        <tag>Chrome</tag>
+      </tags>
+  </entry>
 </search>
