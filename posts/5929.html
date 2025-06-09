@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo 使用表情教程 | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="输入这个命令 下载hexo-filter-github-emojis  1$ npm install hexo-filter-github-emojis --save">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 使用表情教程">
+<meta property="og:url" content="http://pw0n.com/posts/5929.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="输入这个命令 下载hexo-filter-github-emojis  1$ npm install hexo-filter-github-emojis --save">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pw0n.com/img/butterfly-icon.png">
+<meta property="article:published_time" content="2024-07-04T02:35:04.000Z">
+<meta property="article:modified_time" content="2025-06-06T09:57:03.717Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pw0n.com/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hexo 使用表情教程",
+  "url": "http://pw0n.com/posts/5929.html",
+  "image": "http://pw0n.com/img/butterfly-icon.png",
+  "datePublished": "2024-07-04T02:35:04.000Z",
+  "dateModified": "2025-06-06T09:57:03.717Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://pw0n.com/posts/5929.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: true,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo 使用表情教程',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">35</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Hexo 使用表情教程</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Hexo 使用表情教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-07-04T02:35:04.000Z" title="Created 2024-07-04 10:35:04">2024-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-06-06T09:57:03.717Z" title="Updated 2025-06-06 17:57:03">2025-06-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Hexo/">Hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><p>输入这个命令 下载hexo-filter-github-emojis </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-filter-github-emojis --save</span><br></pre></td></tr></table></figure>
+<span id="more"></span>😀
+<p>向站点配置文件 hexo（你的博客文件夹名）_config.yml 中添加如下设置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">githubEmojis:</span><br><span class="line">  enable: true</span><br><span class="line">  className: github-emoji</span><br><span class="line">  unicode: true</span><br><span class="line">  styles:</span><br><span class="line">    display: inline</span><br><span class="line">    vertical-align: middle # Freemind适用</span><br><span class="line">  localEmojis:</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+<p>保存好后你可以再你的文章尝试表情<br>在 emoji-cheat-sheet 中找到你想要的表情，然后点击即可复制。使用方法和 GitHub 一样，比如你想发一个笑脸 😄 直接输入笑脸对应的 emoji 编码 :smile： 就可以。<br>🤤😵‍💫🧐🤓👨‍🎤😏🦧🛗⏫</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/5929.html">http://pw0n.com/posts/5929.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a></div><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/12356.html" title="这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"><img class="cover" src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/万能青年旅店子.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">这首歌的歌词让人震撼！《大石碎胸口》你听过吗？</div></div><div class="info-2"><div class="info-item-1">🎶 这首歌的歌词让人震撼！《大石碎胸口》你听过吗？  你有过那种听一首歌，突然被歌词震撼到的感觉吗？今天我就想给大家推荐一首让我久久不能忘怀的歌——《大石碎胸口》，它出自万能青年旅店的同名专辑。这首歌至今已经发行13年，但每次听都能给我全新的感触，你一定不能错过。 🎧 为什么这首歌让我停不下来？《大石碎胸口》这首歌的旋律和歌词有种让人无法抗拒的魅力。可能你第一次听，会觉得它和你之前听过的歌曲有点不同——它不是那种一听就让人愉快的旋律，而是给你一种沉重却不失力量的感觉。这首歌的旋律融合了摇滚、民谣与实验音乐，每次的编曲都能在耳朵里回响不已。 在听这首歌的那一刻，你一定会感到一种莫名的压迫感，仿佛有一块石头压在胸口——这种感觉就是歌名的来源，而它的深意也远不止于此。 🎤 歌词究竟有多震撼？当你开始认真听歌词时，你会发现它的深度远超一般的歌。歌名里的“大石”和“胸口”，其实是两种象征：大石代表着生活中的压力、困境，而胸口则是承载这些痛苦的地方。歌词中的每一句话，都像是生活中的真实写照，讲述了普通人在社会变革中的迷茫、挣扎和不屈。 歌词里提到的“黑暗好像一颗巨石按在胸口”，真的是让...</div></div></div></a><a class="pagination-related" href="/posts/c2c6a43d.html" title="Spotify 美化指南"><img class="cover" src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/效果图.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Spotify 美化指南</div></div><div class="info-2"><div class="info-item-1">Spotify 美化指南：用插件打造个性化音乐世界你是否觉得默认的 Spotify 界面有些单调？是否希望它能更符合你的审美？Spotify 美化不仅可以让你的音乐播放器变得更有趣，还能让操作更高效。通过简单的设置，你可以自定义主题颜色、安装功能插件，让每次听歌都更愉悦。现在就跟随本指南，一起把你的 Spotify 打造得与众不同！    为什么要美化 Spotify？Spotify 是一款功能强大的流媒体音乐播放器，但它的默认界面风格可能无法满足所有人的喜好。通过美化，你可以实现以下目标：  个性化界面：选择你喜欢的主题和配色，打造专属于你的视觉风格。 增强功能：通过插件扩展，如歌词同步、快捷操作等，让使用体验更上一层楼。 让音乐更有仪式感：听音乐不仅是耳朵的享受，更是眼睛的盛宴。  准备好了吗？接下来开始动手！  Windows 安装指南1. 安装 Spicetify 插件程序确保 Spotify 已安装（任意版本均可）。然后按照以下步骤安装 Spicetify，这是一款功能强大的美化工具。 打开 Windows Powershell 按下系统键，搜索并打开 Windows ...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">35</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/b4e39267.html" title="Hexo博客Google Adsense抓取sitemap问题解决方案"><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/fix-dir%2Fblog%2Fseo%2F2025%2F06%2F05%2F17-54-26-d1cb8459616144bbd50bfa5825948c1d-wufazhuaqu-98ce11.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo博客Google Adsense抓取sitemap问题解决方案"/></a><div class="content"><a class="title" href="/posts/b4e39267.html" title="Hexo博客Google Adsense抓取sitemap问题解决方案">Hexo博客Google Adsense抓取sitemap问题解决方案</a><time datetime="2025-06-05T01:59:05.000Z" title="Created 2025-06-05 09:59:05">2025-06-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/27733.html" title="澳门旅游经验分享">澳门旅游经验分享</a><time datetime="2025-05-21T22:15:22.000Z" title="Created 2025-05-22 06:15:22">2025-05-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/3694.html" title="30分钟速通！深圳龙华清湖护照&amp;港澳通行证办理攻略">30分钟速通！深圳龙华清湖护照&amp;港澳通行证办理攻略</a><time datetime="2025-03-05T22:45:36.000Z" title="Created 2025-03-06 06:45:36">2025-03-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/43436.html" title="中银跨境转账零手续费攻略（内地→香港）">中银跨境转账零手续费攻略（内地→香港）</a><time datetime="2025-03-03T22:46:31.000Z" title="Created 2025-03-04 06:46:31">2025-03-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/21495.html" title="内地小白香港办卡指南：汇丰与中银实战攻略">内地小白香港办卡指南：汇丰与中银实战攻略</a><time datetime="2025-02-25T00:25:45.000Z" title="Created 2025-02-25 08:25:45">2025-02-25</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;2019 - 2025 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.0-b2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Toggle Between Traditional and Simplified Chinese">简</button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
