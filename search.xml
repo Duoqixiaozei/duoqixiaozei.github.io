@@ -1905,10 +1905,9 @@
       </tags>
   </entry>
   <entry>
-    <title>no-search</title>
+    <title>Hexo博客 Butterfly 主题 5.4.0-b2 本地搜索不工作的问题</title>
     <url>/posts/d03bded7.html</url>
-    <content><![CDATA[<p>解决 Butterfly 主题 5.4.0-b2 本地搜索不工作的问题：从排查到解决</p>
-<p>当你升级到 Hexo Butterfly 主题 5.4.0-b2 版本后，发现本地搜索功能突然“失踪”了——没有搜索图标，搜索框也无法使用。这通常是由于搜索插件配置不当导致的。别担心，你的排查思路非常专业，跟着我来一步步解决这个问题。<br><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/fix-dir%2Fblog%2Fsearch%2F2025%2F06%2F09%2F15-19-26-cf488cb050f1a5b55b845aa7ae44e8f2-search%20failed-3d7026.webp" alt="没有搜索"></p>
+    <content><![CDATA[<p>当你升级到 Hexo Butterfly 主题 5.4.0-b2 版本后，发现本地搜索功能突然“失踪”了——没有搜索图标，搜索框也无法使用。这通常是由于搜索插件配置不当导致的。别担心，你的排查思路非常专业，跟着我来一步步解决这个问题。<br><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/fix-dir%2Fblog%2Fsearch%2F2025%2F06%2F09%2F15-19-26-cf488cb050f1a5b55b845aa7ae44e8f2-search%20failed-3d7026.webp" alt="没有搜索"></p>
 <h1 id="问题现象与初步排查"><a href="#问题现象与初步排查" class="headerlink" title="问题现象与初步排查"></a>问题现象与初步排查</h1><p>最初，你可能发现网站上根本没有出现搜索框或搜索图标。即使尝试按照一些通用教程安装了 <code>hexo-generator-search</code> 插件并进行了配置，问题依旧。</p>
 <p>此时，<strong>F12 开发者工具</strong>就成了你的好帮手。打开浏览器开发者工具，切换到 <strong>Console（控制台）</strong> 标签页，你会发现类似 <code>localsearch undefined</code> 的错误信息。这表示主题尝试调用一个名为 <code>localsearch</code> 的变量或函数，但它并没有被正确定义或加载。</p>
 <p>紧接着，在 <strong>Elements（元素）</strong> 或 <strong>Network（网络）</strong> 标签页中搜索 <code>localsearch</code> 或 <code>search.xml</code>（甚至 <code>search.json</code>），你可能会发现：</p>
