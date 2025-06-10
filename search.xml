@@ -94,7 +94,7 @@
 <p><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/puttygen%E4%B8%8B%E8%BD%BD.webp" alt="puttygen下载"></p>
 <p>下载好打开软件进入</p>
 <p><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/puttygen%20%E7%95%8C%E9%9D%A2.webp" alt="puttygen界面"></p>
-<p>点击Generate（tips:点击完不要切换其他程序等待一会 切换其他程序它就会不动！）<br>生成好 需要在Key comment添加的Gmail前面的信息@前面的比如我的是 rsa-key-20240826test（在添加你的gmail前面的信息，比如我的邮箱是<a href="mailto:&#x74;&#101;&#115;&#x74;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">test@gmail.com</a> @前面的比如test你直接加后面就行）<br><img src="https://raw.githubusercontent.com/Duoqixiaozei/img/master/puttygen%E7%94%9F%E6%88%90%E5%A5%BD%E7%9A%84.webp" alt="puttygen生成好"><br>然后点击Save private Key 保存到你想要的文件夹<br>然后打开你的Google cloud的Computer Engine在设置里面的“元数据”然后点击SSH秘钥<br>把puttygen的Public key for pasting into OpenSSH authorized keys file:全部内容复制到秘钥里面</p>
+<p>点击Generate（tips:点击完不要切换其他程序等待一会 切换其他程序它就会不动！）<br>生成好 需要在Key comment添加的Gmail前面的信息@前面的比如我的是 rsa-key-20240826test（在添加你的gmail前面的信息，比如我的邮箱是<a href="mailto:&#x74;&#x65;&#x73;&#x74;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#109;">test@gmail.com</a> @前面的比如test你直接加后面就行）<br><img src="https://raw.githubusercontent.com/Duoqixiaozei/img/master/puttygen%E7%94%9F%E6%88%90%E5%A5%BD%E7%9A%84.webp" alt="puttygen生成好"><br>然后点击Save private Key 保存到你想要的文件夹<br>然后打开你的Google cloud的Computer Engine在设置里面的“元数据”然后点击SSH秘钥<br>把puttygen的Public key for pasting into OpenSSH authorized keys file:全部内容复制到秘钥里面</p>
 <p><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/google%20cloud%20%E5%85%83%E6%95%B0%E6%8D%AE%20ssh%E7%A7%98%E9%92%A5.webp" alt="ComputerEngine"></p>
 <p>然后打开你的虚拟机实例 复制你的外部IP<br>下载putty网址还是上面那个直接找到下载可以 找你对应的电脑架构类型下载 x86就下载x86的<br><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E4%B8%8B%E8%BD%BD.webp" alt="putty下载"></p>
 <p>点击左侧SSH-Auth-Credentials to authenticate with在Private key file for authentication:点击browse选择你刚刚在putty key generator保存ssh秘钥的文件夹。<br><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE2.webp" alt="putty设置1"><br>点击session在Hostname输入格式 rsa-key-20240826test@外部地址 （tips：rsa-key-20240826test是你在putty key generator软件的key comment 里面而test是你的Gmail前面的 也就是你Gmail@前面）然后你可以点击下方的Open就可以连接到你的服务器<br><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE1.webp" alt="putty设置2"><br>如果你觉得上面的过程麻烦下次还要按这样操作的话你在上面操作好之后在左侧session 然后saved<br>session填你想要的名称填好点击save下次打开直接选择你tina好的名称就可以链接服务器<br><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE3.webp" alt="putty设置3"></p>
@@ -153,7 +153,7 @@
     <content><![CDATA[<h1 id="SSH-公钥创建"><a href="#SSH-公钥创建" class="headerlink" title="SSH 公钥创建"></a>SSH 公钥创建</h1><p>打开你的linux 输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@email.com&quot;</span><br></pre></td></tr></table></figure>
 
-<p>“<del><a href="mailto:&#x79;&#111;&#117;&#114;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#x65;&#109;&#97;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;">youremail@email.com</a></del>”填写你自己的email 不要填写示例的</p>
+<p>“<del><a href="mailto:&#121;&#x6f;&#117;&#114;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x6d;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">youremail@email.com</a></del>”填写你自己的email 不要填写示例的</p>
 <p>一路回车</p>
 <span id="more"></span>
 
@@ -751,12 +751,20 @@
   <entry>
     <title>Hexo 使用表情教程</title>
     <url>/posts/5929.html</url>
-    <content><![CDATA[<p>输入这个命令 下载hexo-filter-github-emojis </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-filter-github-emojis --save</span><br></pre></td></tr></table></figure>
-<span id="more"></span>😀
-<p>向站点配置文件 hexo（你的博客文件夹名）_config.yml 中添加如下设置</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">githubEmojis:</span><br><span class="line">  enable: true</span><br><span class="line">  className: github-emoji</span><br><span class="line">  unicode: true</span><br><span class="line">  styles:</span><br><span class="line">    display: inline</span><br><span class="line">    vertical-align: middle # Freemind适用</span><br><span class="line">  localEmojis:</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
-<p>保存好后你可以再你的文章尝试表情<br>在 emoji-cheat-sheet 中找到你想要的表情，然后点击即可复制。使用方法和 GitHub 一样，比如你想发一个笑脸 😄 直接输入笑脸对应的 emoji 编码 :smile： 就可以。<br>🤤😵‍💫🧐🤓👨‍🎤😏🦧🛗⏫</p>
+    <content><![CDATA[<p>让你的Hexo博客活起来：添加GitHub表情符号<br>厌倦了千篇一律的文字？想让你的博客文章更生动有趣吗？GitHub风格的表情符号或许是你的答案！它们不仅能传达情绪，还能让你的内容更具吸引力。今天，我们就来聊聊如何在Hexo博客中轻松集成这些可爱的表情。</p>
+<p>安装GitHub表情符号插件<br>要让Hexo支持GitHub风格的表情符号，你需要安装一个名为 hexo-filter-github-emojis 的插件。在你的Hexo博客根目录下，打开终端或命令行工具，然后输入以下命令：</p>
+<p>Bash</p>
+<p>$ npm install hexo-filter-github-emojis –save<br>执行此命令后，hexo-filter-github-emojis 插件就会被下载并添加到你的项目中。</p>
+<p>配置站点文件<br>安装插件后，我们需要告诉Hexo如何启用和显示这些表情符号。你需要编辑你博客的站点配置文件。这个文件通常位于你的Hexo博客根目录下，名为 _config.yml。</p>
+<p>用你喜欢的文本编辑器打开 _config.yml 文件，然后添加以下配置代码块：</p>
+<p>YAML</p>
+<p>githubEmojis:<br>  enable: true<br>  className: github-emoji<br>  unicode: true<br>  styles:<br>    display: inline<br>    vertical-align: middle # Freemind适用<br>  localEmojis:<br>配置项说明：</p>
+<p>enable: true：这个选项是关键，它激活了GitHub表情符号功能。<br>className: github-emoji：为生成的表情符号图片添加CSS类名，方便你后续进行样式自定义。<br>unicode: true：确保插件能够正确处理并显示Unicode表情符号。<br>styles：这是一个可选的CSS样式设置，可以直接应用于表情符号。<br>display: inline：让表情符号与文本保持在同一行。<br>vertical-align: middle：这个样式特别适用于某些主题（例如Freemind），它能让表情符号与文本的垂直位置对齐，避免出现错位。<br>在文章中尝试表情符号<br>保存并关闭 _config.yml 文件后，你就可以在你的文章中尝试使用表情符号了。</p>
+<p>查找表情符号编码<br>你可以访问 emoji-cheat-sheet 这个网站。它提供了GitHub支持的所有表情符号及其对应的编码。找到你想要的表情，然后点击它即可复制其编码。</p>
+<p>使用方法<br>使用方法和GitHub上非常相似，你只需要在文章中输入表情符号对应的编码。例如，如果你想插入一个笑脸 😄，直接输入 :smile: 就可以。插件会自动将其转换为对应的表情图片或字符。</p>
+<p>现在，你可以在你的文章中尽情使用各种表情符号了！比如：</p>
+<p>🤤😵‍💫🧐🤓👨‍🎤😏🦧🛗⏫</p>
+<p>这些表情符号将帮助你打破传统文字的束缚，让你的博客文章更具表现力。快去试试吧，让你的博客焕然一新！</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -1884,24 +1892,30 @@
   <entry>
     <title>记录一下我入坑Linux</title>
     <url>/posts/51769.html</url>
-    <content><![CDATA[<h1 id="重生之Linux初体验"><a href="#重生之Linux初体验" class="headerlink" title="重生之Linux初体验"></a>重生之Linux初体验</h1><p>你们是什么时候入坑Linux的？是为了学习，还是为了建站？<br>我第一次接触Linux是在很久以前，那时还是个小屁孩。听了一位B站UP主讲解Linux后，我对它产生了浓厚的兴趣。然后，我读了《鸟哥的私房菜》开始自学，但很快因为命令行的枯燥和与Windows的差异，我停了下来。Linux那时对我来说太复杂了，尤其是没有Windows那种鼠标点击的便捷操作。毕竟，谁不想轻轻松松地“点点点”就搞定一切呢？</p>
-<span id="more"></span>
-<h2 id="初识Linux：从虚拟机到Ubuntu"><a href="#初识Linux：从虚拟机到Ubuntu" class="headerlink" title="初识Linux：从虚拟机到Ubuntu"></a>初识Linux：从虚拟机到Ubuntu</h2><p>那时，我大部分的Linux体验都是通过虚拟机（VMware）来进行的。ISO文件下载速度非常慢，等了好久才下载好。虽然虚拟机中运行Linux的体验不好，但我还是忍不住好奇，尝试了一下。第一次使用Linux时，大部分搜索结果都是关于Ubuntu的，于是我下载了它。当时的Ubuntu并不像现在那么易用和直观，桌面环境也不如现在那样完善，兼容性有点差。Gnome桌面虽然还行，但如果你用的是笔记本，KDE桌面体验会更流畅，虽然KDE的可玩性没有Gnome那么高。那时候我常觉得自己像是在给电脑做“手术”，不过，幸运的是，它并没有“死掉”——至少还运行着。</p>
-<p>我记得第一个学会的命令是 <code>cd</code>、<code>cp</code>、<code>mkdir</code>、<code>touch</code> 等基础命令。那时这些命令对我来说比较容易理解，但像 <code>ls -al</code> 和 <code>chmod</code> 等命令就让我有些困惑了。尤其是<code>chmod</code>，感觉它就像是Linux的“魔法咒语”，一不小心就能“变戏法”把文件搞丢。</p>
-<h2 id="从树莓派到云服务器"><a href="#从树莓派到云服务器" class="headerlink" title="从树莓派到云服务器"></a>从树莓派到云服务器</h2><p>在初中时，我还买了台树莓派，用它学习Linux的更多知识。几年后，我以原价将树莓派卖掉，回想起来真有点好笑，简直像是给这台“小钢炮”举办了个小型拍卖会。到了高中，我认识了一位做游戏开发的同学，他对Linux的理解让我非常佩服。那时，他居然可以在小米10（或11）上使用Docker编译和运行Windows，他的技术实力令人叹为观止。那时我心想：“哇，这人不去做黑客真是浪费天赋啊！”</p>
-<p>大学时，我没有继续深造Linux，而是沉迷于娱乐。直到最近，我才重新开始深入学习Linux，安装了一个无图形界面的CentOS服务器。这种操作全靠命令行，完全不依赖GUI界面。像下面这样：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/duoqixiaozei/img@master/%E5%91%BD%E4%BB%A4%E7%95%8C%E9%9D%A2.webp" alt="命令界面"></p>
-<p>在重新接触Linux的过程中，我发现自己经常会卡在一些错误上。很多时候是因为没有配置国内镜像源，导致下载依赖时发生404错误，甚至导致安装失败。记得当时有一个流行的表情包：“Google都不会”，意指我们寻求帮助时反而找不到正确的答案。有时候我都怀疑，Google是不是变得“任性”了，连基本的答案都不给。</p>
-<h2 id="误入“坑”：rm-rf的危险"><a href="#误入“坑”：rm-rf的危险" class="headerlink" title="误入“坑”：rm -rf的危险"></a>误入“坑”：rm -rf的危险</h2><p>在Linux中，最让我印象深刻的命令之一就是 <code>rm -rf</code>。这个命令会在不做任何提示的情况下，强制删除文件，甚至可能导致系统崩溃，丢失所有数据。很多初学者都会在不小心执行这个命令后，损失惨重。记得我第一次用它时，屏幕上的“删除成功”字样简直像是把我所有的文件都埋进了“数字大海”，那一刻，我甚至怀疑人生。</p>
-<h2 id="Linux无处不在"><a href="#Linux无处不在" class="headerlink" title="Linux无处不在"></a>Linux无处不在</h2><p>虽然很多人认为Linux离自己很远，但其实你每天接触的很多设备都在运行Linux。无论是地铁站的自助售票机，还是云服务器、Android手机（即使Google做了修改，核心仍基于Linux），甚至是嵌入式设备、机器人、大数据和人工智能领域，Linux都无处不在。你有没有想过，你每天刷的某个APP背后，可能就是Linux在“默默为你服务”？</p>
+    <content><![CDATA[<h1 id="我的Linux探索之旅：从小白到命令行"><a href="#我的Linux探索之旅：从小白到命令行" class="headerlink" title="我的Linux探索之旅：从小白到命令行"></a>我的Linux探索之旅：从小白到命令行</h1><p>你是什么时候开始接触Linux的？是为了学习，还是为了建站？</p>
+<p>我第一次接触Linux，是在一段遥远的记忆中。那时，我还是个懵懂的小屁孩，对计算机世界充满了好奇。偶然间，我在B站上看到一位UP主深入浅出地讲解Linux，他不仅展示了Linux强大的功能，还提到了它独特的开源精神，这立刻燃起了我内心深处对这个神秘操作系统的浓厚兴趣。紧接着，我迫不及待地翻开了那本被誉为“Linux圣经”的《鸟哥的私房菜》，满怀信心地开始了我的自学之路。然而，这份热情并没有持续太久。很快，我就被无休止的命令行操作、与Windows天壤之别的逻辑思维方式，以及那份对鼠标“点点点”操作的强烈依赖感劝退了。对我来说，Linux当时实在是太复杂了，简直像一个需要破解的密码，而我连基本的钥匙都没有。毕竟，谁不想轻轻松松地“点点点”就搞定一切呢？</p>
 <hr>
-<p>通过这一段学习和实践，我逐渐明白了Linux的魅力。它不仅是一个操作系统，更代表了一种开放、自由的精神。Linux的应用范围越来越广，不仅改变了我们的工作和生活方式，也为创新和科技进步提供了无穷的动力。如果你还没有尝试过Linux，强烈建议你也加入这个探索的旅程，准备好接受“黑暗中的光明”吧。</p>
+<h2 id="初识Linux：从虚拟机到Ubuntu的探索"><a href="#初识Linux：从虚拟机到Ubuntu的探索" class="headerlink" title="初识Linux：从虚拟机到Ubuntu的探索"></a>初识Linux：从虚拟机到Ubuntu的探索</h2><p>那时，我大部分的Linux体验都来自于​<strong>虚拟机（VMware）<strong>​。我清晰地记得，为了下载一个Linux的ISO文件，我守在电脑前等待了漫长的时间，下载进度条缓慢得让人绝望。好不容易下载好了，虚拟机中运行Linux的体验却并不尽如人意，常常伴随着卡顿和兼容性问题。但即便如此，那份与生俱来的好奇心还是驱使我继续尝试。第一次接触Linux时，大部分的中文搜索结果都指向了</strong>Ubuntu</strong>这个发行版，于是我顺理成章地选择了它。</p>
+<p>当时的Ubuntu，远不像现在这样拥有直观友好的用户界面和完善的生态系统。桌面环境也显得比较简陋，兼容性问题更是层出不穷。虽然<strong>Gnome桌面</strong>在当时算是主流，也还算可用，但如果你用的是笔记本电脑，<strong>KDE桌面</strong>的体验会更加流畅，即便KDE在可玩性上不如Gnome那么高，但其轻量化和自定义程度高的特点，也吸引了不少用户。那时候我常觉得自己像是在给电脑做一场精细的“手术”，每一次操作都小心翼翼，生怕一不小心就“弄死”了系统。不过幸运的是，它并没有“死掉”——至少还能运行，这让我颇有成就感。</p>
+<p>在摸索的过程中，我学会了第一个命令，那便是最基础的**<code>cd</code>**（切换目录）。紧接着，​**<code>cp</code><strong>​（复制文件）、​</strong><code>mkdir</code><strong>​（创建目录）、​</strong><code>touch</code><strong>​（创建空文件）等基础命令也相继被我掌握，这些命令对我来说比较容易理解，毕竟它们的操作逻辑与Windows的文件管理有些相似之处。但当遇到像​</strong><code>ls -al</code>**​（列出所有文件及详细信息）和**<code>chmod</code>**（修改文件权限）等命令时，我就开始感到有些困惑了。特别是<code>chmod</code>，它让我感觉就像是Linux世界的“魔法咒语”，那由数字组合而成的权限代码，稍有不慎就能“变戏法”般地把文件搞丢，甚至让程序无法运行，这种不确定性让我既着迷又害怕。</p>
+<hr>
+<h2 id="从树莓派到云服务器的进阶之路"><a href="#从树莓派到云服务器的进阶之路" class="headerlink" title="从树莓派到云服务器的进阶之路"></a>从树莓派到云服务器的进阶之路</h2><p>初中时，我对Linux的兴趣达到了一个新的高度。我甚至攒钱买了一台​<strong>树莓派</strong>​，那块小小的开发板成为了我学习Linux的“私人实验室”。我用它搭建了各种简单的服务，尝试了各种有趣的Linux应用，那段日子里，我的Linux技能得到了飞速提升。几年后，我竟然以原价将这台树莓派卖掉了，现在回想起来，这简直像给这台“小钢炮”举办了个小型拍卖会，既有点好笑，又有些怀念。</p>
+<p>到了高中，我认识了一位做游戏开发的同学，他对Linux的理解之深入，让我感到非常佩服。那时，他居然可以在小米10（或11）上使用<strong>Docker</strong>编译和运行Windows应用程序，这种跨平台的强大技术实力简直令人叹为观止。看到他如此娴熟地驾驭Linux和容器技术，我不禁心想：“哇，这人不去做黑客真是浪费天赋啊！”他的技术实力成为了我继续深入学习Linux的巨大动力。</p>
+<p>大学期间，我一度沉迷于娱乐，学习的重心也转移到了其他领域，因此并没有继续深耕Linux。直到最近，我才重新燃起了对Linux的兴趣，决定再次深入学习。这一次，我直接上手安装了一个​<strong>无图形界面的CentOS服务器</strong>​。这意味着所有的操作都必须通过命令行来完成，完全不依赖任何GUI界面。这种纯粹的命令行操作，让我仿佛回到了Linux最原始的状态，每一行命令都显得尤为重要，就像下面这样：</p>
+<p>在重新接触Linux的这段过程中，我发现自己经常会卡在一些令人头疼的错误上。很多时候都是因为没有正确配置​<strong>国内镜像源</strong>​，导致下载依赖时频繁出现404错误，甚至直接导致软件安装失败。记得当时有一个非常流行的表情包，上面写着：“Google都不会”，用来调侃我们寻求帮助时反而找不到正确答案的窘境。有时候我甚至会怀疑，Google是不是变得“任性”了，连一些基本的答案都不愿意给我了。这些经历让我深刻体会到，搭建一个稳定可靠的Linux环境，其前期配置工作是多么关键。</p>
+<hr>
+<h2 id="误入“坑”：rm-rf-的危险魔咒"><a href="#误入“坑”：rm-rf-的危险魔咒" class="headerlink" title="误入“坑”：rm -rf 的危险魔咒"></a>误入“坑”：<code>rm -rf</code> 的危险魔咒</h2><p>在Linux的世界里，有一个命令让我印象深刻，甚至至今想起来都会感到一丝后怕，那就是 ​**<code>rm -rf</code>**​。这个命令的强大之处在于，它会在不做任何提示的情况下，强制删除文件，甚至可能导致整个系统崩溃，丢失所有珍贵的数据。许多Linux初学者都曾因为不小心执行这个命令而损失惨重，留下惨痛的教训。我清晰地记得我第一次使用它时，屏幕上赫然出现的“删除成功”字样，在那一刻，我的内心是崩溃的，它简直像把我所有的文件都埋进了“数字大海”，那一刻，我甚至开始怀疑人生，质疑自己是否真的适合与这个强大而危险的操作系统打交道。它教会我一个惨痛的教训：在Linux命令行中，每敲下一个命令都必须深思熟虑。</p>
+<hr>
+<h2 id="Linux无处不在：渗透你我生活"><a href="#Linux无处不在：渗透你我生活" class="headerlink" title="Linux无处不在：渗透你我生活"></a>Linux无处不在：渗透你我生活</h2><p>虽然很多人认为Linux离自己的日常生活很远，它只是程序员和技术人员的专属工具，但事实上，你每天接触的许多设备，都在默默地运行着Linux操作系统。不信你看：无论是地铁站里方便快捷的​<strong>自助售票机</strong>​，还是我们日常使用的各种​<strong>云服务器</strong>​，以及几乎人手一部的​<strong>Android手机</strong>​（即使Google做了大量修改，其核心依然基于Linux内核），甚至是工业领域中的​<strong>嵌入式设备</strong>​、高科技的​<strong>机器人</strong>​、处理海量数据的​<strong>大数据平台</strong>​，以及前沿的​<strong>人工智能领域</strong>​，Linux都无处不在，扮演着不可或缺的角色。你有没有想过，你每天刷的某个热门APP，它背后可能就是Linux服务器在“默默为你服务”？Linux已经悄无声息地渗透到我们生活的方方面面，成为支撑现代数字世界的基石。</p>
+<hr>
+<p>通过这一段学习和实践，我逐渐明白了Linux的真正魅力。它不仅仅是一个冰冷的操作系统，更代表了一种​<strong>开放、自由、共享的精神</strong>​，这种精神正是开源社区的核心价值。Linux的应用范围越来越广，它不仅改变了我们的工作和生活方式，也为科技创新和进步提供了源源不断的动力。如果你还没有尝试过Linux，强烈建议你也加入这个充满挑战和惊喜的探索旅程。准备好接受“黑暗中的光明”吧，因为一旦你掌握了它，你将发现一个全新的、充满无限可能的世界。</p>
 ]]></content>
       <categories>
-        <category>记录一下</category>
+        <category>生活记录</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
