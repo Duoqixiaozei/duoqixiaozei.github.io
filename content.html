@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简洁导航</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='50' text-anchor='middle' font-size='80' dominant-baseline='middle'%3E🌐%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1em;
+            display: inline-flex;
+            align-items: center;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        nav a i {
+            margin-right: 8px;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li {
+            margin: 10px 15px;
+            width: 180px;
+            text-align: center;
+        }
+        li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1em;
+            display: block;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        li a:hover {
+            background-color: #f1f1f1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        li a i {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+            display: block;
+            color: #4CAF50;
+        }
+        .recommend {
+            font-size: 0.8em;
+            color: #777;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>简洁导航</h1>
+    </header>
+
+    <nav>
+        <a href="#file-tools"><i class="fas fa-file-alt"></i>文件处理</a>
+        <a href="#dev-tools"><i class="fas fa-code"></i>开发工具</a>
+         <a href="#extensions"><i class="fas fa-puzzle-piece"></i>浏览器扩展</a>
+        <a href="#search"><i class="fas fa-search"></i>搜索引擎</a>
+        <a href="#movie"><i class="fas fa-film"></i>影视</a>
+        <a href="#others"><i class="fas fa-tools"></i>其他工具</a>
+    </nav>
+
+    <section id="file-tools">
+        <h2>文件处理</h2>
+        <ul>
+            <li><a href="https://www.ilovepdf.com/jpg_to_pdf" target="_blank"><i class="fas fa-file-pdf"></i>JPG 转 PDF</a></li>
+            <li><a href="https://www.ilovepdf.com" target="_blank"><i class="fas fa-file-alt"></i>iLovePDF</a></li>
+            <li><a href="https://smallpdf.com/" target="_blank"><i class="fas fa-file-pdf"></i>SmallPDF</a></li>
+            <li><a href="https://www.pdf2go.com/" target="_blank"><i class="fas fa-file-pdf"></i>PDF2Go</a></li>
+        </ul>
+    </section>
+
+    <section id="dev-tools">
+        <h2>开发工具</h2>
+        <ul>
+            <li><a href="https://www.github.com" target="_blank"><i class="fab fa-github"></i>GitHub</a></li>
+            <li><a href="https://gitlab.com" target="_blank"><i class="fab fa-gitlab"></i>GitLab</a></li>
+            <li><a href="https://code.visualstudio.com/" target="_blank"><i class="fas fa-code"></i>VS Code</a></li>
+            <li><a href="https://developer.mozilla.org/" target="_blank"><i class="fas fa-book"></i>MDN 文档</a></li>
+            <li><a href="https://stackoverflow.com" target="_blank"><i class="fas fa-question-circle"></i>Stack Overflow</a></li>
+        </ul>
+    </section>
+      <section id="extensions">
+        <h2>浏览器扩展 <span class="recommend">（推荐新电脑安装）</span></h2>
+        <ul>
+             <li><a href="https://immersivetranslate.com/zh-Hans/" target="_blank"><i class="fas fa-language"></i>沉浸式翻译</a></li>
+            <li><a href="https://www.wappalyzer.com/apps/" target="_blank"><i class="fas fa-fingerprint"></i>Wappalyzer</a></li>
+            <li><a href="https://www.tampermonkey.net/" target="_blank"><i class="fas fa-code"></i>油猴脚本</a></li>
+              <li><a href="https://web.f7tk.com/zh-CN" target="_blank"><i class="fas fa-image"></i>Fatkun图片下载</a></li>
+        </ul>
+    </section>
+    <section id="search">
+        <h2>搜索引擎</h2>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank"><i class="fas fa-search"></i>Google</a></li>
+            <li><a href="https://www.bing.com" target="_blank"><i class="fas fa-search"></i>Bing</a></li>
+            <li><a href="https://www.baidu.com" target="_blank"><i class="fas fa-search"></i>百度</a></li>
+            <li><a href="https://duckduckgo.com" target="_blank"><i class="fas fa-search"></i>DuckDuckGo</a></li>
+        </ul>
+    </section>
+    <section id="movie">
+        <h2>影视</h2>
+        <ul>
+            <li><a href="https://rargb.to/" target="_blank"><i class="fas fa-video"></i>RARBG</a></li>
+            <li><a href="https://eztvx.to/home" target="_blank"><i class="fas fa-video"></i>EZTV</a></li>
+            <li><a href="https://torrentgalaxy.mx/" target="_blank"><i class="fas fa-video"></i>TGX</a></li>
+            <li><a href="https://zimuku.org/" target="_blank"><i class="fas fa-closed-captioning"></i>字幕库</a></li>
+        </ul>
+    </section>
+    <section id="others">
+        <h2>其他工具</h2>
+        <ul>
+            <li><a href="https://www.canva.com" target="_blank"><i class="fas fa-paint-brush"></i>Canva</a></li>
+            <li><a href="https://trello.com" target="_blank"><i class="fas fa-tasks"></i>Trello</a></li>
+            <li><a href="https://www.notion.so" target="_blank"><i class="fas fa-notes-medical"></i>Notion</a></li>
+            <li><a href="https://www.wolframalpha.com" target="_blank"><i class="fas fa-calculator"></i>Wolfram Alpha</a></li>
+        </ul>
+    </section>
+</body>
+</html>
