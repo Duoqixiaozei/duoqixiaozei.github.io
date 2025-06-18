@@ -264,7 +264,7 @@
 <p><img src="https://b22.pw0n.xyz/2025/06/16_putty%E4%B8%8B%E8%BD%BD.webp" alt="puttygen下载"></p>
 <p>下载好打开软件进入</p>
 <p>![puttygen界面](<a href="https://b22.pw0n.xyz/2025/06/16_puttygen">https://b22.pw0n.xyz/2025/06/16_puttygen</a> 界面.webp)</p>
-<p>点击Generate（tips:点击完不要切换其他程序等待一会 切换其他程序它就会不动！）<br>生成好 需要在Key comment添加的Gmail前面的信息@前面的比如我的是 rsa-key-20240826test（在添加你的gmail前面的信息，比如我的邮箱是<a href="mailto:&#x74;&#x65;&#x73;&#116;&#x40;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">test@gmail.com</a> @前面的比如test你直接加后面就行）<br><img src="https://b22.pw0n.xyz/2025/06/16_puttygen%E7%94%9F%E6%88%90%E5%A5%BD%E7%9A%84.webp" alt="puttygen生成好"><br>然后点击Save private Key 保存到你想要的文件夹<br>然后打开你的Google cloud的Computer Engine在设置里面的“元数据”然后点击SSH秘钥<br>把puttygen的Public key for pasting into OpenSSH authorized keys file:全部内容复制到秘钥里面</p>
+<p>点击Generate（tips:点击完不要切换其他程序等待一会 切换其他程序它就会不动！）<br>生成好 需要在Key comment添加的Gmail前面的信息@前面的比如我的是 rsa-key-20240826test（在添加你的gmail前面的信息，比如我的邮箱是<a href="mailto:&#x74;&#x65;&#115;&#x74;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#99;&#111;&#x6d;">test@gmail.com</a> @前面的比如test你直接加后面就行）<br><img src="https://b22.pw0n.xyz/2025/06/16_puttygen%E7%94%9F%E6%88%90%E5%A5%BD%E7%9A%84.webp" alt="puttygen生成好"><br>然后点击Save private Key 保存到你想要的文件夹<br>然后打开你的Google cloud的Computer Engine在设置里面的“元数据”然后点击SSH秘钥<br>把puttygen的Public key for pasting into OpenSSH authorized keys file:全部内容复制到秘钥里面</p>
 <p>![ComputerEngine](<a href="https://b22.pw0n.xyz/2025/06/16_google">https://b22.pw0n.xyz/2025/06/16_google</a> cloud 元数据 ssh秘钥.webp)</p>
 <p>然后打开你的虚拟机实例 复制你的外部IP<br>下载putty网址还是上面那个直接找到下载可以 找你对应的电脑架构类型下载 x86就下载x86的<br><img src="https://b22.pw0n.xyz/2025/06/16_puttygen%E4%B8%8B%E8%BD%BD.webp" alt="putty下载"></p>
 <p>点击左侧SSH-Auth-Credentials to authenticate with在Private key file for authentication:点击browse选择你刚刚在putty key generator保存ssh秘钥的文件夹。<br><img src="https://b22.pw0n.xyz/2025/06/16_putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE1.webp" alt="putty设置1"><br>点击session在Hostname输入格式 rsa-key-20240826test@外部地址 （tips：rsa-key-20240826test是你在putty key generator软件的key comment 里面而test是你的Gmail前面的 也就是你Gmail@前面）然后你可以点击下方的Open就可以连接到你的服务器<br><img src="https://b22.pw0n.xyz/2025/06/16_putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE2.webp" alt="putty设置2"><br>如果你觉得上面的过程麻烦下次还要按这样操作的话你在上面操作好之后在左侧session 然后saved<br>session填你想要的名称填好点击save下次打开直接选择你tina好的名称就可以链接服务器<br><img src="https://b22.pw0n.xyz/2025/06/16_putty%E7%95%8C%E9%9D%A2%E8%AE%BE%E7%BD%AE3.webp" alt="putty设置3"></p>
@@ -394,7 +394,7 @@
     <content><![CDATA[<h1 id="SSH-公钥创建"><a href="#SSH-公钥创建" class="headerlink" title="SSH 公钥创建"></a>SSH 公钥创建</h1><p>打开你的linux 输入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail@email.com&quot;</span><br></pre></td></tr></table></figure>
 
-<p>“<del><a href="mailto:&#x79;&#111;&#x75;&#x72;&#x65;&#109;&#97;&#105;&#108;&#x40;&#101;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">youremail@email.com</a></del>”填写你自己的email 不要填写示例的</p>
+<p>“<del><a href="mailto:&#x79;&#x6f;&#x75;&#x72;&#x65;&#109;&#x61;&#105;&#108;&#64;&#x65;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#109;">youremail@email.com</a></del>”填写你自己的email 不要填写示例的</p>
 <p>一路回车</p>
 <span id="more"></span>
 
@@ -823,6 +823,43 @@
       </categories>
       <tags>
         <tag>archlinux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>简洁导航介绍</title>
+    <url>/posts/848c1e0.html</url>
+    <content><![CDATA[<p>介绍一下我的<a href="https://www.pw0n.com/content.html">简介导航</a></p>
+<h1 id="文件处理"><a href="#文件处理" class="headerlink" title="文件处理"></a>文件处理</h1><ul>
+<li><a href="https://www.ilovepdf.com/">iLovePDF</a></li>
+<li><a href="https://smallpdf.com/">SmallPDF</a></li>
+<li><a href="https://www.pdf2go.com/">PDF2Go</a><br>这三个网站都可以转PDF格式<br>我本人喜欢iLovePDF，就以iLovePDF为例<br><img src="https://b22.pw0n.xyz/2025/06/18_ilovepdf%E7%95%8C%E9%9D%A2.webp" alt="界面"><br><img src="https://b22.pw0n.xyz/2025/06/18_JPG%E8%BD%ACPDF.webp" alt="JPG转PDF"><br><img src="https://b22.pw0n.xyz/2025/06/18_%E8%BD%ACPDF.webp" alt="转pdf"><br><img src="https://b22.pw0n.xyz/2025/06/18_%E5%AE%8C%E6%88%90%E8%BD%AC%E6%A0%BC%E5%BC%8F.webp" alt="完成"><br>使用起来也很简单 导入你的图片或者其他文件就能转换成pdf格式</li>
+</ul>
+<h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><p>不多介绍</p>
+<h1 id="浏览器扩展-（推荐新电脑安装）"><a href="#浏览器扩展-（推荐新电脑安装）" class="headerlink" title="浏览器扩展 （推荐新电脑安装）"></a>浏览器扩展 <strong>（推荐新电脑安装）</strong></h1><ul>
+<li><a href="https://immersivetranslate.com/zh-Hans/">沉浸式翻译</a>这个插件我推荐大部分安装的好，你看github或者看其他的英文文章可以翻译看起来也舒服，也可以用来学习你可以选择你不会的来翻译，会的可以不用翻译，也支持主流AI秘钥对接，让AI翻译。看youtube还可以生成中文字幕，这个插件真的绝。以下动图参考官方动图演示<div align="center"><img src="https://s.immersivetranslate.com/assets/r2-uploads/4月23日--qiq-G-lB3vBVRzR.gif" alt="browser action" width="300"></div></li>
+</ul>
+<div align="center"><img src="https://s.immersivetranslate.com/assets/r2-uploads/008_翻译在线PDF-FPIM78GFpKPega_K.gif" width="300"></div>
+
+<ul>
+<li><a href="https://www.wappalyzer.com/apps/">Wappalyzer</a>这个插件，可以看网站是什么框架，可以有效的让我判断网站有什么插件</li>
+<li><a href="https://www.tampermonkey.net/">油猴脚本</a>有很多脚本，能让我们使用 或者自己做一个脚本，很多博主有教程就不演示</li>
+<li><a href="https://web.f7tk.com/zh-CN">Fatkun图片下载</a>你可以直接扒网站的图片 直接原图下载<br><img src="https://b22.pw0n.xyz/2025/06/18_fatkun%E5%9B%BE%E7%89%87%E6%89%B9%E9%87%8F%E4%B8%8B%E8%BD%BD.webp" alt="Fatkun图片下载"><br><img src="https://b22.pw0n.xyz/2025/06/18_%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87.webp" alt="下载图片"></li>
+</ul>
+<h1 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h1><p>不赘述</p>
+<h1 id="影视"><a href="#影视" class="headerlink" title="影视"></a>影视</h1><ul>
+<li><a href="https://rargb.to/">RARBG</a> 老牌种子网站 这个之前就倒闭了 但是有人后续搞了，用这个</li>
+<li><a href="https://eztvx.to/home">EZTV</a> 也是种子网站，看美剧用的，不过我还是首选RARBG</li>
+<li><a href="https://zimuku.org/">字幕库</a> 看字幕用的，可以下载你对应的字幕<br>这些都需要下一个下载器 才能用都是bit种子，不过资源挺多的<blockquote>
+<p>后续再补充有用的</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>导航</category>
+      </categories>
+      <tags>
+        <tag>导航</tag>
       </tags>
   </entry>
   <entry>
