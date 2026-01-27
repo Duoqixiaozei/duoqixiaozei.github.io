@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Temu特姆一键拒绝调价脚本 不同意调价脚本 | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="你还在问temu天天弹窗降价而烦恼吗？这篇文章叫你如何解放双手一件拒绝弹窗。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Temu特姆一键拒绝调价脚本 不同意调价脚本">
+<meta property="og:url" content="http://pw0n.com/posts/55283.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="你还在问temu天天弹窗降价而烦恼吗？这篇文章叫你如何解放双手一件拒绝弹窗。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://b22.pw0n.xyz/2025/06/16_temu.webp">
+<meta property="article:published_time" content="2024-09-11T06:43:38.000Z">
+<meta property="article:modified_time" content="2026-01-26T01:07:53.173Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="TEMU">
+<meta property="article:tag" content="特姆">
+<meta property="article:tag" content="跨境电商">
+<meta property="article:tag" content="自动脚本">
+<meta property="article:tag" content="油猴脚本">
+<meta property="article:tag" content="拒绝调价">
+<meta property="article:tag" content="自动化工具">
+<meta property="article:tag" content="运营工具">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="浏览器插件">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://b22.pw0n.xyz/2025/06/16_temu.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Temu特姆一键拒绝调价脚本 不同意调价脚本",
+  "url": "http://pw0n.com/posts/55283.html",
+  "image": "https://b22.pw0n.xyz/2025/06/16_temu.webp",
+  "datePublished": "2024-09-11T06:43:38.000Z",
+  "dateModified": "2026-01-26T01:07:53.173Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/posts/55283.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Temu特姆一键拒绝调价脚本 不同意调价脚本',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Temu特姆一键拒绝调价脚本 不同意调价脚本</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Temu特姆一键拒绝调价脚本 不同意调价脚本</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-09-11T06:43:38.000Z" title="Created 2024-09-11 14:43:38">2024-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-01-26T01:07:53.173Z" title="Updated 2026-01-26 09:07:53">2026-01-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86/">跨境电商</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86/TEMU/">TEMU</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><p>Temu天天弹降价窗所以搞了个一键不同调价的脚本<br>脚本要搭配油猴使用！！！<br>该脚本js脚本 可以直接复制到油猴 也可以直接创建一个文件后缀js的文件<br>然后把内容复制使用文本编辑粘贴上去再拖动到油猴脚本。<br>建议直接在油猴脚本 新建一个脚本 直接复制一下内容！<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_temu.webp" alt="temu右上角"><br>点击右上角开始直接一键不同意调价！！！</p>
+<span id="more"></span> 
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ==UserScript==</span></span><br><span class="line"><span class="comment">// @name         temu-Automatically click to disagree</span></span><br><span class="line"><span class="comment">// @namespace    https:www.pw0n.com</span></span><br><span class="line"><span class="comment">// @version      0.6</span></span><br><span class="line"><span class="comment">// @description  自动点击指定的元素，并增加开始和暂停按钮</span></span><br><span class="line"><span class="comment">// @author       pw0n</span></span><br><span class="line"><span class="comment">// @match        https://seller.kuajingmaihuo.com/*</span></span><br><span class="line"><span class="comment">// @match        https://agentseller.temu.com/*</span></span><br><span class="line"><span class="comment">// @grant        none</span></span><br><span class="line"><span class="comment">// ==/UserScript==</span></span><br><span class="line"></span><br><span class="line">(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> isRunning = <span class="literal">false</span>; <span class="comment">// 标记当前状态，是否自动点击</span></span><br><span class="line">    <span class="keyword">let</span> intervalId;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">clickElements</span>(<span class="params">selector</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> elements = <span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(selector);</span><br><span class="line">        elements.<span class="title function_">forEach</span>(<span class="function"><span class="params">element</span> =&gt;</span> &#123;</span><br><span class="line">            element.<span class="title function_">click</span>();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">autoClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="comment">// 点击指定的单选按钮（使用新的选择器）</span></span><br><span class="line">        <span class="title function_">clickElements</span>(<span class="string">&#x27;div.RD_radioWrapper_5-118-0&#x27;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 点击&quot;我已知晓风险，本次不再提醒&quot;的元素</span></span><br><span class="line">        <span class="title function_">clickElements</span>(<span class="string">&#x27;div.CBX_squareInputWrapper_5-114-0&#x27;</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 点击确认按钮</span></span><br><span class="line">        <span class="title function_">clickElements</span>(<span class="string">&#x27;button[data-tracking-id=&quot;zIb_kvR_JvmInKd9&quot;].BTN_outerWrapper_5-111-0.BTN_danger_5-111-0.BTN_medium_5-111-0.BTN_outerWrapperBtn_5-111-0[data-testid=&quot;beast-core-button&quot;]&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">startAutoClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!isRunning) &#123;</span><br><span class="line">            <span class="title function_">autoClick</span>(); <span class="comment">// 执行一次点击</span></span><br><span class="line">            intervalId = <span class="built_in">setInterval</span>(autoClick, <span class="number">3000</span>); <span class="comment">// 每3秒执行一次</span></span><br><span class="line">            isRunning = <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">stopAutoClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (isRunning) &#123;</span><br><span class="line">            <span class="built_in">clearInterval</span>(intervalId);</span><br><span class="line">            isRunning = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建按钮</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">createControlButtons</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> container = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">position</span> = <span class="string">&#x27;fixed&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">top</span> = <span class="string">&#x27;10px&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">left</span> = <span class="string">&#x27;10px&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">zIndex</span> = <span class="string">&#x27;9999&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">display</span> = <span class="string">&#x27;flex&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">gap</span> = <span class="string">&#x27;10px&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">padding</span> = <span class="string">&#x27;8px&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">background</span> = <span class="string">&#x27;rgba(255,255,255,0.7)&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">borderRadius</span> = <span class="string">&#x27;4px&#x27;</span>;</span><br><span class="line">        container.<span class="property">style</span>.<span class="property">boxShadow</span> = <span class="string">&#x27;0 2px 6px rgba(0,0,0,0.2)&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> startButton = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">        startButton.<span class="property">textContent</span> = <span class="string">&#x27;开始&#x27;</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">padding</span> = <span class="string">&#x27;6px 12px&#x27;</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">background</span> = <span class="string">&#x27;#4CAF50&#x27;</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">border</span> = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">borderRadius</span> = <span class="string">&#x27;4px&#x27;</span>;</span><br><span class="line">        startButton.<span class="property">style</span>.<span class="property">cursor</span> = <span class="string">&#x27;pointer&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> stopButton = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">        stopButton.<span class="property">textContent</span> = <span class="string">&#x27;暂停&#x27;</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">padding</span> = <span class="string">&#x27;6px 12px&#x27;</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">background</span> = <span class="string">&#x27;#f44336&#x27;</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">color</span> = <span class="string">&#x27;white&#x27;</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">border</span> = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">borderRadius</span> = <span class="string">&#x27;4px&#x27;</span>;</span><br><span class="line">        stopButton.<span class="property">style</span>.<span class="property">cursor</span> = <span class="string">&#x27;pointer&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        startButton.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, startAutoClick);</span><br><span class="line">        stopButton.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, stopAutoClick);</span><br><span class="line"></span><br><span class="line">        container.<span class="title function_">appendChild</span>(startButton);</span><br><span class="line">        container.<span class="title function_">appendChild</span>(stopButton);</span><br><span class="line">        <span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(container);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 页面加载后创建按钮</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">readyState</span> === <span class="string">&#x27;complete&#x27;</span> || <span class="variable language_">document</span>.<span class="property">readyState</span> === <span class="string">&#x27;interactive&#x27;</span>) &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(createControlButtons, <span class="number">1000</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">setTimeout</span>(createControlButtons, <span class="number">1000</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>劝退正常人的平台</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/55283.html">http://pw0n.com/posts/55283.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/TEMU/">TEMU</a><a class="post-meta__tags" href="/tags/%E7%89%B9%E5%A7%86/">特姆</a><a class="post-meta__tags" href="/tags/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86/">跨境电商</a><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E8%84%9A%E6%9C%AC/">自动脚本</a><a class="post-meta__tags" href="/tags/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/">油猴脚本</a><a class="post-meta__tags" href="/tags/%E6%8B%92%E7%BB%9D%E8%B0%83%E4%BB%B7/">拒绝调价</a><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/">自动化工具</a><a class="post-meta__tags" href="/tags/%E8%BF%90%E8%90%A5%E5%B7%A5%E5%85%B7/">运营工具</a><a class="post-meta__tags" href="/tags/JavaScript/">JavaScript</a><a class="post-meta__tags" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/">浏览器插件</a></div><div class="post-share"><div class="social-share" data-image="https://b22.pw0n.xyz/2025/06/16_temu.webp" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/39742.html" title="Spotify 美化插件之歌词界面毛玻璃效果"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_效果图.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Spotify 美化插件之歌词界面毛玻璃效果</div></div><div class="info-2"><div class="info-item-1">声明：以下安装美化需要有spicetify-cli和spicetify-marketplace插件如果没有就只能看我以往的spotify美化教程不懂安装的插件的点击这里看我之前的文章讲解  如何安装？第一种方法安装好插件后，直接从marketplace-Extensions 找到beautiful lyrics安装 你就可以看到下面的多出了一个麦克风的图标点击就可以看到效果  第二种方法在powershell 安装 beautiful lyrics 输入一下内容 12spicetify config custom_appsspicetify apply 美化歌词推荐：beautiful lyrics 有毛玻璃效果再次打开客户端就可以看到效果  tips:有些歌曲在spotify是无法看到歌词。  </div></div></div></a><a class="pagination-related" href="/posts/58450.html" title="域名取消绑定后为什么输入IP网址还是会自动跳转域名？"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_cloudflare缓存.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">域名取消绑定后为什么输入IP网址还是会自动跳转域名？</div></div><div class="info-2"><div class="info-item-1">域名取消绑定后为什么输入IP网址还是会自动跳转域名 可能原因及解决方案域名服务商未彻底删除IP绑定如果你的域名服务商没有彻底删除IP绑定信息，IP网址可能依旧与域名关联。你可以检查并删除所有绑定到该IP地址的域名。  域名服务商缓存未清理有时，域名服务商的缓存未及时清理，导致IP地址仍会重定向到域名。请联系你的服务商以清理相关缓存。 服务器上的 URL 重写规则未修改服务器上的 URL 重写规则（如 Nginx 或 Apache 的 .htaccess 文件）可能未按照正确的地址进行修改，导致IP地址仍然重定向到域名。 示例：使用 Cloudflare 进行检查和调整 打开 Cloudflare 网站，进入 DNS 记录页面，检查是否还有其他域名绑定到你的服务器IP地址，确保所有无关的域名记录都已删除。  进入 缓存 - 配置 - 清除缓存，选择 清除所有内容 以确保缓存已被清理。    打开你的Nginx配置文件，确认是否已将绑定的域名更改为IP地址。这样一来，你的IP网址就能正常打开了。    以上解决方案基于80端口已开放的公网IP地址。  </div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-06-20</div><div class="info-item-2">一款好用去除广告的浏览器插件 uBlock Origin</div></div><div class="info-2"><div class="info-item-1">今天给大家介绍这一款适合很多人的浏览器插件 —— ​uBlock Origin​。无论你是看 Bilibili &#x2F; YouTube 等平台的视频，还是浏览普通网页，uBlock Origin 都能帮你自动跳过广告，为你带来更清爽的使用体验。 除了视频方面，uBlock Origin 在打开新闻网站、电商页面、论坛等网页时，也能有效屏蔽弹窗广告、横幅广告、追踪脚本等烦人的内容。虽然它会在运行时占用一定的内存和 CPU 资源，但整体使用起来非常流畅，几乎感觉不到卡顿。确实是一款“装了就离不开”的神器。  🌟 uBlock Origin 的主要优点 ​完全免费、开源​：不像其他某些插件会暗藏收费机制，uBlock Origin 完全开源，安全放心。 ​占用资源小​：相比一些老牌的广告插件，uBlock Origin 更加轻量高效。 ​规则更新及时​：内置 EasyList、uBlock filters 等规则库，同时支持手动添加自定义过滤规则。 ​高度可配置​：高级用户可以根据需要自定义屏蔽范围和行为。   🚀 如何安装 uBlock Origin 打开你的浏览器插件商店...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

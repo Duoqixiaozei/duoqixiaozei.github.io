@@ -1,0 +1,289 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hexo 使用表情教程 | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="hexo如何使用表情，需要安装什么模块？，看着篇文章让你快速上手使用emoji表情">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 使用表情教程">
+<meta property="og:url" content="http://pw0n.com/posts/5929.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="hexo如何使用表情，需要安装什么模块？，看着篇文章让你快速上手使用emoji表情">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://b22.pw0n.xyz/2025/06/30_emoji.webp">
+<meta property="article:published_time" content="2024-07-04T02:35:04.000Z">
+<meta property="article:modified_time" content="2025-08-29T02:49:12.186Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://b22.pw0n.xyz/2025/06/30_emoji.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hexo 使用表情教程",
+  "url": "http://pw0n.com/posts/5929.html",
+  "image": "https://b22.pw0n.xyz/2025/06/30_emoji.webp",
+  "datePublished": "2024-07-04T02:35:04.000Z",
+  "dateModified": "2025-08-29T02:49:12.186Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/posts/5929.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo 使用表情教程',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Hexo 使用表情教程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Hexo 使用表情教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-07-04T02:35:04.000Z" title="Created 2024-07-04 10:35:04">2024-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-29T02:49:12.186Z" title="Updated 2025-08-29 10:49:12">2025-08-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Hexo/">Hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><p>让你的Hexo博客活起来：添加GitHub表情符号<br>厌倦了千篇一律的文字？想让你的博客文章更生动有趣吗？GitHub风格的表情符号或许是你的答案！它们不仅能传达情绪，还能让你的内容更具吸引力。今天，我们就来聊聊如何在Hexo博客中轻松集成这些可爱的表情。</p>
+<p>安装GitHub表情符号插件<br>要让Hexo支持GitHub风格的表情符号，你需要安装一个名为 hexo-filter-github-emojis 的插件。在你的Hexo博客根目录下，打开终端或命令行工具，然后输入以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-filter-github-emojis --save</span><br><span class="line">npm hexo-filter-github-emojis </span><br></pre></td></tr></table></figure>
+<p>配置站点文件<br>安装插件后，我们需要告诉Hexo如何启用和显示这些表情符号。你需要编辑你博客的站点配置文件。这个文件通常位于你的Hexo博客根目录下，名为 _config.yml。</p>
+<p>用你喜欢的文本编辑器打开 _config.yml 文件，然后添加以下配置代码块：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">githubEmojis:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">className:</span> <span class="string">github-emoji</span></span><br><span class="line">  <span class="attr">unicode:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">styles:</span></span><br><span class="line">    <span class="attr">display:</span> <span class="string">inline</span></span><br><span class="line">    <span class="attr">vertical-align:</span> <span class="string">middle</span> <span class="comment"># Freemind适用</span></span><br><span class="line">  <span class="attr">localEmojis:</span></span><br></pre></td></tr></table></figure>
+<p>配置项说明：</p>
+<p>enable: true：这个选项是关键，它激活了GitHub表情符号功能。<br>className: github-emoji：为生成的表情符号图片添加CSS类名，方便你后续进行样式自定义。<br>unicode: true：确保插件能够正确处理并显示Unicode表情符号。<br>styles：这是一个可选的CSS样式设置，可以直接应用于表情符号。<br>display: inline：让表情符号与文本保持在同一行。<br>vertical-align: middle：这个样式特别适用于某些主题（例如Freemind），它能让表情符号与文本的垂直位置对齐，避免出现错位。<br>在文章中尝试表情符号<br>保存并关闭 _config.yml 文件后，你就可以在你的文章中尝试使用表情符号了。</p>
+<p>查找表情符号编码<br>你可以访问 emoji-cheat-sheet 这个网站。它提供了GitHub支持的所有表情符号及其对应的编码。找到你想要的表情，然后点击它即可复制其编码。</p>
+<p>使用方法<br>使用方法和GitHub上非常相似，你只需要在文章中输入表情符号对应的编码。例如，如果你想插入一个笑脸 😄，直接输入 :smile: 就可以。插件会自动将其转换为对应的表情图片或字符。</p>
+<p>现在，你可以在你的文章中尽情使用各种表情符号了！比如：</p>
+<p>🤤😵‍💫🧐🤓👨‍🎤😏🦧🛗⏫</p>
+<p>这些表情符号将帮助你打破传统文字的束缚，让你的博客文章更具表现力。快去试试吧，让你的博客焕然一新！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/5929.html">http://pw0n.com/posts/5929.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a></div><div class="post-share"><div class="social-share" data-image="https://b22.pw0n.xyz/2025/06/30_emoji.webp" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/12356.html" title="这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_万能青年旅店.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">这首歌的歌词让人震撼！《大石碎胸口》你听过吗？</div></div><div class="info-2"><div class="info-item-1">🎶 这首歌的歌词让人震撼！《大石碎胸口》你听过吗？  你有过那种听一首歌，突然被歌词震撼到的感觉吗？今天我就想给大家推荐一首让我久久不能忘怀的歌——《大石碎胸口》，它出自万能青年旅店的同名专辑。这首歌至今已经发行13年，但每次听都能给我全新的感触，你一定不能错过。 🎧 为什么这首歌让我停不下来？《大石碎胸口》这首歌的旋律和歌词有种让人无法抗拒的魅力。可能你第一次听，会觉得它和你之前听过的歌曲有点不同——它不是那种一听就让人愉快的旋律，而是给你一种沉重却不失力量的感觉。这首歌的旋律融合了摇滚、民谣与实验音乐，每次的编曲都能在耳朵里回响不已。 在听这首歌的那一刻，你一定会感到一种莫名的压迫感，仿佛有一块石头压在胸口——这种感觉就是歌名的来源，而它的深意也远不止于此。 🎤 歌词究竟有多震撼？当你开始认真听歌词时，你会发现它的深度远超一般的歌。歌名里的“大石”和“胸口”，其实是两种象征：大石代表着生活中的压力、困境，而胸口则是承载这些痛苦的地方。歌词中的每一句话，都像是生活中的真实写照，讲述了普通人在社会变革中的迷茫、挣扎和不屈。 歌词里提到的“黑暗好像一颗巨石按在胸口”，真的是让...</div></div></div></a><a class="pagination-related" href="/posts/c2c6a43d.html" title="Spotify 美化指南"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_美化插件.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">Spotify 美化指南</div></div><div class="info-2"><div class="info-item-1">Spotify 美化指南：用插件打造个性化音乐世界你是否觉得默认的 Spotify 界面有些单调？是否希望它能更符合你的审美？Spotify 美化不仅可以让你的音乐播放器变得更有趣，还能让操作更高效。通过简单的设置，你可以自定义主题颜色、安装功能插件，让每次听歌都更愉悦。现在就跟随本指南，一起把你的 Spotify 打造得与众不同！    为什么要美化 Spotify？Spotify 是一款功能强大的流媒体音乐播放器，但它的默认界面风格可能无法满足所有人的喜好。通过美化，你可以实现以下目标：  个性化界面：选择你喜欢的主题和配色，打造专属于你的视觉风格。 增强功能：通过插件扩展，如歌词同步、快捷操作等，让使用体验更上一层楼。 让音乐更有仪式感：听音乐不仅是耳朵的享受，更是眼睛的盛宴。  准备好了吗？接下来开始动手！  Windows 安装指南1. 安装 Spicetify 插件程序确保 Spotify 已安装（任意版本均可）。然后按照以下步骤安装 Spicetify，这是一款功能强大的美化工具。 打开 Windows Powershell 按下系统键，搜索并打开 Windows ...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

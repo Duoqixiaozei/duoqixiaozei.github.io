@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>申请Adsense“低质量内容”被拒绝 | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="申请Adsense“低质量内容”被拒绝的大概原因有哪些呢？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="申请Adsense“低质量内容”被拒绝">
+<meta property="og:url" content="http://pw0n.com/posts/12536.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="申请Adsense“低质量内容”被拒绝的大概原因有哪些呢？">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://b22.pw0n.xyz/2025/06/17_adsense-refuse.webp">
+<meta property="article:published_time" content="2025-01-22T01:44:20.000Z">
+<meta property="article:modified_time" content="2025-08-29T02:48:27.618Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="Google AdSense">
+<meta property="article:tag" content="低质量内容">
+<meta property="article:tag" content="网站审核">
+<meta property="article:tag" content="官方论坛">
+<meta property="article:tag" content="网站规范">
+<meta property="article:tag" content="内容创作">
+<meta property="article:tag" content="网站运营">
+<meta property="article:tag" content="审核策略">
+<meta property="article:tag" content="网站页面">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://b22.pw0n.xyz/2025/06/17_adsense-refuse.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "申请Adsense“低质量内容”被拒绝",
+  "url": "http://pw0n.com/posts/12536.html",
+  "image": "https://b22.pw0n.xyz/2025/06/17_adsense-refuse.webp",
+  "datePublished": "2025-01-22T01:44:20.000Z",
+  "dateModified": "2025-08-29T02:48:27.618Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/posts/12536.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '申请Adsense“低质量内容”被拒绝',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">申请Adsense“低质量内容”被拒绝</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">申请Adsense“低质量内容”被拒绝</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-01-22T01:44:20.000Z" title="Created 2025-01-22 09:44:20">2025-01-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-29T02:48:27.618Z" title="Updated 2025-08-29 10:48:27">2025-08-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Google-AdSense/">Google AdSense</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/">网站运营</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/">内容创作</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">问题解决</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/">经验分享</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="AdSense-审核卡住了？别慌！我来告诉你问题可能出在哪"><a href="#AdSense-审核卡住了？别慌！我来告诉你问题可能出在哪" class="headerlink" title="AdSense 审核卡住了？别慌！我来告诉你问题可能出在哪"></a>AdSense 审核卡住了？别慌！我来告诉你问题可能出在哪</h1><p><strong>申请 Adsense 总是因为“低质量内容”被拒绝</strong></p>
+<p>今天早上，我收到了 AdSense 的邮件，结果是：被拒了！理由是“Low value content（低质量内容）”。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_adsense-refuse.webp" alt="adsens-refuse"></p>
+<span id="more"></span>
+
+<p><strong>又被拒了，我反思了一下：</strong></p>
+<p>这已经不是我第一次因为“低质量内容”被 AdSense 拒绝了。这次虽然有 Discover 带来的流量，但 AdSense 还是不让我过。我得好好想想，我的网站到底哪里有问题。</p>
+<p><strong>1. 有流量不代表内容好：</strong></p>
+<p>Discover 带来的流量是挺多的，但这不代表我的内容就符合 AdSense 的要求。AdSense 更看重内容是不是有深度、是不是原创、是不是有价值，光有流量没用。</p>
+<p><strong>2. 内容不够深入：</strong></p>
+<p>我承认，为了快点有流量，我有点急了。有些文章为了多写点，就写得比较简单，只是把信息罗列出来，没有自己的想法和分析。</p>
+<p><strong>3. 内容有点抄袭：</strong></p>
+<p>为了快点把网站填满，我参考了一些别人的文章，导致内容有点抄袭，不够原创。这肯定不符合 AdSense 的要求。</p>
+<p><strong>4. 网站体验不好：</strong></p>
+<p>网站的排版、图片质量啥的也需要优化。虽然内容能看，但在用户体验上还是差了点。</p>
+<p><strong>我打算这么做：</strong></p>
+<p>这次被拒让我明白，AdSense 不会因为你有流量就让你过关。接下来，我打算这样做：</p>
+<ul>
+<li><strong>深入研究：</strong> 把网站的主题好好研究一下，写出有深度、有价值的内容。</li>
+<li><strong>坚持原创：</strong> 坚持写原创内容，加入自己的想法和见解。</li>
+<li><strong>优化排版：</strong> 把网站排版优化一下，让大家看起来更舒服。</li>
+<li><strong>持续更新：</strong> 经常更新内容，让网站保持活跃。</li>
+<li><strong>学习别人：</strong> 看看其他成功通过 AdSense 审核的网站，学学他们的经验。</li>
+</ul>
+<p><strong>怎么回事，大家都这样？</strong></p>
+<p>说实话，这还是我第一个被拒绝的网站。之前几个网站申请 AdSense 都挺顺利的，一个星期就搞定了。我感觉这个网站跟之前的网站差不多，主题、插件、页面布局都差不多。</p>
+<p>于是，我就去论坛看看有没有解决方法。</p>
+<p><strong>可能的原因：</strong></p>
+<ul>
+<li><strong>AdSense 政策变了：</strong> 可能是 Google AdSense 最近改了审核标准，对内容质量要求更高了。</li>
+<li><strong>算法调整：</strong> AdSense 的审核算法可能调整了，导致以前能通过的网站现在被拒绝了。</li>
+<li><strong>内容太像了：</strong> 可能是因为大家都在做差不多的网站，内容太像了，AdSense 不喜欢。</li>
+<li><strong>网站不好用：</strong> 可能是网站的用户体验不好，AdSense 觉得网站没什么价值。</li>
+</ul>
+<p><strong>难道是网站不够规范？</strong></p>
+<p>在国外论坛中，我看到网友分享了他的经验。他修改内容，而是检查了网站的附属页面，比如隐私条款、Cookies 协议、GDPR 这些。<br>结果，他把这些页面完善后，再申请 AdSense 就通过了。这让我觉得，可能不是内容不行，而是网站不够规范。</p>
+<p><strong>官方论坛没啥用？</strong></p>
+<p>我又去 AdSense 官方论坛看了看，但没找到啥有用的方法。比如官方说的“内容质量”问题，我觉得我的网站肯定没问题。</p>
+<p>首先，我的文章没语法错误，都是 AI 生成草稿，然后我再改的，还用了语法检查工具。</p>
+<p>其次，我对自己的文章还是挺有信心的，因为我都是找竞争小的关键词，填补搜索市场的空白。如果内容不好，也不可能被 Google Discover 推荐。</p>
+<p><strong>我打算最后试一次：</strong></p>
+<p>所以，接下来我打算再更新几篇文章，然后把网站的必备页面完善好，再重新申请 AdSense 试试。如果你也遇到了类似的问题，不妨试试这个方法。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/12536.html">http://pw0n.com/posts/12536.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Google-AdSense/">Google AdSense</a><a class="post-meta__tags" href="/tags/%E4%BD%8E%E8%B4%A8%E9%87%8F%E5%86%85%E5%AE%B9/">低质量内容</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99%E5%AE%A1%E6%A0%B8/">网站审核</a><a class="post-meta__tags" href="/tags/%E5%AE%98%E6%96%B9%E8%AE%BA%E5%9D%9B/">官方论坛</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99%E8%A7%84%E8%8C%83/">网站规范</a><a class="post-meta__tags" href="/tags/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/">内容创作</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/">网站运营</a><a class="post-meta__tags" href="/tags/%E5%AE%A1%E6%A0%B8%E7%AD%96%E7%95%A5/">审核策略</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99%E9%A1%B5%E9%9D%A2/">网站页面</a></div><div class="post-share"><div class="social-share" data-image="https://b22.pw0n.xyz/2025/06/17_adsense-refuse.webp" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/54545.html" title="FPV穿越机遥控器使用WIFI更新固件的时候，显示没有足够的空间报错no enough space"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">FPV穿越机遥控器使用WIFI更新固件的时候，显示没有足够的空间报错no enough space</div></div><div class="info-2"><div class="info-item-1">我们正常刷新的固件的时候会显示 no enough space 或者 failed above解决上面的问题可以使用一下   使用清除缓存的固件固件地址：https://pan.quark.cn/s/907bf201873a#/list/share点击链接复制 下载清除缓存固件然后再次连接上我们的遥控器的WIFI选着刚才下载的清除缓存固件然后在重新刷写，刷写好了之后，重新开机 刷写你需要的固件下载对应的FPV radio固件 然后刷写就好了 此方法也适合降级刷写！ </div></div></div></a><a class="pagination-related" href="/posts/5093.html" title="解决MediaCreationTool报错(0X80072F8F-0X20000)方法"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_MediaCreationTool_22H2报错-1584da.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">解决MediaCreationTool报错(0X80072F8F-0X20000)方法</div></div><div class="info-2"><div class="info-item-1">Windows 7 升级 Win10：解决 MediaCreationTool 报错 (0X80072F8F-0X20000)方法问题： 当您尝试使用 MediaCreationTool 工具（版本 22H2）将老旧的 Windows 7 系统升级到 Windows 10 时，可能会遇到错误代码 0X80072F8F-0X20000。 ![MediaCreationTool22H2报错]https://b22.pw0n.xyz/2025/06/17_MediaCreationTool_22H2报错-1584da.webp)   原因： 这个错误通常是因为 Windows 7 系统缺少必要的 TLS（安全传输层协议）支持，导致 MediaCreationTool 工具无法正常连接到服务器。 解决方案： 以下步骤将帮助您解决此问题，顺利升级到 Windows 10： 步骤一：添加 TLS 注册表信息 创建注册表文件：  在您的电脑桌面，新建一个文本文档（.txt 文件）。  将下面的代码复制粘贴到这个文本文档中：   123456Windows Registry Editor Ver...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#AdSense-%E5%AE%A1%E6%A0%B8%E5%8D%A1%E4%BD%8F%E4%BA%86%EF%BC%9F%E5%88%AB%E6%85%8C%EF%BC%81%E6%88%91%E6%9D%A5%E5%91%8A%E8%AF%89%E4%BD%A0%E9%97%AE%E9%A2%98%E5%8F%AF%E8%83%BD%E5%87%BA%E5%9C%A8%E5%93%AA"><span class="toc-number">1.</span> <span class="toc-text">AdSense 审核卡住了？别慌！我来告诉你问题可能出在哪</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

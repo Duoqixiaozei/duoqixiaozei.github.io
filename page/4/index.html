@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Pw0n's blog - 技术分享、生活记录、教程指南</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pw0n&#39;s blog">
+<meta property="og:url" content="http://pw0n.com/page/4/index.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pw0n.com/img/butterfly-icon.png">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="技术博客,Linux教程,Windows教程,网络工具,生活记录,技术分享,教程指南">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pw0n.com/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Pw0n\'s blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Pw0n's blog</h1></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover"><a href="/posts/43806.html" title="万能青年旅店《冀西南林路行》开箱分享与专辑介绍"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_黑白.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="万能青年旅店《冀西南林路行》开箱分享与专辑介绍"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/43806.html" title="万能青年旅店《冀西南林路行》开箱分享与专辑介绍">万能青年旅店《冀西南林路行》开箱分享与专辑介绍</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-08-19T03:43:42.000Z" title="Created 2024-08-19 11:43:42">2024-08-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E5%B8%B8/">日常</a></span></div><div class="content">万青二专《冀西南林路行》开箱体验期待已久的万能青年旅店第二张专辑《冀西南林路行》终于到手！十年磨一剑，这张专辑在内容和设计上都无可挑剔。实体专辑的封面设计延续了万青一贯的简约风格，同时蕴含深刻的北方气质，让人一见倾心。翻阅附赠的小册子，每一首曲目都充满了诗意与力量。  专辑背景《冀西南林路行》 是一张承载了深厚思想和情感的作品，标题中“冀西南”不仅指向具体的地理区域，更象征着一次精神上的探索之旅。这张专辑在音乐上依然延续了乐队的摇滚风格，同时加入了器乐曲与叙事性编曲，展现了更加丰富的艺术表达。  专辑完整曲目以下是《冀西南林路行》的全部曲目列表 [1]，每一首都各具特色，编曲和情感表达层次分明：      曲目名 作词 作曲 时长 类型    1. 早 （器乐曲） 董亚千 01:23 器乐曲   2. 泥河 姬赓 董亚千 05:48 词曲全作   3. 平等云雾 （器乐曲） 董亚千 01:26 器乐曲   4. 采石 姬赓 董亚千 08:56 词曲全作   5. 山雀 姬赓 董亚千 03:18 词曲全作   6. 绕越 （器乐曲） 董亚千 02:43 器乐曲   7. 河北墨麒麟...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/34211.html" title="Google 百度 Bing SEO重定向的问题"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_重定向.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Google 百度 Bing SEO重定向的问题"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/34211.html" title="Google 百度 Bing SEO重定向的问题">Google 百度 Bing SEO重定向的问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-08-12T09:51:30.000Z" title="Created 2024-08-12 17:51:30">2024-08-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/SEO/">SEO</a></span></div><div class="content">SEO显示网页会自动重定向是什么原因？    域名绑定了两个在网站上去服务商DNS去掉一个比如说我就用一个www.yourdomainame.com 绑定到网站就用这个去绑定，可以用CNAME 或者 A来记录。 是否正确填写服务器DNS要在服务器正确填写你的域名DNS不是用那个就填那个，如果是github page，就在根目录创建一个CNAME的文件 写上你的网站 比如 www.yourdomainame.com 创建好上传就好了 确定是否https这个就很重要，你要看你的网站的是什么格式大部分是https，如果是https没有SSL证书可以把你的域名托管到cloudflare可以免费SSL证书 还可以用cloudflare的cdn，大部分国内是在服务商购买SSL证书。 </div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/51769.html" title="记录一下我入坑Linux"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_命令界面.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="记录一下我入坑Linux"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/51769.html" title="记录一下我入坑Linux">记录一下我入坑Linux</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-08-01T09:39:17.000Z" title="Created 2024-08-01 17:39:17">2024-08-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/">生活记录</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E8%AE%B0%E5%BD%95/Linux/">Linux</a></span></div><div class="content">我的Linux探索之旅：从小白到命令行你是什么时候开始接触Linux的？是为了学习，还是为了建站？ 我第一次接触Linux，是在一段遥远的记忆中。那时，我还是个懵懂的小屁孩，对计算机世界充满了好奇。偶然间，我在B站上看到一位UP主深入浅出地讲解Linux，他不仅展示了Linux强大的功能，还提到了它独特的开源精神，这立刻燃起了我内心深处对这个神秘操作系统的浓厚兴趣。紧接着，我迫不及待地翻开了那本被誉为“Linux圣经”的《鸟哥的私房菜》，满怀信心地开始了我的自学之路。然而，这份热情并没有持续太久。很快，我就被无休止的命令行操作、与Windows天壤之别的逻辑思维方式，以及那份对鼠标“点点点”操作的强烈依赖感劝退了。对我来说，Linux当时实在是太复杂了，简直像一个需要破解的密码，而我连基本的钥匙都没有。毕竟，谁不想轻轻松松地“点点点”就搞定一切呢？  初识Linux：从虚拟机到Ubuntu的探索那时，我大部分的Linux体验都来自于​虚拟机（VMware）​。我清晰地记得，为了下载一个Linux的ISO文件，我守在电脑前等待了漫长的时间，下载进度条缓慢得让人绝望。好不容易下载好了...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/50369.html" title="Linux之PuTTY远程工具完整教程"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/remote-work-concept-illustration_114360-110.jpg?w=1380&amp;t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux之PuTTY远程工具完整教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/50369.html" title="Linux之PuTTY远程工具完整教程">Linux之PuTTY远程工具完整教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-19T05:36:03.000Z" title="Created 2024-07-19 13:36:03">2024-07-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span></div><div class="content">🚀 Linux之PuTTY远程工具完整教程 掌握PuTTY远程连接工具，在Windows系统下高效管理你的Linux服务器！  📋 什么是PuTTY？PuTTY简介PuTTY是一个免费的SSH和Telnet客户端，专为Windows系统设计。它提供了安全、稳定的远程连接功能，是Windows用户连接Linux服务器的首选工具。 为什么选择PuTTY？ 🆓 完全免费：开源软件，无任何费用 🔒 安全可靠：支持SSH加密连接 🖥️ 轻量级：占用资源少，启动快速 🎨 界面友好：简单直观的操作界面 📱 功能丰富：支持多种协议和功能  🛠️ 第一步：下载和安装PuTTY官方下载地址访问PuTTY官方网站：https://www.chiark.greenend.org.uk/~sgtatham&#x2F;putty&#x2F;latest.html 选择正确的版本根据你的Windows系统选择对应版本：  Windows 64位：选择 putty-64bit-0.xx-installer.msi Windows 32位：选择 putty-0.xx-installer.msi 便...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/44943.html" title="Linux创建SSH密钥完整教程"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/linux-penguin-concept-illustration_114360-109.jpg?w=1380&amp;t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux创建SSH密钥完整教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/44943.html" title="Linux创建SSH密钥完整教程">Linux创建SSH密钥完整教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-18T07:54:10.000Z" title="Created 2024-07-18 15:54:10">2024-07-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span></div><div class="content">🔐 Linux SSH密钥创建完整教程 掌握Linux SSH密钥的创建和管理，为你的服务器提供安全、便捷的远程访问方式！  📋 什么是SSH密钥？SSH密钥简介SSH密钥是一种基于非对称加密的身份验证方式，比传统的用户名密码登录更安全、更方便。它由一对密钥组成：  私钥：保存在本地，用于身份验证 公钥：上传到服务器，用于验证身份  为什么使用SSH密钥？ 🔒 安全性更高：无法被暴力破解 🚀 登录更快：无需输入密码 🛡️ 防中间人攻击：密钥具有唯一性 📱 支持自动化：脚本和CI&#x2F;CD流程  🛠️ 第一步：生成SSH密钥对基本命令格式1ssh-keygen -t rsa -C &quot;your_email@example.com&quot;  参数说明：  -t rsa：指定密钥类型为RSA（推荐） -C：添加注释，通常使用邮箱地址 你也可以使用 -t ed25519 生成更现代的Ed25519密钥  完整生成过程12345# 生成RSA密钥对ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.co...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/1839.html" title="VIM编辑器那些坑（二）"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bjh-pixel.cdn.bcebos.com/user_personal_pixel/25b27df1791514606c1727e4fb5944f6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VIM编辑器那些坑（二）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/1839.html" title="VIM编辑器那些坑（二）">VIM编辑器那些坑（二）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-17T06:25:05.000Z" title="Created 2024-07-17 14:25:05">2024-07-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/VIM/">VIM</a></span></div><div class="content">VIM编辑器那些坑（二） 继续探索VIM编辑器的进阶技巧和常见陷阱，让你的编辑效率更上一层楼！  🎯 VIM界外复制粘贴的终极解决方案问题描述遇到从外界复制内容时，你是不是以为按 Ctrl+V 就能粘贴？然而VIM并不会响应这个快捷键，这让很多新手感到困惑。 解决方案方法一：使用寄存器命令1234# 在命令模式下输入:set paste    # 启用粘贴模式p             # 然后按p粘贴:set nopaste  # 粘贴完成后关闭粘贴模式  方法二：使用系统剪贴板123# 在普通模式下&quot;+p          # 从系统剪贴板粘贴&quot;+yy         # 复制当前行到系统剪贴板  方法三：远程终端专用如果你使用的是 Putty 或 Xshell 等远程终端工具：  直接从外界复制文字 在VIM中右键点击即可粘贴 或者使用 Shift+Insert 快捷键  为什么VIM不响应Ctrl+V？VIM的设计哲学是”模态编辑”，它有自己的复制粘贴系统，不依赖系统的剪贴板。这种设计虽然学习曲线陡峭，但提供了更强大的编辑能力。 🔄 VIM界内复制...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/38741.html" title="VIM编辑器那些坑（一）"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://bjh-pixel.cdn.bcebos.com/user_personal_pixel/25b27df1791514606c1727e4fb5944f6.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VIM编辑器那些坑（一）"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/38741.html" title="VIM编辑器那些坑（一）">VIM编辑器那些坑（一）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-15T08:51:53.000Z" title="Created 2024-07-15 16:51:53">2024-07-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/VIM/">VIM</a></span></div><div class="content">VIM编辑器那些坑（一） 从零开始学习VIM编辑器，避开新手常见陷阱，掌握高效的文本编辑技能！  🚀 VIM编辑器简介什么是VIM？VIM（Vi IMproved）是一个高度可配置的文本编辑器，是Unix系统下经典编辑器Vi的改进版本。它以其强大的功能和陡峭的学习曲线而闻名，但一旦掌握，将成为你最得力的文本编辑工具。 为什么选择VIM？ 高效性：无需使用鼠标，双手不离键盘 跨平台：支持Windows、Linux、macOS 可扩展：丰富的插件生态系统 轻量级：资源占用少，启动速度快 远程友好：在SSH连接中表现优异  🎯 VIM的三种模式1. 普通模式（Normal Mode）这是VIM的默认模式，用于导航和执行命令。 12# 进入普通模式ESC键  2. 插入模式（Insert Mode）用于输入和编辑文本。 12345# 进入插入模式i键          # 在光标前插入a键          # 在光标后插入o键          # 在下一行插入O键          # 在上一行插入  3. 命令模式（Command Mode）用于执行VIM命令。 12# 进入命...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/12356.html" title="这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_万能青年旅店.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这首歌的歌词让人震撼！《大石碎胸口》你听过吗？"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/12356.html" title="这首歌的歌词让人震撼！《大石碎胸口》你听过吗？">这首歌的歌词让人震撼！《大石碎胸口》你听过吗？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-11T09:29:56.000Z" title="Created 2024-07-11 17:29:56">2024-07-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%AD%8C%E6%9B%B2%E6%8E%A8%E8%8D%90/">歌曲推荐</a></span></div><div class="content">🎶 这首歌的歌词让人震撼！《大石碎胸口》你听过吗？  你有过那种听一首歌，突然被歌词震撼到的感觉吗？今天我就想给大家推荐一首让我久久不能忘怀的歌——《大石碎胸口》，它出自万能青年旅店的同名专辑。这首歌至今已经发行13年，但每次听都能给我全新的感触，你一定不能错过。 🎧 为什么这首歌让我停不下来？《大石碎胸口》这首歌的旋律和歌词有种让人无法抗拒的魅力。可能你第一次听，会觉得它和你之前听过的歌曲有点不同——它不是那种一听就让人愉快的旋律，而是给你一种沉重却不失力量的感觉。这首歌的旋律融合了摇滚、民谣与实验音乐，每次的编曲都能在耳朵里回响不已。 在听这首歌的那一刻，你一定会感到一种莫名的压迫感，仿佛有一块石头压在胸口——这种感觉就是歌名的来源，而它的深意也远不止于此。 🎤 歌词究竟有多震撼？当你开始认真听歌词时，你会发现它的深度远超一般的歌。歌名里的“大石”和“胸口”，其实是两种象征：大石代表着生活中的压力、困境，而胸口则是承载这些痛苦的地方。歌词中的每一句话，都像是生活中的真实写照，讲述了普通人在社会变革中的迷茫、挣扎和不屈。 歌词里提到的“黑暗好像一颗巨石按在胸口”，真的是让...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/5929.html" title="Hexo 使用表情教程"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/30_emoji.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo 使用表情教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/5929.html" title="Hexo 使用表情教程">Hexo 使用表情教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-07-04T02:35:04.000Z" title="Created 2024-07-04 10:35:04">2024-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hexo/">Hexo</a></span></div><div class="content">让你的Hexo博客活起来：添加GitHub表情符号厌倦了千篇一律的文字？想让你的博客文章更生动有趣吗？GitHub风格的表情符号或许是你的答案！它们不仅能传达情绪，还能让你的内容更具吸引力。今天，我们就来聊聊如何在Hexo博客中轻松集成这些可爱的表情。 安装GitHub表情符号插件要让Hexo支持GitHub风格的表情符号，你需要安装一个名为 hexo-filter-github-emojis 的插件。在你的Hexo博客根目录下，打开终端或命令行工具，然后输入以下命令： 12npm install hexo-filter-github-emojis --savenpm hexo-filter-github-emojis  配置站点文件安装插件后，我们需要告诉Hexo如何启用和显示这些表情符号。你需要编辑你博客的站点配置文件。这个文件通常位于你的Hexo博客根目录下，名为 _config.yml。 用你喜欢的文本编辑器打开 _config.yml 文件，然后添加以下配置代码块： 12345678githubEmojis:  enable: true  className: gith...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/c2c6a43d.html" title="Spotify 美化指南"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_美化插件.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spotify 美化指南"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/c2c6a43d.html" title="Spotify 美化指南">Spotify 美化指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-04-29T07:16:46.000Z" title="Created 2024-04-29 15:16:46">2024-04-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Spotify/">Spotify</a></span></div><div class="content">Spotify 美化指南：用插件打造个性化音乐世界你是否觉得默认的 Spotify 界面有些单调？是否希望它能更符合你的审美？Spotify 美化不仅可以让你的音乐播放器变得更有趣，还能让操作更高效。通过简单的设置，你可以自定义主题颜色、安装功能插件，让每次听歌都更愉悦。现在就跟随本指南，一起把你的 Spotify 打造得与众不同！    为什么要美化 Spotify？Spotify 是一款功能强大的流媒体音乐播放器，但它的默认界面风格可能无法满足所有人的喜好。通过美化，你可以实现以下目标：  个性化界面：选择你喜欢的主题和配色，打造专属于你的视觉风格。 增强功能：通过插件扩展，如歌词同步、快捷操作等，让使用体验更上一层楼。 让音乐更有仪式感：听音乐不仅是耳朵的享受，更是眼睛的盛宴。  准备好了吗？接下来开始动手！  Windows 安装指南1. 安装 Spicetify 插件程序确保 Spotify 已安装（任意版本均可）。然后按照以下步骤安装 Spicetify，这是一款功能强大的美化工具。 打开 Windows Powershell 按下系统键，搜索并打开 Windows ...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Deepseek/"><span class="card-category-list-name">Deepseek</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/FPV/"><span class="card-category-list-name">FPV</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/FPV/FPV%E6%8A%A5%E9%94%99/"><span class="card-category-list-name">FPV报错</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Gemini/"><span class="card-category-list-name">Gemini</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/"><span class="card-category-list-name">Google AdSense</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/"><span class="card-category-list-name">网站运营</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/"><span class="card-category-list-name">内容创作</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="card-category-list-name">问题解决</span><span class="card-category-list-count">1</span></a></li></ul></li></ul></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Google-Search-Console/" style="font-size: 1.1em; color: #999">Google Search Console</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.23em; color: #999ea6">人工智能</a> <a href="/tags/%E5%8A%B3%E5%8A%A8%E7%BB%B4%E6%9D%83/" style="font-size: 1.1em; color: #999">劳动维权</a> <a href="/tags/Ollama/" style="font-size: 1.1em; color: #999">Ollama</a> <a href="/tags/sitemap/" style="font-size: 1.1em; color: #999">sitemap</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">技术学习</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">操作系统</a> <a href="/tags/%E7%89%B9%E5%A7%86/" style="font-size: 1.1em; color: #999">特姆</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 1.1em; color: #999">代理</a> <a href="/tags/%E5%AA%92%E4%BD%93%E8%B4%A3%E4%BB%BB/" style="font-size: 1.1em; color: #999">媒体责任</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">网络</a> <a href="/tags/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86/" style="font-size: 1.1em; color: #999">跨境电商</a> <a href="/tags/AI/" style="font-size: 1.23em; color: #999ea6">AI</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">学习记录</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1.1em; color: #999">日常</a> <a href="/tags/Windows%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">Windows工具</a> <a href="/tags/RustDesk/" style="font-size: 1.1em; color: #999">RustDesk</a> <a href="/tags/Linux/" style="font-size: 1.5em; color: #99a9bf">Linux</a> <a href="/tags/%E6%B1%BD%E8%BD%A6%E6%96%B0%E9%97%BB/" style="font-size: 1.1em; color: #999">汽车新闻</a> <a href="/tags/%E9%A6%99%E6%B8%AF%E4%B8%AD%E5%9B%BD%E9%93%B6%E8%A1%8C/" style="font-size: 1.1em; color: #999">香港中国银行</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E8%84%9A%E6%9C%AC/" style="font-size: 1.1em; color: #999">自动脚本</a> <a href="/tags/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97/" style="font-size: 1.1em; color: #999">万能青年旅店</a> <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" style="font-size: 1.37em; color: #99a4b2">远程连接</a> <a href="/tags/%E7%BE%8E%E8%82%A1/" style="font-size: 1.1em; color: #999">美股</a> <a href="/tags/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1/" style="font-size: 1.1em; color: #999">邮件服务</a> <a href="/tags/Spotify/" style="font-size: 1.23em; color: #999ea6">Spotify</a> <a href="/tags/%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86/" style="font-size: 1.1em; color: #999">密钥管理</a> <a href="/tags/xiaomi/" style="font-size: 1.1em; color: #999">xiaomi</a> <a href="/tags/%E6%96%B0%E9%97%BB%E4%BC%A6%E7%90%86/" style="font-size: 1.1em; color: #999">新闻伦理</a> <a href="/tags/Windows/" style="font-size: 1.1em; color: #999">Windows</a> <a href="/tags/%E4%B8%8D%E7%BB%99%E4%BC%91%E5%B9%B4%E5%81%87/" style="font-size: 1.1em; color: #999">不给休年假</a> <a href="/tags/%E6%97%85%E6%B8%B8/" style="font-size: 1.23em; color: #999ea6">旅游</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/" style="font-size: 1.1em; color: #999">系统配置</a> <a href="/tags/Edge/" style="font-size: 1.1em; color: #999">Edge</a> <a href="/tags/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/" style="font-size: 1.1em; color: #999">模型部署</a> <a href="/tags/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" style="font-size: 1.1em; color: #999">主题美化</a> <a href="/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/" style="font-size: 1.1em; color: #999">开源软件</a> <a href="/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" style="font-size: 1.1em; color: #999">音乐播放器</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.1em; color: #999">插件</a> <a href="/tags/%E5%AA%92%E4%BD%93%E6%8A%A5%E9%81%93/" style="font-size: 1.1em; color: #999">媒体报道</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/08/">
+            <span class="card-archive-list-date">
+              八月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">40</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-01-27T07:37:31.262Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

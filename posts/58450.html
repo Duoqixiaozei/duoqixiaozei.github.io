@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>域名取消绑定后为什么输入IP网址还是会自动跳转域名？ | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="域名取消绑定后为什么输入IP网址还是会自动跳转域名？如果你使用的是cloudflare那么你可以用清除缓存来解决">
+<meta property="og:type" content="article">
+<meta property="og:title" content="域名取消绑定后为什么输入IP网址还是会自动跳转域名？">
+<meta property="og:url" content="http://pw0n.com/posts/58450.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="域名取消绑定后为什么输入IP网址还是会自动跳转域名？如果你使用的是cloudflare那么你可以用清除缓存来解决">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://b22.pw0n.xyz/2025/06/17_cloudflare%E7%BC%93%E5%AD%98.webp">
+<meta property="article:published_time" content="2024-09-02T09:49:22.000Z">
+<meta property="article:modified_time" content="2025-08-29T02:48:38.102Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="cloudflare">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://b22.pw0n.xyz/2025/06/17_cloudflare%E7%BC%93%E5%AD%98.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "域名取消绑定后为什么输入IP网址还是会自动跳转域名？",
+  "url": "http://pw0n.com/posts/58450.html",
+  "image": "https://b22.pw0n.xyz/2025/06/17_cloudflare缓存.webp",
+  "datePublished": "2024-09-02T09:49:22.000Z",
+  "dateModified": "2025-08-29T02:48:38.102Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/posts/58450.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '域名取消绑定后为什么输入IP网址还是会自动跳转域名？',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">域名取消绑定后为什么输入IP网址还是会自动跳转域名？</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">域名取消绑定后为什么输入IP网址还是会自动跳转域名？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-09-02T09:49:22.000Z" title="Created 2024-09-02 17:49:22">2024-09-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-29T02:48:38.102Z" title="Updated 2025-08-29 10:48:38">2025-08-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/cloudflare/">cloudflare</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><p><strong>域名取消绑定后为什么输入IP网址还是会自动跳转域名</strong></p>
+<h1 id="可能原因及解决方案"><a href="#可能原因及解决方案" class="headerlink" title="可能原因及解决方案"></a>可能原因及解决方案</h1><h2 id="域名服务商未彻底删除IP绑定"><a href="#域名服务商未彻底删除IP绑定" class="headerlink" title="域名服务商未彻底删除IP绑定"></a>域名服务商未彻底删除IP绑定</h2><p>如果你的域名服务商没有彻底删除IP绑定信息，IP网址可能依旧与域名关联。你可以检查并删除所有绑定到该IP地址的域名。</p>
+<span id="more"></span>
+<h2 id="域名服务商缓存未清理"><a href="#域名服务商缓存未清理" class="headerlink" title="域名服务商缓存未清理"></a>域名服务商缓存未清理</h2><p>有时，域名服务商的缓存未及时清理，导致IP地址仍会重定向到域名。请联系你的服务商以清理相关缓存。</p>
+<h2 id="服务器上的-URL-重写规则未修改"><a href="#服务器上的-URL-重写规则未修改" class="headerlink" title="服务器上的 URL 重写规则未修改"></a>服务器上的 URL 重写规则未修改</h2><p>服务器上的 URL 重写规则（如 Nginx 或 Apache 的 <code>.htaccess</code> 文件）可能未按照正确的地址进行修改，导致IP地址仍然重定向到域名。</p>
+<h2 id="示例：使用-Cloudflare-进行检查和调整"><a href="#示例：使用-Cloudflare-进行检查和调整" class="headerlink" title="示例：使用 Cloudflare 进行检查和调整"></a>示例：使用 Cloudflare 进行检查和调整</h2><ol>
+<li><p>打开 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">Cloudflare</a> 网站，进入 <strong>DNS</strong> 记录页面，检查是否还有其他域名绑定到你的服务器IP地址，确保所有无关的域名记录都已删除。</p>
+</li>
+<li><p>进入 <strong>缓存</strong> - <strong>配置</strong> - <strong>清除缓存</strong>，选择 <strong>清除所有内容</strong> 以确保缓存已被清理。<br>  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_cloudflare%E7%BC%93%E5%AD%98.webp" alt="cloudflare缓存清理"></p>
+</li>
+<li><p>打开你的Nginx配置文件，确认是否已将绑定的域名更改为IP地址。这样一来，你的IP网址就能正常打开了。</p>
+</li>
+</ol>
+<blockquote>
+<p>以上解决方案基于80端口已开放的公网IP地址。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/58450.html">http://pw0n.com/posts/58450.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/cloudflare/">cloudflare</a></div><div class="post-share"><div class="social-share" data-image="https://b22.pw0n.xyz/2025/06/17_cloudflare缓存.webp" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/55283.html" title="Temu特姆一键拒绝调价脚本 不同意调价脚本"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_temu.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">Temu特姆一键拒绝调价脚本 不同意调价脚本</div></div><div class="info-2"><div class="info-item-1">Temu天天弹降价窗所以搞了个一键不同调价的脚本脚本要搭配油猴使用！！！该脚本js脚本 可以直接复制到油猴 也可以直接创建一个文件后缀js的文件然后把内容复制使用文本编辑粘贴上去再拖动到油猴脚本。建议直接在油猴脚本 新建一个脚本 直接复制一下内容！点击右上角开始直接一键不同意调价！！！   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899// ==UserScript==// @name         temu-Automatically click to disagree// @namespace    https:www.pw0n.com// @version      0.6// @description  自动点击指定的元素，并增加开始和暂停按钮...</div></div></div></a><a class="pagination-related" href="/posts/9819.html" title="如何使用Google Cloud中的SSH远程连接服务器：详细教程"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-108.jpg?w=1380&amp;t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">如何使用Google Cloud中的SSH远程连接服务器：详细教程</div></div><div class="info-2"><div class="info-item-1">🚀 Google Cloud SSH远程连接完整教程 通过SSH安全、高效地连接和管理你的Google Cloud服务器，掌握云端运维的核心技能！  📋 教程概览本教程将带你完成以下步骤：  下载并安装PuTTY工具 生成SSH密钥对 配置Google Cloud SSH密钥 建立SSH连接 保存连接配置  🛠️ 第一步：下载PuTTY工具下载PuTTYgen（密钥生成器）访问官方下载页面：https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 快速定位方法：  使用 Ctrl + F 搜索 “puttygen.exe” 查找 “a RSA and DSA key generation utility” 选择适合你电脑架构的版本（x86或x64）   下载PuTTY（SSH客户端）在同一页面找到PuTTY主程序下载链接，同样选择适合的架构版本。 🔑 第二步：生成SSH密钥对启动PuTTYgen下载完成后，运行 puttygen.exe 程序。 ![puttygen界面](https://b22.pw0n...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/17787.html" title="域名注册与 Cloudflare 托管教程"><div class="cover" style="background: cloudflare"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-16</div><div class="info-item-2">域名注册与 Cloudflare 托管教程</div></div><div class="info-2"><div class="info-item-1">域名注册与 Cloudflare 托管教程本指南将引导你完成域名注册，以及使用 Cloudflare 进行域名托管的步骤。 注册域名推荐服务商：NameSilo我们推荐使用 NameSilo 进行域名注册，它操作简便且价格合理。点击这里 直接访问 NameSilo 官网。 域名后缀选择 .com： 推荐用于正式网站，更具专业性。 .xyz &#x2F; .site： 适合个人博客、学生项目等，价格相对较低。  请根据你的需求选择合适的域名后缀。 NameSilo 用户注册注册注意事项 邮箱： 请使用你常用的有效邮箱进行注册，以便接收重要通知。 用户名： 注册时设置的用户名请务必牢记。  填写个人信息 注册完成后，你需要填写个人信息。 访问 美国地址生成器 或直接复制此网址：https://www.meiguodizhi.com。 在 NameSilo 网站，点击 Account Settings，按照生成器提供的身份信息填写。  配置 DNS 服务器 填写完个人信息后，点击 Dashboard。 如果你已购买域名，会看到 Active Domains，点击 Manage。 点击你...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%AF%E8%83%BD%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.</span> <span class="toc-text">可能原因及解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%95%86%E6%9C%AA%E5%BD%BB%E5%BA%95%E5%88%A0%E9%99%A4IP%E7%BB%91%E5%AE%9A"><span class="toc-number">1.1.</span> <span class="toc-text">域名服务商未彻底删除IP绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%95%86%E7%BC%93%E5%AD%98%E6%9C%AA%E6%B8%85%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">域名服务商缓存未清理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-URL-%E9%87%8D%E5%86%99%E8%A7%84%E5%88%99%E6%9C%AA%E4%BF%AE%E6%94%B9"><span class="toc-number">1.3.</span> <span class="toc-text">服务器上的 URL 重写规则未修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%EF%BC%9A%E4%BD%BF%E7%94%A8-Cloudflare-%E8%BF%9B%E8%A1%8C%E6%A3%80%E6%9F%A5%E5%92%8C%E8%B0%83%E6%95%B4"><span class="toc-number">1.4.</span> <span class="toc-text">示例：使用 Cloudflare 进行检查和调整</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

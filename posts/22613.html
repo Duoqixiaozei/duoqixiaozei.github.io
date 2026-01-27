@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程 | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这一篇将教你如何部署属于自己的远程软件，通过自建服务端，拥有完全掌控的远程解决方案。如果你动手能力强且能自行维护，这将是最佳选择。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程">
+<meta property="og:url" content="http://pw0n.com/posts/22613.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="这一篇将教你如何部署属于自己的远程软件，通过自建服务端，拥有完全掌控的远程解决方案。如果你动手能力强且能自行维护，这将是最佳选择。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://rustdesk.com/_astro/favicon.B_ZzjaxD.svg">
+<meta property="article:published_time" content="2024-12-25T23:24:31.000Z">
+<meta property="article:modified_time" content="2025-08-30T03:06:13.496Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="RustDesk">
+<meta property="article:tag" content="远程桌面">
+<meta property="article:tag" content="自建服务">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://rustdesk.com/_astro/favicon.B_ZzjaxD.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程",
+  "url": "http://pw0n.com/posts/22613.html",
+  "image": "https://rustdesk.com/_astro/favicon.B_ZzjaxD.svg",
+  "datePublished": "2024-12-25T23:24:31.000Z",
+  "dateModified": "2025-08-30T03:06:13.496Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/posts/22613.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-12-25T23:24:31.000Z" title="Created 2024-12-26 07:24:31">2024-12-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-30T03:06:13.496Z" title="Updated 2025-08-30 11:06:13">2025-08-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/">网络工具</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在如今的远程办公和技术支持中，安全是首要考虑因素。然而，大部分主流的远程控制软件虽然安全，但其高级功能通常需要付费订阅，这不仅增加了成本，还可能将数据暴露在第三方服务器中。与其花费高额费用购买订阅，不如通过自建服务端，拥有完全掌控的远程解决方案。如果你动手能力强且能自行维护，这将是最佳选择。</p>
+<hr>
+<h2 id="RustDesk-介绍"><a href="#RustDesk-介绍" class="headerlink" title="RustDesk 介绍"></a>RustDesk 介绍</h2><p><strong>RustDesk</strong> 是一款开源的远程桌面软件，类似于 TeamViewer 和 AnyDesk，但它的特点是完全开源且自托管。RustDesk 允许用户在不同的设备和平台之间进行远程控制，支持 Windows、Linux、macOS、Android 和 iOS 等操作系统。</p>
+<p>  作为向日葵等商业软件的替代方案，它具备高性能、安全性和无需订阅等优点。本文将详细介绍 RustDesk 的特点、与向日葵的对比，并指导如何通过 Docker 搭建 RustDesk 服务端。 </p>
+<span id="more"></span>
+
+<hr>
+<h2 id="RustDesk-与向日葵的对比"><a href="#RustDesk-与向日葵的对比" class="headerlink" title="RustDesk 与向日葵的对比"></a>RustDesk 与向日葵的对比</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>RustDesk</th>
+<th>向日葵</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>部署方式</td>
+<td>支持自建服务端</td>
+<td>官方服务器或订阅</td>
+</tr>
+<tr>
+<td>数据隐私</td>
+<td>完全掌控</td>
+<td>依赖官方服务</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>免费</td>
+<td>部分功能需订阅</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>高效（P2P 优先，支持中继）</td>
+<td>视网络状况而定</td>
+</tr>
+</tbody></table>
+<p>RustDesk 的主要优势在于开源和私有化部署，适合需要高度安全和灵活控制的用户。</p>
+<hr>
+<h2 id="搭建-RustDesk-服务端（Docker-优先）"><a href="#搭建-RustDesk-服务端（Docker-优先）" class="headerlink" title="搭建 RustDesk 服务端（Docker 优先）"></a>搭建 RustDesk 服务端（Docker 优先）</h2><h3 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a>1. 环境准备</h3><h4 id="系统与工具"><a href="#系统与工具" class="headerlink" title="系统与工具"></a>系统与工具</h4><ul>
+<li>操作系统：Ubuntu &#x2F; CentOS</li>
+<li>安装 Docker：</li>
+</ul>
+<p>Ubuntu：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt install -y docker.io docker-compose</span><br></pre></td></tr></table></figure>
+
+<p>CentOS：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> yum update -y &amp;&amp; <span class="built_in">sudo</span> yum install -y docker docker-compose</span><br></pre></td></tr></table></figure>
+
+<p>启动并设置 Docker 开机启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl start docker</span><br><span class="line"><span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-使用-Docker-部署-RustDesk-服务端"><a href="#2-使用-Docker-部署-RustDesk-服务端" class="headerlink" title="2. 使用 Docker 部署 RustDesk 服务端"></a>2. 使用 Docker 部署 RustDesk 服务端</h3><p>RustDesk 服务端包括 <code>hbbs</code>（信令服务器）和 <code>hbbr</code>（中继服务器），可以通过 Docker 一键部署。</p>
+<h4 id="拉取-RustDesk-Docker-镜像"><a href="#拉取-RustDesk-Docker-镜像" class="headerlink" title="拉取 RustDesk Docker 镜像"></a>拉取 RustDesk Docker 镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull rustdesk/rustdesk-server:latest</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建-Docker-容器"><a href="#创建-Docker-容器" class="headerlink" title="创建 Docker 容器"></a>创建 Docker 容器</h4><p>运行以下命令启动服务端：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name rustdesk-server \</span><br><span class="line">  -p 21114:21114 \</span><br><span class="line">  -p 21115:21115 \</span><br><span class="line">  -p 21116:21116 \</span><br><span class="line">  -v $(<span class="built_in">pwd</span>)/data:/data \</span><br><span class="line">  rustdesk/rustdesk-server:latest</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-p 21114:21114</code>：信令服务器（ID Server），用于设备注册和通信</li>
+<li><code>-p 21115:21115</code>：中继服务器（Relay Server），用于穿透 NAT 和中继数据传输</li>
+<li><code>-p 21116:21116</code>：API 服务器（File Transfer Server），用于文件传输和其他 API 调用</li>
+<li><code>-v $(pwd)/data:/data</code>：持久化存储数据</li>
+</ul>
+<h3 id="3-配置防火墙"><a href="#3-配置防火墙" class="headerlink" title="3. 配置防火墙"></a>3. 配置防火墙</h3><p>确保开放必要端口：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Ubuntu</span></span><br><span class="line"><span class="built_in">sudo</span> ufw allow 21114/tcp</span><br><span class="line"><span class="built_in">sudo</span> ufw allow 21115/tcp</span><br><span class="line"><span class="built_in">sudo</span> ufw allow 21116/tcp</span><br><span class="line"></span><br><span class="line"><span class="comment"># CentOS</span></span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=21114/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=21115/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --add-port=21116/tcp --permanent</span><br><span class="line"><span class="built_in">sudo</span> firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-获取秘钥与配置"><a href="#4-获取秘钥与配置" class="headerlink" title="4. 获取秘钥与配置"></a>4. 获取秘钥与配置</h3><p>RustDesk 服务端的秘钥存储在容器内 <code>/data</code> 目录下。</p>
+<p>进入容器查看秘钥：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it rustdesk-server <span class="built_in">cat</span> /data/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+
+<p>输出的公钥内容即为客户端连接时需要的秘钥。</p>
+<hr>
+<h2 id="安装客户端"><a href="#安装客户端" class="headerlink" title="安装客户端"></a>安装客户端</h2><p>你可以在 <a target="_blank" rel="noopener" href="https://github.com/rustdesk/rustdesk/releases/tag/1.3.6">RustDesk 1.3.6 版本发布页面</a> 下载适用于各平台的 RustDesk 客户端安装包。</p>
+<hr>
+<h2 id="客户端配置详解"><a href="#客户端配置详解" class="headerlink" title="客户端配置详解"></a>客户端配置详解</h2><p>在 RustDesk 客户端中，需要配置以下内容：</p>
+<ol>
+<li><p><strong>ID Server（信令服务器）</strong>：</p>
+<ul>
+<li>端口：21114</li>
+<li>用途：负责设备注册和管理设备之间的连接。</li>
+<li>示例配置：填入你的服务器域名或 IP 地址，例如 <code>yourdomain.com</code>。</li>
+</ul>
+</li>
+<li><p><strong>Relay Server（中继服务器）</strong>：</p>
+<ul>
+<li>端口：21115</li>
+<li>用途：用于设备之间的中继通信，尤其是无法直接 P2P 连接时。</li>
+<li>示例配置：同样填写你的服务器域名或 IP 地址。</li>
+</ul>
+</li>
+<li><p><strong>File Transfer Server（API 服务器）</strong>：</p>
+<ul>
+<li>端口：21116</li>
+<li>用途：文件传输服务，支持远程桌面的文件操作。</li>
+<li>示例配置：填写与信令服务器相同的地址。</li>
+</ul>
+</li>
+<li><p><strong>Key（秘钥）</strong>：</p>
+<ul>
+<li>用途：确保客户端与服务端的连接安全。</li>
+<li>配置方式：将前面获取的公钥粘贴到「Key」字段中。</li>
+</ul>
+</li>
+</ol>
+<p>在 RustDesk 客户端的设置页面中，依次填写以上信息，完成配置。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_rustdesk-setting.webp" alt="rustdesk-setting"></p>
+<hr>
+<h2 id="验证服务"><a href="#验证服务" class="headerlink" title="验证服务"></a>验证服务</h2><ol>
+<li>启动客户端并尝试连接目标设备。</li>
+<li>检查服务端日志，确保连接正常。</li>
+</ol>
+<p>查看 Docker 容器日志：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs rustdesk-server</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>RustDesk 通过开源、可私有化部署的特点，为用户提供了安全高效的远程桌面解决方案。与向日葵相比，RustDesk 的免费和隐私优势尤为突出。通过 Docker 部署 RustDesk 服务端，并结合必要端口配置和秘钥管理，可以轻松搭建自己的远程桌面服务。<br>参考 <a target="_blank" rel="noopener" href="https://rustdesk.com/">RustDesk 官方网站</a> 获取更多信息。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/22613.html">http://pw0n.com/posts/22613.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/RustDesk/">RustDesk</a><a class="post-meta__tags" href="/tags/%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/">远程桌面</a><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%BB%BA%E6%9C%8D%E5%8A%A1/">自建服务</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></div><div class="post-share"><div class="social-share" data-image="https://rustdesk.com/_astro/favicon.B_ZzjaxD.svg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/12388.html" title="archlinux开机进入系统显示白屏闪烁"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_微信图片_20250106110103.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">archlinux开机进入系统显示白屏闪烁</div></div><div class="info-2"><div class="info-item-1">前几天我把我的archlinux，全部更新了一遍，没想到开机开机进入系统显示白屏闪烁 切换tty3显示：nouveau0000:01:00.8:xorg[875]:valldate:22               12nouveau0000:01:00.8:xorg[875]:valldate:22nouveau0000:01:00.8:xorg[875]:valldating bo list    第一步 开机启动 进入grub时1. 进入 GRUB 菜单 重启你的电脑，当 GRUB 启动菜单出现时，使用上下箭头键选中你想启动的内核（通常是默认的启动项）。 按下 e 键进行编辑。  2. 禁用 Nouveau 驱动 在 GRUB 编辑界面中，找到以 linux 开头的那一行。这一行通常会包含启动内核的路径以及一些内核参数。比如，类似这样的行： 1linux   /boot/vmlinuz-linux root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx rx quiet splash nouveau.modeset=0  每个人的电脑不一样...</div></div></div></a><a class="pagination-related" href="/posts/21419.html" title="曾经的百元机之王：酷派手机为何从辉煌走向低谷?"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.antutu.com/20180404/s_15228305111376_1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">曾经的百元机之王：酷派手机为何从辉煌走向低谷?</div></div><div class="info-2"><div class="info-item-1">从巅峰到低谷：酷派手机的财务困局与市场份额分析酷派（Coolpad），曾是国内智能手机市场的重要玩家之一，凭借其高性价比的百元机产品在早期吸引了大量消费者。然而，随着市场竞争的加剧、技术创新滞后以及战略失误，酷派的市场份额逐渐萎缩，最终陷入财务困境。本文将从酷派的辉煌历史、市场份额变化、财务状况和转型困局等多个方面进行详细分析。    图片来源：安兔兔    一、从百元机到市场低迷：酷派曾经的成功与衰退酷派在智能手机行业早期取得了不小的成绩，尤其在中低端市场。其百元机的推出，使大量预算有限的消费者选择了酷派。以下是酷派辉煌时期的几个关键因素：  性价比与百元机战略酷派凭借着价格亲民的百元机快速吸引了大量消费者，尤其是三四线城市的用户。相比于同类产品，酷派在硬件上并不逊色，但价格更具竞争力。 运营商渠道合作酷派与中国移动等运营商的合作，使其迅速在市场中占据一席之地。通过推出定制版手机，酷派得以快速获得消费者的信任，特别是在农村和二线城市。 市场份额扩展2014至2016年间，酷派的市场份额曾一度超过10%，尤其是在千元以下的手机市场中占据主导地位。然而，随着行业的发展，酷派未能及时...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/36910.html" title="用域名和cloudflare创建无限邮箱"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/email-concept-illustration_114360-111.jpg?w=1380&t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-15</div><div class="info-item-2">用域名和cloudflare创建无限邮箱</div></div><div class="info-2"><div class="info-item-1">准备 域名： 你需要一个已经拥有的域名。 Cloudflare 账号： 如果没有，请前往 Cloudflare 官网 注册一个。 官方文档： https://temp-mail-docs.awsl.uk/ 域名接入 Cloudflare： 如果你还不清楚如何将域名接入 Cloudflare，请参考这篇教程： 点击这里 (请注意，此链接可能需要替换为实际可用的教程链接)    Cloudflare 电子邮件设置 开始使用电子邮件路由： 在 Cloudflare 控制台中，找到你的域名，点击 电子邮件，然后选择 电子邮件路由 开始使用。 自定义域名前缀和验证邮箱： 为你的域名设置一个前缀。 在下方输入你的真实邮箱地址（QQ 邮箱或 163 邮箱等，确保能接收到邮件）。 点击 验证邮箱。   验证邮箱： 前往你填写的邮箱，找到 Cloudflare 发来的邮件，点击邮件中的链接完成验证。 启用电子邮件路由： 返回 Cloudflare，点击 继续，在电子邮件路由入门指南页面，点击 添加记录并启用。 编辑路由规则： 点击 编辑，打开 状态，然后点击 路由规则。  创建 D1 数据库 进入...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RustDesk-%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.</span> <span class="toc-text">RustDesk 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RustDesk-%E4%B8%8E%E5%90%91%E6%97%A5%E8%91%B5%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-number">3.</span> <span class="toc-text">RustDesk 与向日葵的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA-RustDesk-%E6%9C%8D%E5%8A%A1%E7%AB%AF%EF%BC%88Docker-%E4%BC%98%E5%85%88%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">搭建 RustDesk 服务端（Docker 优先）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-number">4.1.</span> <span class="toc-text">1. 环境准备</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%B8%8E%E5%B7%A5%E5%85%B7"><span class="toc-number">4.1.1.</span> <span class="toc-text">系统与工具</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8-Docker-%E9%83%A8%E7%BD%B2-RustDesk-%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">4.2.</span> <span class="toc-text">2. 使用 Docker 部署 RustDesk 服务端</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%89%E5%8F%96-RustDesk-Docker-%E9%95%9C%E5%83%8F"><span class="toc-number">4.2.1.</span> <span class="toc-text">拉取 RustDesk Docker 镜像</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Docker-%E5%AE%B9%E5%99%A8"><span class="toc-number">4.2.2.</span> <span class="toc-text">创建 Docker 容器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-number">4.3.</span> <span class="toc-text">3. 配置防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%8E%B7%E5%8F%96%E7%A7%98%E9%92%A5%E4%B8%8E%E9%85%8D%E7%BD%AE"><span class="toc-number">4.4.</span> <span class="toc-text">4. 获取秘钥与配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-number">5.</span> <span class="toc-text">安装客户端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3"><span class="toc-number">6.</span> <span class="toc-text">客户端配置详解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E6%9C%8D%E5%8A%A1"><span class="toc-number">7.</span> <span class="toc-text">验证服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

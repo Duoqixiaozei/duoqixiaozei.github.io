@@ -1,0 +1,488 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>用域名和cloudflare创建无限邮箱 | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文章教你用你的cloudflare如何搭建域名来搭建你自己的临时邮箱，包含完整的部署步骤和配置教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用域名和cloudflare创建无限邮箱">
+<meta property="og:url" content="http://pw0n.com/posts/36910.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="本文章教你用你的cloudflare如何搭建域名来搭建你自己的临时邮箱，包含完整的部署步骤和配置教程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.freepik.com/free-vector/email-concept-illustration_114360-111.jpg?w=1380&t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef">
+<meta property="article:published_time" content="2025-01-15T00:23:46.000Z">
+<meta property="article:modified_time" content="2025-08-30T03:06:13.080Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="自建服务">
+<meta property="article:tag" content="网络工具">
+<meta property="article:tag" content="Cloudflare">
+<meta property="article:tag" content="邮箱">
+<meta property="article:tag" content="域名">
+<meta property="article:tag" content="邮件服务">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.freepik.com/free-vector/email-concept-illustration_114360-111.jpg?w=1380&t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "用域名和cloudflare创建无限邮箱",
+  "url": "http://pw0n.com/posts/36910.html",
+  "image": "https://img.freepik.com/free-vector/email-concept-illustration_114360-111.jpg?w=1380&t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+  "datePublished": "2025-01-15T00:23:46.000Z",
+  "dateModified": "2025-08-30T03:06:13.080Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/posts/36910.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '用域名和cloudflare创建无限邮箱',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">用域名和cloudflare创建无限邮箱</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">用域名和cloudflare创建无限邮箱</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-01-15T00:23:46.000Z" title="Created 2025-01-15 08:23:46">2025-01-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-08-30T03:06:13.080Z" title="Updated 2025-08-30 11:06:13">2025-08-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%88%9B%E5%BB%BA%E9%82%AE%E7%AE%B1/">创建邮箱</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><strong>域名：</strong> 你需要一个已经拥有的域名。</li>
+<li><strong>Cloudflare 账号：</strong> 如果没有，请前往 <a target="_blank" rel="noopener" href="https://www.cloudflare.com/">Cloudflare 官网</a> 注册一个。</li>
+<li><strong>官方文档：</strong> <a target="_blank" rel="noopener" href="https://temp-mail-docs.awsl.uk/">https://temp-mail-docs.awsl.uk/</a></li>
+<li><strong>域名接入 Cloudflare：</strong> 如果你还不清楚如何将域名接入 Cloudflare，请参考这篇教程： <a target="_blank" rel="noopener" href="https://pw0n.xyz/">点击这里</a> (请注意，此链接可能需要替换为实际可用的教程链接)</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="Cloudflare-电子邮件设置"><a href="#Cloudflare-电子邮件设置" class="headerlink" title="Cloudflare 电子邮件设置"></a>Cloudflare 电子邮件设置</h2><ol>
+<li><strong>开始使用电子邮件路由：</strong> 在 Cloudflare 控制台中，找到你的域名，点击 <strong>电子邮件</strong>，然后选择 <strong>电子邮件路由</strong> 开始使用。</li>
+<li><strong>自定义域名前缀和验证邮箱：</strong><ul>
+<li>为你的域名设置一个前缀。</li>
+<li>在下方输入<strong>你的真实邮箱地址</strong>（QQ 邮箱或 163 邮箱等，确保能接收到邮件）。</li>
+<li>点击 <strong>验证邮箱</strong>。</li>
+</ul>
+</li>
+<li><strong>验证邮箱：</strong> 前往你填写的邮箱，找到 Cloudflare 发来的邮件，点击邮件中的链接完成验证。</li>
+<li><strong>启用电子邮件路由：</strong> 返回 Cloudflare，点击 <strong>继续</strong>，在电子邮件路由入门指南页面，点击 <strong>添加记录并启用</strong>。</li>
+<li><strong>编辑路由规则：</strong> 点击 <strong>编辑</strong>，打开 <strong>状态</strong>，然后点击 <strong>路由规则</strong>。</li>
+</ol>
+<h2 id="创建-D1-数据库"><a href="#创建-D1-数据库" class="headerlink" title="创建 D1 数据库"></a>创建 D1 数据库</h2><ol>
+<li><strong>进入 D1 数据库：</strong> 在 Cloudflare 主页，点击 <strong>存储和数据库</strong>，然后选择 <strong>D1 SQL 数据库</strong>。</li>
+<li><strong>创建数据库：</strong> 点击 <strong>创建</strong>，输入一个你喜欢的名字，然后点击 <strong>创建</strong>。</li>
+<li><strong>执行 SQL 脚本：</strong><ul>
+<li>复制以下 SQL 代码：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> raw_mails (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    message_id TEXT,</span><br><span class="line">    source TEXT,</span><br><span class="line">    address TEXT,</span><br><span class="line">    raw TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_raw_mails_address <span class="keyword">ON</span> raw_mails(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> address (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span> AUTOINCREMENT,</span><br><span class="line">    name TEXT <span class="keyword">UNIQUE</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_address_name <span class="keyword">ON</span> address(name);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> auto_reply_mails (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    source_prefix TEXT,</span><br><span class="line">    name TEXT,</span><br><span class="line">    address TEXT <span class="keyword">UNIQUE</span>,</span><br><span class="line">    subject TEXT,</span><br><span class="line">    message TEXT,</span><br><span class="line">    enabled <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">1</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_auto_reply_mails_address <span class="keyword">ON</span> auto_reply_mails(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> address_sender (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    address TEXT <span class="keyword">UNIQUE</span>,</span><br><span class="line">    balance <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>,</span><br><span class="line">    enabled <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">1</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_address_sender_address <span class="keyword">ON</span> address_sender(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> sendbox (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    address TEXT,</span><br><span class="line">    raw TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_sendbox_address <span class="keyword">ON</span> sendbox(address);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> settings (</span><br><span class="line">    key TEXT <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    <span class="keyword">value</span> TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> users (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_email TEXT <span class="keyword">UNIQUE</span> <span class="keyword">NOT NULL</span>,</span><br><span class="line">    password TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    user_info TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_users_user_email <span class="keyword">ON</span> users(user_email);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> users_address (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_id <span class="type">INTEGER</span>,</span><br><span class="line">    address_id <span class="type">INTEGER</span> <span class="keyword">UNIQUE</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_users_address_user_id <span class="keyword">ON</span> users_address(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_users_address_address_id <span class="keyword">ON</span> users_address(address_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> user_roles (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_id <span class="type">INTEGER</span> <span class="keyword">UNIQUE</span> <span class="keyword">NOT NULL</span>,</span><br><span class="line">    role_text TEXT,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_user_roles_user_id <span class="keyword">ON</span> user_roles(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> user_passkeys (</span><br><span class="line">    id <span class="type">INTEGER</span> <span class="keyword">PRIMARY KEY</span>,</span><br><span class="line">    user_id <span class="type">INTEGER</span> <span class="keyword">NOT NULL</span>,</span><br><span class="line">    passkey_name TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    passkey_id TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    passkey TEXT <span class="keyword">NOT NULL</span>,</span><br><span class="line">    counter <span class="type">INTEGER</span> <span class="keyword">DEFAULT</span> <span class="number">0</span>,</span><br><span class="line">    created_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span>,</span><br><span class="line">    updated_at DATETIME <span class="keyword">DEFAULT</span> <span class="built_in">CURRENT_TIMESTAMP</span></span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_user_passkeys_user_id <span class="keyword">ON</span> user_passkeys(user_id);</span><br><span class="line"></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> INDEX IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> idx_user_passkeys_user_id_passkey_id <span class="keyword">ON</span> user_passkeys(user_id, passkey_id);</span><br></pre></td></tr></table></figure></li>
+<li>在 D1 数据库的 <strong>控制台</strong> 中，将代码粘贴到输入框中。</li>
+<li>点击 <strong>执行</strong>。</li>
+</ul>
+</li>
+</ol>
+<h2 id="部署-Worker"><a href="#部署-Worker" class="headerlink" title="部署 Worker"></a>部署 Worker</h2><ol>
+<li><p><strong>创建 Worker：</strong> 在 Cloudflare 主页，点击 <strong>Workers 和 Pages</strong>，然后选择 <strong>创建 Worker</strong>。</p>
+</li>
+<li><p><strong>命名 Worker：</strong> 随意给你的 Worker 起一个名字，然后点击 <strong>部署</strong>。</p>
+</li>
+<li><p><strong>设置兼容性标志：</strong></p>
+<ul>
+<li>找到你刚才部署的 Worker，点击进入。</li>
+<li>点击 <strong>设置</strong>，找到 <strong>兼容性标志</strong>。</li>
+<li>点击编辑标志，输入 <strong>nodejs_compat</strong>。</li>
+</ul>
+</li>
+<li><p><strong>编辑代码：</strong></p>
+<ul>
+<li><p>点击 <strong>编辑代码</strong>。</p>
+</li>
+<li><p>下载 <code>worker.js</code> 代码：<a target="_blank" rel="noopener" href="https://github.com/dreamhunter2333/cloudflare_temp_email/releases/latest/download/worker.js">worker.js</a></p>
+</li>
+<li><p>将下载的代码复制粘贴到代码编辑器中，然后点击 <strong>部署</strong>。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>绑定 D1 数据库：</strong></p>
+<ul>
+<li>返回 Worker 设置页面。</li>
+<li>点击 <strong>D1 数据库</strong>，然后选择 <strong>绑定</strong>。</li>
+<li>在 <strong>变量名称</strong> 中输入 <strong>DB</strong>。</li>
+<li>在 <strong>D1 数据库</strong> 中选择你创建的数据库。</li>
+</ul>
+</li>
+<li><p><strong>设置自定义域：</strong></p>
+<ul>
+<li>在 <strong>域和路由</strong> 中选择 <strong>自定义域</strong>。</li>
+<li>输入你想要的 API 域名 (例如 <code>api.你的域名.com</code>)。</li>
+</ul>
+</li>
+<li><p><strong>配置环境变量：</strong></p>
+<ul>
+<li>在 Worker 设置页面，找到 <strong>环境变量</strong>。</li>
+<li>根据下表配置环境变量：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>类型</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ADMIN_PASSWORDS</td>
+<td>JSON</td>
+<td><code>[&quot;your_password&quot;, &quot;your_password_two&quot;]</code></td>
+<td>admin 控制台密码，不配置则不允许访问控制台。可以配置多个密码，也可以只配置一个。</td>
+</tr>
+<tr>
+<td>ADMIN_USER_ROLE</td>
+<td>纯文本</td>
+<td><code>admin</code></td>
+<td>admin 角色配置，只有用户角色等于 <code>ADMIN_USER_ROLE</code> 的用户才能访问 admin 控制台。</td>
+</tr>
+<tr>
+<td>DEFAULT_DOMAINS</td>
+<td>JSON</td>
+<td><code>[&quot;&quot;]</code></td>
+<td>未登录用户可用的域名列表，默认为空。如果你想让未登录用户也可以使用域名，可以添加你的域名，例如 <code>[&quot;你的域名.com&quot;]</code>，可以添加多个域名。</td>
+</tr>
+<tr>
+<td>DOMAINS</td>
+<td>JSON</td>
+<td><code>[&quot;你的域名.com&quot;]</code></td>
+<td>用于配置你的域名，例如 <code>[&quot;你的域名.com&quot;]</code>，请确保配置的域名已经接入 Cloudflare。</td>
+</tr>
+<tr>
+<td>ENABLE_AUTO_REPLY</td>
+<td>纯文本</td>
+<td><code>false</code></td>
+<td>是否允许自动回复邮件，默认 <code>false</code>。</td>
+</tr>
+<tr>
+<td>ENABLE_USER_CREATE_EMAIL</td>
+<td>纯文本</td>
+<td><code>true</code></td>
+<td>是否允许用户随机创建邮箱账户，默认 <code>true</code>。</td>
+</tr>
+<tr>
+<td>ENABLE_USER_DELETE_EMAIL</td>
+<td>纯文本</td>
+<td><code>true</code></td>
+<td>是否允许用户删除邮件，默认 <code>true</code>。设置为 <code>false</code> 则不允许用户删除邮件。</td>
+</tr>
+<tr>
+<td>JWT_SECRET</td>
+<td>纯文本</td>
+<td>自己生成一个</td>
+<td>用于生成 JWT 的密钥，前往 <a target="_blank" rel="noopener" href="https://www.librechat.ai/toolkit/creds_generator">https://www.librechat.ai/toolkit/creds_generator</a> 生成并复制 <strong>JWT_SECRET</strong> 的值。</td>
+</tr>
+<tr>
+<td>NO_LIMIT_SEND_ROLE</td>
+<td>纯文本</td>
+<td><code>admin</code></td>
+<td>可以无限发送邮件的角色，设置为 <code>admin</code> 则只有 <code>admin</code> 角色的用户可以无限发送邮件。</td>
+</tr>
+<tr>
+<td>USER_ROLES</td>
+<td>JSON</td>
+<td><code>[&#123;&quot;domains&quot;:[&quot;xx.com&quot;],&quot;prefix&quot;:&quot;&quot;,&quot;role&quot;:&quot;vip&quot;&#125;,&#123;&quot;domains&quot;:[&quot;xx.com&quot;],&quot;prefix&quot;:&quot;&quot;,&quot;role&quot;:&quot;admin&quot;&#125;]</code></td>
+<td>设置系统角色，示例中创建了 <code>vip</code> 和 <code>admin</code> 两个角色。请从这里复制，避免格式错误。</td>
+</tr>
+<tr>
+<td>RESEND_TOKEN</td>
+<td>纯文本</td>
+<td><code>re_xxxx</code></td>
+<td>去 <a target="_blank" rel="noopener" href="https://resend.com/"><code>https://resend.com</code></a> 注册并添加域名获取 api 秘钥填写，用来发送邮件，可自己选择。</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h2 id="部署-KV-缓存"><a href="#部署-KV-缓存" class="headerlink" title="部署 KV 缓存"></a>部署 KV 缓存</h2><ol>
+<li><strong>创建 KV 命名空间：</strong> 在 Cloudflare 主页，点击 <strong>存储和数据库</strong>，然后选择 <strong>KV</strong>。</li>
+<li><strong>创建命名空间：</strong> 点击 <strong>创建</strong>，随意输入一个名字，然后点击 <strong>添加</strong>。</li>
+<li><strong>绑定 KV 命名空间：</strong><ul>
+<li>返回 <strong>Workers 和 Pages</strong>，找到你创建的 Worker。</li>
+<li>点击 <strong>设置</strong>，然后选择 <strong>绑定</strong>。</li>
+<li>点击 <strong>KV 命名空间</strong>，在 <strong>变量名称</strong> 中输入 <strong>KV</strong>（注意大写）。</li>
+<li>在 <strong>命名空间</strong> 中选择你创建的 KV 命名空间。</li>
+</ul>
+</li>
+</ol>
+<h2 id="部署路由转发"><a href="#部署路由转发" class="headerlink" title="部署路由转发"></a>部署路由转发</h2><ol>
+<li><strong>进入电子邮件路由：</strong> 在 Cloudflare 主页，点击你的域名，然后选择 <strong>电子邮件</strong>，再选择 <strong>电子邮件路由</strong>。</li>
+<li><strong>编辑路由规则：</strong><ul>
+<li>找到 <strong>路由规则</strong> 部分，点击 <strong>catch-all</strong> 规则。</li>
+<li>在 <strong>操作</strong> 中选择 <strong>发送到 Workers</strong>。</li>
+<li>在 <strong>编辑位置</strong> 中选择你创建的 Worker。</li>
+<li>点击 <strong>保存</strong>。</li>
+</ul>
+</li>
+</ol>
+<h2 id="创建页面前端"><a href="#创建页面前端" class="headerlink" title="创建页面前端"></a>创建页面前端</h2><ol>
+<li><p><strong>下载前端代码：</strong> <a target="_blank" rel="noopener" href="https://github.com/dreamhunter2333/cloudflare_temp_email/releases/latest/download/frontend.zip">前端代码</a></p>
+</li>
+<li><p><strong>解压前端代码：</strong> 解压下载的 <code>frontend.zip</code> 文件。</p>
+</li>
+<li><p><strong>编辑 index 文件：</strong></p>
+<ul>
+<li>打开解压后的文件夹，进入 <code>assets</code> 文件夹。</li>
+<li>找到 <code>index-xxxx</code> 文件 (xxxx 是随机数，每个人不一样)，使用文本编辑器打开。</li>
+<li>按下 <code>Ctrl + F</code> (或 <code>Cmd + F</code>)，搜索 <code>https://temp-email-aps-</code>。</li>
+<li>将找到的链接替换成你刚刚创建的 API 域名 (例如 <code>https://api.你的域名.com</code>)，保存文件。</li>
+</ul>
+</li>
+<li><p><strong>创建 Pages 项目：</strong></p>
+<ul>
+<li>在 Cloudflare 主页，点击 <strong>Workers 和 Pages</strong>，然后选择 <strong>Pages</strong>。</li>
+<li>点击 <strong>创建项目</strong>，然后选择 <strong>上传资产</strong>。</li>
+<li>随便起一个项目名，然后点击 <strong>从计算机选择</strong>。</li>
+</ul>
+</li>
+<li><p><strong>上传前端代码：</strong> 选择你解压的文件夹，将所有文件上传。</p>
+</li>
+<li><p><strong>设置自定义域：</strong></p>
+<ul>
+<li>点击 <strong>自定义域</strong>，将你的邮箱前端域名指向 Pages 项目 (例如 <code>mail.你的域名.com</code>)。</li>
+</ul>
+</li>
+<li><p><strong>访问前端：</strong> 等待几分钟，然后在浏览器中输入 <code>mail.你的域名.com</code>，查看是否成功部署。</p>
+</li>
+</ol>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>恭喜！你已经成功搭建了一个基于 Cloudflare 的无限邮箱服务。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>请将示例中的 “你的域名.com”、”api.你的域名.com” 和 “mail.你的域名.com” 替换成你自己的实际域名。</li>
+<li>请确保你的域名已经正确接入 Cloudflare。</li>
+</ul>
+<p>希望这个教程对你有帮助！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/36910.html">http://pw0n.com/posts/36910.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%87%AA%E5%BB%BA%E6%9C%8D%E5%8A%A1/">自建服务</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/">网络工具</a><a class="post-meta__tags" href="/tags/Cloudflare/">Cloudflare</a><a class="post-meta__tags" href="/tags/%E9%82%AE%E7%AE%B1/">邮箱</a><a class="post-meta__tags" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a><a class="post-meta__tags" href="/tags/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1/">邮件服务</a></div><div class="post-share"><div class="social-share" data-image="https://img.freepik.com/free-vector/email-concept-illustration_114360-111.jpg?w=1380&amp;t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/17787.html" title="域名注册与 Cloudflare 托管教程"><div class="cover" style="background: cloudflare"></div><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">域名注册与 Cloudflare 托管教程</div></div><div class="info-2"><div class="info-item-1">域名注册与 Cloudflare 托管教程本指南将引导你完成域名注册，以及使用 Cloudflare 进行域名托管的步骤。 注册域名推荐服务商：NameSilo我们推荐使用 NameSilo 进行域名注册，它操作简便且价格合理。点击这里 直接访问 NameSilo 官网。 域名后缀选择 .com： 推荐用于正式网站，更具专业性。 .xyz &#x2F; .site： 适合个人博客、学生项目等，价格相对较低。  请根据你的需求选择合适的域名后缀。 NameSilo 用户注册注册注意事项 邮箱： 请使用你常用的有效邮箱进行注册，以便接收重要通知。 用户名： 注册时设置的用户名请务必牢记。  填写个人信息 注册完成后，你需要填写个人信息。 访问 美国地址生成器 或直接复制此网址：https://www.meiguodizhi.com。 在 NameSilo 网站，点击 Account Settings，按照生成器提供的身份信息填写。  配置 DNS 服务器 填写完个人信息后，点击 Dashboard。 如果你已购买域名，会看到 Active Domains，点击 Manage。 点击你...</div></div></div></a><a class="pagination-related" href="/posts/28317.html" title="国内也能用 Gemini 了！超详细教程"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_gemini.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">国内也能用 Gemini 了！超详细教程</div></div><div class="info-2"><div class="info-item-1">使用 Cloudflare Workers 搭建 Gemini API 代理，并通过 Chatbox 使用 Gemini 本教程将指导你如何利用 Cloudflare Workers 搭建一个将 Google Gemini API 转换为 OpenAI API 兼容格式的代理，然后使用开源的 Chatbox 连接 Gemini 模型。 准备工作   Google Gemini API 密钥: 访问 aistuidio.google.com 并登录你的 Google 账号。 在 Google AI Studio 中创建新的 API 密钥。请注意，即使你不在支持的地区，也可以通过 VPN 获取。   Cloudflare 账号: 你需要一个 Cloudflare 账号。如果你还没有，请在 cloudflare.com 注册一个。   Github 账号: 你需要一个 Github 账号，以便fork项目   Chatbox: 下载并安装 Chatbox 。这是一个开源的聊天客户端，支持多种 AI 模型。    步骤一：获取gemini API 访问 aistuidio.google....</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/28317.html" title="国内也能用 Gemini 了！超详细教程"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_gemini.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-06</div><div class="info-item-2">国内也能用 Gemini 了！超详细教程</div></div><div class="info-2"><div class="info-item-1">使用 Cloudflare Workers 搭建 Gemini API 代理，并通过 Chatbox 使用 Gemini 本教程将指导你如何利用 Cloudflare Workers 搭建一个将 Google Gemini API 转换为 OpenAI API 兼容格式的代理，然后使用开源的 Chatbox 连接 Gemini 模型。 准备工作   Google Gemini API 密钥: 访问 aistuidio.google.com 并登录你的 Google 账号。 在 Google AI Studio 中创建新的 API 密钥。请注意，即使你不在支持的地区，也可以通过 VPN 获取。   Cloudflare 账号: 你需要一个 Cloudflare 账号。如果你还没有，请在 cloudflare.com 注册一个。   Github 账号: 你需要一个 Github 账号，以便fork项目   Chatbox: 下载并安装 Chatbox 。这是一个开源的聊天客户端，支持多种 AI 模型。    步骤一：获取gemini API 访问 aistuidio.google....</div></div></div></a><a class="pagination-related" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-06-20</div><div class="info-item-2">一款好用去除广告的浏览器插件 uBlock Origin</div></div><div class="info-2"><div class="info-item-1">今天给大家介绍这一款适合很多人的浏览器插件 —— ​uBlock Origin​。无论你是看 Bilibili &#x2F; YouTube 等平台的视频，还是浏览普通网页，uBlock Origin 都能帮你自动跳过广告，为你带来更清爽的使用体验。 除了视频方面，uBlock Origin 在打开新闻网站、电商页面、论坛等网页时，也能有效屏蔽弹窗广告、横幅广告、追踪脚本等烦人的内容。虽然它会在运行时占用一定的内存和 CPU 资源，但整体使用起来非常流畅，几乎感觉不到卡顿。确实是一款“装了就离不开”的神器。  🌟 uBlock Origin 的主要优点 ​完全免费、开源​：不像其他某些插件会暗藏收费机制，uBlock Origin 完全开源，安全放心。 ​占用资源小​：相比一些老牌的广告插件，uBlock Origin 更加轻量高效。 ​规则更新及时​：内置 EasyList、uBlock filters 等规则库，同时支持手动添加自定义过滤规则。 ​高度可配置​：高级用户可以根据需要自定义屏蔽范围和行为。   🚀 如何安装 uBlock Origin 打开你的浏览器插件商店...</div></div></div></a><a class="pagination-related" href="/posts/22613.html" title="拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://rustdesk.com/_astro/favicon.B_ZzjaxD.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-12-26</div><div class="info-item-2">拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程</div></div><div class="info-2"><div class="info-item-1">前言在如今的远程办公和技术支持中，安全是首要考虑因素。然而，大部分主流的远程控制软件虽然安全，但其高级功能通常需要付费订阅，这不仅增加了成本，还可能将数据暴露在第三方服务器中。与其花费高额费用购买订阅，不如通过自建服务端，拥有完全掌控的远程解决方案。如果你动手能力强且能自行维护，这将是最佳选择。  RustDesk 介绍RustDesk 是一款开源的远程桌面软件，类似于 TeamViewer 和 AnyDesk，但它的特点是完全开源且自托管。RustDesk 允许用户在不同的设备和平台之间进行远程控制，支持 Windows、Linux、macOS、Android 和 iOS 等操作系统。   作为向日葵等商业软件的替代方案，它具备高性能、安全性和无需订阅等优点。本文将详细介绍 RustDesk 的特点、与向日葵的对比，并指导如何通过 Docker 搭建 RustDesk 服务端。     RustDesk 与向日葵的对比   特性 RustDesk 向日葵    开源 是 否   部署方式 支持自建服务端 官方服务器或订阅   数据隐私 完全掌控 依赖官方服务   成本 免费 部...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cloudflare-%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">Cloudflare 电子邮件设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-D1-%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">创建 D1 数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2-Worker"><span class="toc-number">4.</span> <span class="toc-text">部署 Worker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2-KV-%E7%BC%93%E5%AD%98"><span class="toc-number">5.</span> <span class="toc-text">部署 KV 缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E8%B7%AF%E7%94%B1%E8%BD%AC%E5%8F%91"><span class="toc-number">6.</span> <span class="toc-text">部署路由转发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%A1%B5%E9%9D%A2%E5%89%8D%E7%AB%AF"><span class="toc-number">7.</span> <span class="toc-text">创建页面前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-number">8.</span> <span class="toc-text">完成</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>一款好用去除广告的浏览器插件 uBlock Origin | Pw0n's blog</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="如果你厌倦了网页上各种广告弹窗，或者不想在视频开始前强制观看几十秒的广告，那么 uBlock Origin* 是你不容错过的插件。它简单、干净、强大，装上之后，你可能再也不想卸载它了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一款好用去除广告的浏览器插件 uBlock Origin">
+<meta property="og:url" content="http://pw0n.com/posts/f8a420b.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="如果你厌倦了网页上各种广告弹窗，或者不想在视频开始前强制观看几十秒的广告，那么 uBlock Origin* 是你不容错过的插件。它简单、干净、强大，装上之后，你可能再也不想卸载它了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://b22.pw0n.xyz/2025/06/20_ublock.webp">
+<meta property="article:published_time" content="2025-06-20T06:21:11.000Z">
+<meta property="article:modified_time" content="2026-01-26T01:07:53.173Z">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="浏览器插件">
+<meta property="article:tag" content="ublock">
+<meta property="article:tag" content="去广告插件">
+<meta property="article:tag" content="Firefox">
+<meta property="article:tag" content="Edge">
+<meta property="article:tag" content="Chrome">
+<meta property="article:tag" content="广告拦截">
+<meta property="article:tag" content="隐私保护">
+<meta property="article:tag" content="网络工具">
+<meta property="article:tag" content="浏览器扩展">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://b22.pw0n.xyz/2025/06/20_ublock.webp"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "一款好用去除广告的浏览器插件 uBlock Origin",
+  "url": "http://pw0n.com/posts/f8a420b.html",
+  "image": "https://b22.pw0n.xyz/2025/06/20_ublock.webp",
+  "datePublished": "2025-06-20T06:21:11.000Z",
+  "dateModified": "2026-01-26T01:07:53.173Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pw0n",
+      "url": "http://pw0n.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/posts/f8a420b.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '一款好用去除广告的浏览器插件 uBlock Origin',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">一款好用去除广告的浏览器插件 uBlock Origin</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">一款好用去除广告的浏览器插件 uBlock Origin</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-01-26T01:07:53.173Z" title="Updated 2026-01-26 09:07:53">2026-01-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8F%92%E4%BB%B6/">插件</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><p>今天给大家介绍这一款适合很多人的浏览器插件 —— ​<strong>uBlock Origin</strong>​。无论你是看 <strong>Bilibili &#x2F; YouTube</strong> 等平台的视频，还是浏览普通网页，uBlock Origin 都能帮你自动跳过广告，为你带来更清爽的使用体验。</p>
+<p>除了视频方面，uBlock Origin 在打开新闻网站、电商页面、论坛等网页时，也能有效屏蔽弹窗广告、横幅广告、追踪脚本等烦人的内容。虽然它会在运行时占用一定的内存和 CPU 资源，但整体使用起来非常流畅，几乎感觉不到卡顿。确实是一款“装了就离不开”的神器。</p>
+<hr>
+<h1 id="🌟-uBlock-Origin-的主要优点"><a href="#🌟-uBlock-Origin-的主要优点" class="headerlink" title="🌟 uBlock Origin 的主要优点"></a>🌟 uBlock Origin 的主要优点</h1><ul>
+<li>​<strong>完全免费、开源</strong>​：不像其他某些插件会暗藏收费机制，uBlock Origin 完全开源，安全放心。</li>
+<li>​<strong>占用资源小</strong>​：相比一些老牌的广告插件，uBlock Origin 更加轻量高效。</li>
+<li>​<strong>规则更新及时</strong>​：内置 EasyList、uBlock filters 等规则库，同时支持手动添加自定义过滤规则。</li>
+<li>​<strong>高度可配置</strong>​：高级用户可以根据需要自定义屏蔽范围和行为。</li>
+</ul>
+<hr>
+<h1 id="🚀-如何安装-uBlock-Origin"><a href="#🚀-如何安装-uBlock-Origin" class="headerlink" title="🚀 如何安装 uBlock Origin"></a>🚀 如何安装 uBlock Origin</h1><ol>
+<li><p>打开你的浏览器插件商店：</p>
+<ul>
+<li>Chrome 用户进入 <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">Chrome 网上应用店</a></li>
+<li>Firefox 用户访问 <a target="_blank" rel="noopener" href="https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/">Firefox Add-ons</a></li>
+<li>Edge 用户进入 <a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm">Edge 插件商店</a></li>
+</ul>
+</li>
+<li><p>搜索 <strong>uBlock Origin</strong> 并点击“添加到浏览器”。</p>
+</li>
+<li><p>安装完成后，在右上角扩展图标中点击即可进行简单配置。</p>
+</li>
+<li><p>如果拓展商店没法搜索到或者无法使用可以在github页面下载对应的浏览器拓展程序</p>
+<ul>
+<li>Github uBlock Origin页面<a target="_blank" rel="noopener" href="https://github.com/gorhill/uBlock/releases">Github uBlock Origin页面下载</a></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="⚙️-推荐设置"><a href="#⚙️-推荐设置" class="headerlink" title="⚙️ 推荐设置"></a>⚙️ 推荐设置</h1><p>为了获得更强的屏蔽效果，可以进入插件设置页面，勾选以下选项：</p>
+<ul>
+<li>✔️ 启用“uBlock filters – Privacy”</li>
+<li>✔️ 启用“uBlock filters – Annoyances”</li>
+<li>✔️ 启用“AdGuard Chinese filter”（适合中文网页）</li>
+<li>✔️ 启用“Fanboy’s Annoyance List”</li>
+</ul>
+<p>如果你愿意深入研究，还可以添加自定义的规则，如屏蔽某些弹窗提示、视频站点的特定广告行为等。</p>
+<hr>
+<h1 id="🕹️如何使用"><a href="#🕹️如何使用" class="headerlink" title="🕹️如何使用"></a>🕹️如何使用</h1><ul>
+<li><p>安装好的插件你需要固定好插件按照我一下图片操作<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_%E7%82%B9%E5%87%BB%E6%8B%93%E5%B1%95%E6%8F%92%E4%BB%B6.webp" alt="点击图标"><br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_%E5%9B%BA%E5%AE%9A%E6%8F%92%E4%BB%B6.webp" alt="点击固定"><br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E6%89%93%E5%BC%80.webp" alt="打开ublock拦截"></p>
+</li>
+<li><p>这样你就已经开启了拦截了，有些网页还是会出现广告没有拦截到要怎么搞呢？我们可以用手动临时移除元素来拦截。<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_%E5%8D%95%E5%87%BB%E5%B1%8F%E8%94%BD%E5%B9%BF%E5%91%8A.webp" alt="临时移除元素"></p>
+</li>
+<li><p>点击你想要拦截的广告，我以我之前的英文网站为例子就拦截图片</p>
+<p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA.webp" alt="点击拦截"><br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_%E6%8B%A6%E6%88%AA%E6%95%88%E6%9E%9C.webp" alt="拦截效果"></p>
+</li>
+<li><p>Youtube另外可以拦截视频广告，真的很方便<br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_utube.webp" alt="youtube拦截效果"><br><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_bilibili.webp" alt="bilibili拦截效果"></p>
+</li>
+</ul>
+<hr>
+<h1 id="❗-注意事项"><a href="#❗-注意事项" class="headerlink" title="❗ 注意事项"></a>❗ 注意事项</h1><p>虽然 uBlock Origin 很强大，但也可能会误伤某些正常内容，比如网站评论区、内嵌视频播放器等功能。因此如果你遇到页面功能不正常的情况，可以临时点击扩展图标，选择“在此网站禁用”，刷新页面即可。</p>
+<hr>
+<h1 id="✅-总结"><a href="#✅-总结" class="headerlink" title="✅ 总结"></a>✅ 总结</h1><p>如果你厌倦了网页上各种广告弹窗，或者不想在视频开始前强制观看几十秒的广告，那么 <strong>uBlock Origin</strong> 是你不容错过的插件。它简单、干净、强大，装上之后，你可能再也不想卸载它了。</p>
+<p>快去安装试试吧！让你的浏览器焕然一新 🎉</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://pw0n.com">Pw0n</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://pw0n.com/posts/f8a420b.html">http://pw0n.com/posts/f8a420b.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/">浏览器插件</a><a class="post-meta__tags" href="/tags/ublock/">ublock</a><a class="post-meta__tags" href="/tags/%E5%8E%BB%E5%B9%BF%E5%91%8A%E6%8F%92%E4%BB%B6/">去广告插件</a><a class="post-meta__tags" href="/tags/Firefox/">Firefox</a><a class="post-meta__tags" href="/tags/Edge/">Edge</a><a class="post-meta__tags" href="/tags/Chrome/">Chrome</a><a class="post-meta__tags" href="/tags/%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA/">广告拦截</a><a class="post-meta__tags" href="/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4/">隐私保护</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/">网络工具</a><a class="post-meta__tags" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">浏览器扩展</a></div><div class="post-share"><div class="social-share" data-image="https://b22.pw0n.xyz/2025/06/20_ublock.webp" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">Previous</div><div class="info-item-2">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</div></div><div class="info-2"><div class="info-item-1">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！许多摄影爱好者选择去香港购买相机，最主要的原因就是价格优势。以佳能R50白色套机（带18-45mm镜头）为例，大陆淘宝售价约6349元，而在香港，港水价格最低可达4980港币，行货价格为5550港币。  如果按汇率0.915计算，港行价格折合人民币约为5078.25元。使用现金支付通常无需手续费，但如果选择微信或支付宝等移动支付方式，则需要支付1%的手续费。 什么是行货和水货？在香港购买相机时，你可能会听到“行货”和“水货”这两个词，它们的主要区别在于售后保修：  ​行货​：指通过正规渠道销售的产品，通常可以享受全国联保服务，也就是可以在大陆进行保修。 ​水货​：由于香港是免税港，商家会从日本等国家以更低的价格进货。水货通常不享受全国联保，因此价格更便宜。​请注意，有些水货机型可能只支持日文和繁体中文显示​，购买前务必向店家问清楚。  简单来说，​行货和水货的区别在于是否提供官方保修服务​。 如何在香港购买相机？推荐大家在前往香港前，先通过Price.com.hk这个网站进行线上预约。这样可以避免线下排队等候，并且更容...</div></div></div></a><a class="pagination-related" href="/posts/848c1e0.html" title="简洁导航介绍"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/18_简洁导航.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">简洁导航介绍</div></div><div class="info-2"><div class="info-item-1">介绍一下我的简介导航 文件处理 iLovePDF SmallPDF PDF2Go这三个网站都可以转PDF格式我本人喜欢iLovePDF，就以iLovePDF为例使用起来也很简单 导入你的图片或者其他文件就能转换成pdf格式  开发工具不多介绍 浏览器扩展 （推荐新电脑安装） 沉浸式翻译这个插件我推荐大部分安装的好，你看github或者看其他的英文文章可以翻译看起来也舒服，也可以用来学习你可以选择你不会的来翻译，会的可以不用翻译，也支持主流AI秘钥对接，让AI翻译。看youtube还可以生成中文字幕，这个插件真的绝。以下动图参考官方动图演示     Wappalyzer这个插件，可以看网站是什么框架，可以有效的让我判断网站有什么插件 油猴脚本有很多脚本，能让我们使用 或者自己做一个脚本，很多博主有教程就不演示 Fatkun图片下载你可以直接扒网站的图片 直接原图下载  搜索引擎不赘述 影视 RARBG 老牌种子网站 这个之前就倒闭了 但是有人后续搞了，用这个 EZTV 也是种子网站，看美剧用的，不过我还是首选RARBG 字幕库 看字幕用的，可以下载你对应的字幕这些都需要下一个下载器...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/28317.html" title="国内也能用 Gemini 了！超详细教程"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_gemini.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-06</div><div class="info-item-2">国内也能用 Gemini 了！超详细教程</div></div><div class="info-2"><div class="info-item-1">使用 Cloudflare Workers 搭建 Gemini API 代理，并通过 Chatbox 使用 Gemini 本教程将指导你如何利用 Cloudflare Workers 搭建一个将 Google Gemini API 转换为 OpenAI API 兼容格式的代理，然后使用开源的 Chatbox 连接 Gemini 模型。 准备工作   Google Gemini API 密钥: 访问 aistuidio.google.com 并登录你的 Google 账号。 在 Google AI Studio 中创建新的 API 密钥。请注意，即使你不在支持的地区，也可以通过 VPN 获取。   Cloudflare 账号: 你需要一个 Cloudflare 账号。如果你还没有，请在 cloudflare.com 注册一个。   Github 账号: 你需要一个 Github 账号，以便fork项目   Chatbox: 下载并安装 Chatbox 。这是一个开源的聊天客户端，支持多种 AI 模型。    步骤一：获取gemini API 访问 aistuidio.google....</div></div></div></a><a class="pagination-related" href="/posts/36910.html" title="用域名和cloudflare创建无限邮箱"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/email-concept-illustration_114360-111.jpg?w=1380&t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-15</div><div class="info-item-2">用域名和cloudflare创建无限邮箱</div></div><div class="info-2"><div class="info-item-1">准备 域名： 你需要一个已经拥有的域名。 Cloudflare 账号： 如果没有，请前往 Cloudflare 官网 注册一个。 官方文档： https://temp-mail-docs.awsl.uk/ 域名接入 Cloudflare： 如果你还不清楚如何将域名接入 Cloudflare，请参考这篇教程： 点击这里 (请注意，此链接可能需要替换为实际可用的教程链接)    Cloudflare 电子邮件设置 开始使用电子邮件路由： 在 Cloudflare 控制台中，找到你的域名，点击 电子邮件，然后选择 电子邮件路由 开始使用。 自定义域名前缀和验证邮箱： 为你的域名设置一个前缀。 在下方输入你的真实邮箱地址（QQ 邮箱或 163 邮箱等，确保能接收到邮件）。 点击 验证邮箱。   验证邮箱： 前往你填写的邮箱，找到 Cloudflare 发来的邮件，点击邮件中的链接完成验证。 启用电子邮件路由： 返回 Cloudflare，点击 继续，在电子邮件路由入门指南页面，点击 添加记录并启用。 编辑路由规则： 点击 编辑，打开 状态，然后点击 路由规则。  创建 D1 数据库 进入...</div></div></div></a><a class="pagination-related" href="/posts/55283.html" title="Temu特姆一键拒绝调价脚本 不同意调价脚本"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_temu.webp" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-09-11</div><div class="info-item-2">Temu特姆一键拒绝调价脚本 不同意调价脚本</div></div><div class="info-2"><div class="info-item-1">Temu天天弹降价窗所以搞了个一键不同调价的脚本脚本要搭配油猴使用！！！该脚本js脚本 可以直接复制到油猴 也可以直接创建一个文件后缀js的文件然后把内容复制使用文本编辑粘贴上去再拖动到油猴脚本。建议直接在油猴脚本 新建一个脚本 直接复制一下内容！点击右上角开始直接一键不同意调价！！！   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899// ==UserScript==// @name         temu-Automatically click to disagree// @namespace    https:www.pw0n.com// @version      0.6// @description  自动点击指定的元素，并增加开始和暂停按钮...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comments</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%8C%9F-uBlock-Origin-%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BC%98%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">🌟 uBlock Origin 的主要优点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%9A%80-%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85-uBlock-Origin"><span class="toc-number">2.</span> <span class="toc-text">🚀 如何安装 uBlock Origin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">⚙️ 推荐设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%95%B9%EF%B8%8F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">🕹️如何使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%9D%97-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.</span> <span class="toc-text">❗ 注意事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%9C%85-%E6%80%BB%E7%BB%93"><span class="toc-number">6.</span> <span class="toc-text">✅ 总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll to Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'https://pw0n.netlify.app/.netlify/functions/twikoo',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>

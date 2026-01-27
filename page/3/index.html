@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Pw0n's blog - 技术分享、生活记录、教程指南</title><meta name="author" content="Pw0n"><meta name="copyright" content="Pw0n"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pw0n&#39;s blog">
+<meta property="og:url" content="http://pw0n.com/page/3/index.html">
+<meta property="og:site_name" content="Pw0n&#39;s blog">
+<meta property="og:description" content="个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://pw0n.com/img/butterfly-icon.png">
+<meta property="article:author" content="Pw0n">
+<meta property="article:tag" content="技术博客,Linux教程,Windows教程,网络工具,生活记录,技术分享,教程指南">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://pw0n.com/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://pw0n.com/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.3"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"No results found for: ${query}","hits_stats":"${hits} articles found"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Pw0n\'s blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="Pw0n's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pw0n's blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-th"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><h1 class="title-seo">Pw0n's blog</h1></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover"><a href="/posts/36910.html" title="用域名和cloudflare创建无限邮箱"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/email-concept-illustration_114360-111.jpg?w=1380&amp;t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="用域名和cloudflare创建无限邮箱"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/36910.html" title="用域名和cloudflare创建无限邮箱">用域名和cloudflare创建无限邮箱</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-15T00:23:46.000Z" title="Created 2025-01-15 08:23:46">2025-01-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%88%9B%E5%BB%BA%E9%82%AE%E7%AE%B1/">创建邮箱</a></span></div><div class="content">准备 域名： 你需要一个已经拥有的域名。 Cloudflare 账号： 如果没有，请前往 Cloudflare 官网 注册一个。 官方文档： https://temp-mail-docs.awsl.uk/ 域名接入 Cloudflare： 如果你还不清楚如何将域名接入 Cloudflare，请参考这篇教程： 点击这里 (请注意，此链接可能需要替换为实际可用的教程链接)    Cloudflare 电子邮件设置 开始使用电子邮件路由： 在 Cloudflare 控制台中，找到你的域名，点击 电子邮件，然后选择 电子邮件路由 开始使用。 自定义域名前缀和验证邮箱： 为你的域名设置一个前缀。 在下方输入你的真实邮箱地址（QQ 邮箱或 163 邮箱等，确保能接收到邮件）。 点击 验证邮箱。   验证邮箱： 前往你填写的邮箱，找到 Cloudflare 发来的邮件，点击邮件中的链接完成验证。 启用电子邮件路由： 返回 Cloudflare，点击 继续，在电子邮件路由入门指南页面，点击 添加记录并启用。 编辑路由规则： 点击 编辑，打开 状态，然后点击 路由规则。  创建 D1 数据库 进入...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/28317.html" title="国内也能用 Gemini 了！超详细教程"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_gemini.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="国内也能用 Gemini 了！超详细教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/28317.html" title="国内也能用 Gemini 了！超详细教程">国内也能用 Gemini 了！超详细教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-05T22:37:36.000Z" title="Created 2025-01-06 06:37:36">2025-01-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Gemini/">Gemini</a></span></div><div class="content">使用 Cloudflare Workers 搭建 Gemini API 代理，并通过 Chatbox 使用 Gemini 本教程将指导你如何利用 Cloudflare Workers 搭建一个将 Google Gemini API 转换为 OpenAI API 兼容格式的代理，然后使用开源的 Chatbox 连接 Gemini 模型。 准备工作   Google Gemini API 密钥: 访问 aistuidio.google.com 并登录你的 Google 账号。 在 Google AI Studio 中创建新的 API 密钥。请注意，即使你不在支持的地区，也可以通过 VPN 获取。   Cloudflare 账号: 你需要一个 Cloudflare 账号。如果你还没有，请在 cloudflare.com 注册一个。   Github 账号: 你需要一个 Github 账号，以便fork项目   Chatbox: 下载并安装 Chatbox 。这是一个开源的聊天客户端，支持多种 AI 模型。    步骤一：获取gemini API 访问 aistuidio.google....</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/49800.html" title="archlinux没有显示器无法调节亮度"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/linux-system-concept-illustration_114360-114.jpg?w=1380&amp;t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="archlinux没有显示器无法调节亮度"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/49800.html" title="archlinux没有显示器无法调节亮度">archlinux没有显示器无法调节亮度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-02T09:41:53.000Z" title="Created 2025-01-02 17:41:53">2025-01-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/archlinux/">archlinux</a></span></div><div class="content">如何解决 Thinkpad 笔记本亮度无法调节的问题背景在一些 Thinkpad 笔记本电脑上，尽管系统能够检测到亮度控制接口，但实际调节亮度的功能却无法正常工作。你可能会看到系统识别到亮度控制硬件，但调整亮度时并无任何反应，甚至出现闪屏或无法控制的情况。本文将为你提供一系列步骤，帮助解决这个问题。    电脑配置123456789101112131415161718		 .o+`                   ---------                 `ooo/                   OS: Arch Linux x86_64                `+oooo:                  Host: 20H5A056CD ThinkPad E570               `+oooooo:                 Kernel: 6.12.7-arch1-1              -+oooooo+:                Uptime: 10 mins            `/:-:++oooo+: ...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/12388.html" title="archlinux开机进入系统显示白屏闪烁"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_微信图片_20250106110103.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="archlinux开机进入系统显示白屏闪烁"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/12388.html" title="archlinux开机进入系统显示白屏闪烁">archlinux开机进入系统显示白屏闪烁</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-01-02T06:28:32.000Z" title="Created 2025-01-02 14:28:32">2025-01-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/archlinux/">archlinux</a></span></div><div class="content">前几天我把我的archlinux，全部更新了一遍，没想到开机开机进入系统显示白屏闪烁 切换tty3显示：nouveau0000:01:00.8:xorg[875]:valldate:22               12nouveau0000:01:00.8:xorg[875]:valldate:22nouveau0000:01:00.8:xorg[875]:valldating bo list    第一步 开机启动 进入grub时1. 进入 GRUB 菜单 重启你的电脑，当 GRUB 启动菜单出现时，使用上下箭头键选中你想启动的内核（通常是默认的启动项）。 按下 e 键进行编辑。  2. 禁用 Nouveau 驱动 在 GRUB 编辑界面中，找到以 linux 开头的那一行。这一行通常会包含启动内核的路径以及一些内核参数。比如，类似这样的行： 1linux   /boot/vmlinuz-linux root=UUID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx rx quiet splash nouveau.modeset=0  每个人的电脑不一样...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/22613.html" title="拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://rustdesk.com/_astro/favicon.B_ZzjaxD.svg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/22613.html" title="拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程">拥有一个安全自己操作的远程软件：RustDesk 完全私有化部署教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-12-25T23:24:31.000Z" title="Created 2024-12-26 07:24:31">2024-12-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%80%E6%9C%AF/%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/">网络工具</a></span></div><div class="content">前言在如今的远程办公和技术支持中，安全是首要考虑因素。然而，大部分主流的远程控制软件虽然安全，但其高级功能通常需要付费订阅，这不仅增加了成本，还可能将数据暴露在第三方服务器中。与其花费高额费用购买订阅，不如通过自建服务端，拥有完全掌控的远程解决方案。如果你动手能力强且能自行维护，这将是最佳选择。  RustDesk 介绍RustDesk 是一款开源的远程桌面软件，类似于 TeamViewer 和 AnyDesk，但它的特点是完全开源且自托管。RustDesk 允许用户在不同的设备和平台之间进行远程控制，支持 Windows、Linux、macOS、Android 和 iOS 等操作系统。   作为向日葵等商业软件的替代方案，它具备高性能、安全性和无需订阅等优点。本文将详细介绍 RustDesk 的特点、与向日葵的对比，并指导如何通过 Docker 搭建 RustDesk 服务端。     RustDesk 与向日葵的对比   特性 RustDesk 向日葵    开源 是 否   部署方式 支持自建服务端 官方服务器或订阅   数据隐私 完全掌控 依赖官方服务   成本 免费 部...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/21419.html" title="曾经的百元机之王：酷派手机为何从辉煌走向低谷?"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.antutu.com/20180404/s_15228305111376_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="曾经的百元机之王：酷派手机为何从辉煌走向低谷?"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/21419.html" title="曾经的百元机之王：酷派手机为何从辉煌走向低谷?">曾经的百元机之王：酷派手机为何从辉煌走向低谷?</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-11-26T03:38:06.000Z" title="Created 2024-11-26 11:38:06">2024-11-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="content">从巅峰到低谷：酷派手机的财务困局与市场份额分析酷派（Coolpad），曾是国内智能手机市场的重要玩家之一，凭借其高性价比的百元机产品在早期吸引了大量消费者。然而，随着市场竞争的加剧、技术创新滞后以及战略失误，酷派的市场份额逐渐萎缩，最终陷入财务困境。本文将从酷派的辉煌历史、市场份额变化、财务状况和转型困局等多个方面进行详细分析。    图片来源：安兔兔    一、从百元机到市场低迷：酷派曾经的成功与衰退酷派在智能手机行业早期取得了不小的成绩，尤其在中低端市场。其百元机的推出，使大量预算有限的消费者选择了酷派。以下是酷派辉煌时期的几个关键因素：  性价比与百元机战略酷派凭借着价格亲民的百元机快速吸引了大量消费者，尤其是三四线城市的用户。相比于同类产品，酷派在硬件上并不逊色，但价格更具竞争力。 运营商渠道合作酷派与中国移动等运营商的合作，使其迅速在市场中占据一席之地。通过推出定制版手机，酷派得以快速获得消费者的信任，特别是在农村和二线城市。 市场份额扩展2014至2016年间，酷派的市场份额曾一度超过10%，尤其是在千元以下的手机市场中占据主导地位。然而，随着行业的发展，酷派未能及时...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/39742.html" title="Spotify 美化插件之歌词界面毛玻璃效果"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_效果图.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spotify 美化插件之歌词界面毛玻璃效果"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/39742.html" title="Spotify 美化插件之歌词界面毛玻璃效果">Spotify 美化插件之歌词界面毛玻璃效果</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-20T03:43:35.000Z" title="Created 2024-09-20 11:43:35">2024-09-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Spotify/">Spotify</a></span></div><div class="content">声明：以下安装美化需要有spicetify-cli和spicetify-marketplace插件如果没有就只能看我以往的spotify美化教程不懂安装的插件的点击这里看我之前的文章讲解  如何安装？第一种方法安装好插件后，直接从marketplace-Extensions 找到beautiful lyrics安装 你就可以看到下面的多出了一个麦克风的图标点击就可以看到效果  第二种方法在powershell 安装 beautiful lyrics 输入一下内容 12spicetify config custom_appsspicetify apply 美化歌词推荐：beautiful lyrics 有毛玻璃效果再次打开客户端就可以看到效果  tips:有些歌曲在spotify是无法看到歌词。  </div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/55283.html" title="Temu特姆一键拒绝调价脚本 不同意调价脚本"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/16_temu.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Temu特姆一键拒绝调价脚本 不同意调价脚本"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/55283.html" title="Temu特姆一键拒绝调价脚本 不同意调价脚本">Temu特姆一键拒绝调价脚本 不同意调价脚本</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-11T06:43:38.000Z" title="Created 2024-09-11 14:43:38">2024-09-11</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86/">跨境电商</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86/TEMU/">TEMU</a></span></div><div class="content">Temu天天弹降价窗所以搞了个一键不同调价的脚本脚本要搭配油猴使用！！！该脚本js脚本 可以直接复制到油猴 也可以直接创建一个文件后缀js的文件然后把内容复制使用文本编辑粘贴上去再拖动到油猴脚本。建议直接在油猴脚本 新建一个脚本 直接复制一下内容！点击右上角开始直接一键不同意调价！！！   123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899// ==UserScript==// @name         temu-Automatically click to disagree// @namespace    https:www.pw0n.com// @version      0.6// @description  自动点击指定的元素，并增加开始和暂停按钮...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/58450.html" title="域名取消绑定后为什么输入IP网址还是会自动跳转域名？"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/17_cloudflare缓存.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="域名取消绑定后为什么输入IP网址还是会自动跳转域名？"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/58450.html" title="域名取消绑定后为什么输入IP网址还是会自动跳转域名？">域名取消绑定后为什么输入IP网址还是会自动跳转域名？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-09-02T09:49:22.000Z" title="Created 2024-09-02 17:49:22">2024-09-02</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/cloudflare/">cloudflare</a></span></div><div class="content">域名取消绑定后为什么输入IP网址还是会自动跳转域名 可能原因及解决方案域名服务商未彻底删除IP绑定如果你的域名服务商没有彻底删除IP绑定信息，IP网址可能依旧与域名关联。你可以检查并删除所有绑定到该IP地址的域名。  域名服务商缓存未清理有时，域名服务商的缓存未及时清理，导致IP地址仍会重定向到域名。请联系你的服务商以清理相关缓存。 服务器上的 URL 重写规则未修改服务器上的 URL 重写规则（如 Nginx 或 Apache 的 .htaccess 文件）可能未按照正确的地址进行修改，导致IP地址仍然重定向到域名。 示例：使用 Cloudflare 进行检查和调整 打开 Cloudflare 网站，进入 DNS 记录页面，检查是否还有其他域名绑定到你的服务器IP地址，确保所有无关的域名记录都已删除。  进入 缓存 - 配置 - 清除缓存，选择 清除所有内容 以确保缓存已被清理。    打开你的Nginx配置文件，确认是否已将绑定的域名更改为IP地址。这样一来，你的IP网址就能正常打开了。    以上解决方案基于80端口已开放的公网IP地址。  </div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/posts/9819.html" title="如何使用Google Cloud中的SSH远程连接服务器：详细教程"><img class="post-bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.freepik.com/free-vector/cloud-computing-concept-illustration_114360-108.jpg?w=1380&amp;t=st=1703123456~exp=1703124056~hmac=1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何使用Google Cloud中的SSH远程连接服务器：详细教程"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/9819.html" title="如何使用Google Cloud中的SSH远程连接服务器：详细教程">如何使用Google Cloud中的SSH远程连接服务器：详细教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-08-26T02:17:30.000Z" title="Created 2024-08-26 10:17:30">2024-08-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Google-Cloud/">Google Cloud</a></span></div><div class="content">🚀 Google Cloud SSH远程连接完整教程 通过SSH安全、高效地连接和管理你的Google Cloud服务器，掌握云端运维的核心技能！  📋 教程概览本教程将带你完成以下步骤：  下载并安装PuTTY工具 生成SSH密钥对 配置Google Cloud SSH密钥 建立SSH连接 保存连接配置  🛠️ 第一步：下载PuTTY工具下载PuTTYgen（密钥生成器）访问官方下载页面：https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 快速定位方法：  使用 Ctrl + F 搜索 “puttygen.exe” 查找 “a RSA and DSA key generation utility” 选择适合你电脑架构的版本（x86或x64）   下载PuTTY（SSH客户端）在同一页面找到PuTTY主程序下载链接，同样选择适合的架构版本。 🔑 第二步：生成SSH密钥对启动PuTTYgen下载完成后，运行 puttygen.exe 程序。 ![puttygen界面](https://b22.pw0n...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pw0n</div><div class="author-info-description">个人技术博客，分享Linux、Windows、网络工具、生活记录等实用内容，提供详细的教程和解决方案。</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">40</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">167</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">50</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://www.pw0n.com/atom.xml"><i class="fas fa-rss"></i><span>订阅RSS</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/duoqixiaozei" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:pw0nxx@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">欢迎来到我的博客</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2026/01/25__DSC0409.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🇭🇰 香港迪士尼保姆级游玩攻略"/></a><div class="content"><a class="title" href="/posts/af66e21b.html" title="🇭🇰 香港迪士尼保姆级游玩攻略">🇭🇰 香港迪士尼保姆级游玩攻略</a><time datetime="2026-01-25T02:02:39.000Z" title="Created 2026-01-25 10:02:39">2026-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/8c59746b.html" title="win10退出微软账户"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://learn-attachment.microsoft.com/api/attachments/838c14dc-216b-4989-8b4d-9f0d35971b16?platform=QnA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win10退出微软账户"/></a><div class="content"><a class="title" href="/posts/8c59746b.html" title="win10退出微软账户">win10退出微软账户</a><time datetime="2026-01-03T11:44:29.000Z" title="Created 2026-01-03 19:44:29">2026-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/27_labor.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会第一课：劳动维权维权教程"/></a><div class="content"><a class="title" href="/posts/dd48c9c3.html" title="社会第一课：劳动维权维权教程">社会第一课：劳动维权维权教程</a><time datetime="2025-08-21T05:48:59.000Z" title="Created 2025-08-21 13:48:59">2025-08-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/08/11_R50cover.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！"/></a><div class="content"><a class="title" href="/posts/bfe54fc9.html" title="香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！">香港低价购相机攻略：低价入手佳能R50，你需要知道的都在这里！</a><time datetime="2025-08-11T03:13:06.000Z" title="Created 2025-08-11 11:13:06">2025-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://b22.pw0n.xyz/2025/06/20_ublock.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="一款好用去除广告的浏览器插件 uBlock Origin"/></a><div class="content"><a class="title" href="/posts/f8a420b.html" title="一款好用去除广告的浏览器插件 uBlock Origin">一款好用去除广告的浏览器插件 uBlock Origin</a><time datetime="2025-06-20T06:21:11.000Z" title="Created 2025-06-20 14:21:11">2025-06-20</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Deepseek/"><span class="card-category-list-name">Deepseek</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/FPV/"><span class="card-category-list-name">FPV</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/FPV/FPV%E6%8A%A5%E9%94%99/"><span class="card-category-list-name">FPV报错</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Gemini/"><span class="card-category-list-name">Gemini</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/"><span class="card-category-list-name">Google AdSense</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/"><span class="card-category-list-name">网站运营</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/"><span class="card-category-list-name">内容创作</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Google-AdSense/%E7%BD%91%E7%AB%99%E8%BF%90%E8%90%A5/%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="card-category-list-name">问题解决</span><span class="card-category-list-count">1</span></a></li></ul></li></ul></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Google-Search-Console/" style="font-size: 1.1em; color: #999">Google Search Console</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.23em; color: #999ea6">人工智能</a> <a href="/tags/%E5%8A%B3%E5%8A%A8%E7%BB%B4%E6%9D%83/" style="font-size: 1.1em; color: #999">劳动维权</a> <a href="/tags/Ollama/" style="font-size: 1.1em; color: #999">Ollama</a> <a href="/tags/sitemap/" style="font-size: 1.1em; color: #999">sitemap</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">技术学习</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">操作系统</a> <a href="/tags/%E7%89%B9%E5%A7%86/" style="font-size: 1.1em; color: #999">特姆</a> <a href="/tags/%E4%BB%A3%E7%90%86/" style="font-size: 1.1em; color: #999">代理</a> <a href="/tags/%E5%AA%92%E4%BD%93%E8%B4%A3%E4%BB%BB/" style="font-size: 1.1em; color: #999">媒体责任</a> <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">网络</a> <a href="/tags/%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%86/" style="font-size: 1.1em; color: #999">跨境电商</a> <a href="/tags/AI/" style="font-size: 1.23em; color: #999ea6">AI</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" style="font-size: 1.1em; color: #999">学习记录</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 1.1em; color: #999">日常</a> <a href="/tags/Windows%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">Windows工具</a> <a href="/tags/RustDesk/" style="font-size: 1.1em; color: #999">RustDesk</a> <a href="/tags/Linux/" style="font-size: 1.5em; color: #99a9bf">Linux</a> <a href="/tags/%E6%B1%BD%E8%BD%A6%E6%96%B0%E9%97%BB/" style="font-size: 1.1em; color: #999">汽车新闻</a> <a href="/tags/%E9%A6%99%E6%B8%AF%E4%B8%AD%E5%9B%BD%E9%93%B6%E8%A1%8C/" style="font-size: 1.1em; color: #999">香港中国银行</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E8%84%9A%E6%9C%AC/" style="font-size: 1.1em; color: #999">自动脚本</a> <a href="/tags/%E4%B8%87%E8%83%BD%E9%9D%92%E5%B9%B4%E6%97%85%E5%BA%97/" style="font-size: 1.1em; color: #999">万能青年旅店</a> <a href="/tags/%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" style="font-size: 1.37em; color: #99a4b2">远程连接</a> <a href="/tags/%E7%BE%8E%E8%82%A1/" style="font-size: 1.1em; color: #999">美股</a> <a href="/tags/%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1/" style="font-size: 1.1em; color: #999">邮件服务</a> <a href="/tags/Spotify/" style="font-size: 1.23em; color: #999ea6">Spotify</a> <a href="/tags/%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86/" style="font-size: 1.1em; color: #999">密钥管理</a> <a href="/tags/xiaomi/" style="font-size: 1.1em; color: #999">xiaomi</a> <a href="/tags/%E6%96%B0%E9%97%BB%E4%BC%A6%E7%90%86/" style="font-size: 1.1em; color: #999">新闻伦理</a> <a href="/tags/Windows/" style="font-size: 1.1em; color: #999">Windows</a> <a href="/tags/%E4%B8%8D%E7%BB%99%E4%BC%91%E5%B9%B4%E5%81%87/" style="font-size: 1.1em; color: #999">不给休年假</a> <a href="/tags/%E6%97%85%E6%B8%B8/" style="font-size: 1.23em; color: #999ea6">旅游</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE/" style="font-size: 1.1em; color: #999">系统配置</a> <a href="/tags/Edge/" style="font-size: 1.1em; color: #999">Edge</a> <a href="/tags/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/" style="font-size: 1.1em; color: #999">模型部署</a> <a href="/tags/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" style="font-size: 1.1em; color: #999">主题美化</a> <a href="/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6/" style="font-size: 1.1em; color: #999">开源软件</a> <a href="/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" style="font-size: 1.1em; color: #999">音乐播放器</a> <a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.1em; color: #999">插件</a> <a href="/tags/%E5%AA%92%E4%BD%93%E6%8A%A5%E9%81%93/" style="font-size: 1.1em; color: #999">媒体报道</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      <a class="card-more-btn" href="/archives/"
+            title="View More">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/08/">
+            <span class="card-archive-list-date">
+              八月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/06/">
+            <span class="card-archive-list-date">
+              六月 2025
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">7</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">40</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-01-27T07:37:31.262Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Pw0n</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/utils.min.js"></script><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/main.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      false
+        ? pjax.loadUrl('/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading Database</span></div><div class="local-search-input"><input placeholder="请输入内容" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/hexo-theme-butterfly@5.5.3/source/js/search/local-search.min.js"></script></div></div></body></html>
